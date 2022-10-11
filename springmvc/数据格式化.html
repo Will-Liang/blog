@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>数据格式化 | LiAng的博客</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <link rel="icon" href="logo.png">
+    <meta name="description" content="使用VuePress搭建的个人博客">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    
+    <link rel="preload" href="/blog/assets/css/0.styles.20774dd8.css" as="style"><link rel="preload" href="/blog/assets/js/app.3330eed2.js" as="script"><link rel="preload" href="/blog/assets/js/3.6c5b35bb.js" as="script"><link rel="preload" href="/blog/assets/js/1.504525ea.js" as="script"><link rel="preload" href="/blog/assets/js/120.44e6da3c.js" as="script"><link rel="prefetch" href="/blog/assets/js/10.ae134eec.js"><link rel="prefetch" href="/blog/assets/js/100.f494bb12.js"><link rel="prefetch" href="/blog/assets/js/101.1abed729.js"><link rel="prefetch" href="/blog/assets/js/102.3dae5b73.js"><link rel="prefetch" href="/blog/assets/js/103.d4c1df48.js"><link rel="prefetch" href="/blog/assets/js/104.97769664.js"><link rel="prefetch" href="/blog/assets/js/105.e1d4b509.js"><link rel="prefetch" href="/blog/assets/js/106.d2de4d87.js"><link rel="prefetch" href="/blog/assets/js/107.32eb9a4b.js"><link rel="prefetch" href="/blog/assets/js/108.6176ba6f.js"><link rel="prefetch" href="/blog/assets/js/109.c2517b07.js"><link rel="prefetch" href="/blog/assets/js/11.3ad7e7ee.js"><link rel="prefetch" href="/blog/assets/js/110.5473f89e.js"><link rel="prefetch" href="/blog/assets/js/111.e5313fb6.js"><link rel="prefetch" href="/blog/assets/js/112.45abac2a.js"><link rel="prefetch" href="/blog/assets/js/113.2529321a.js"><link rel="prefetch" href="/blog/assets/js/114.aecf45e8.js"><link rel="prefetch" href="/blog/assets/js/115.7bfd8d11.js"><link rel="prefetch" href="/blog/assets/js/116.a8923bc8.js"><link rel="prefetch" href="/blog/assets/js/117.eb510836.js"><link rel="prefetch" href="/blog/assets/js/118.2d9e2dde.js"><link rel="prefetch" href="/blog/assets/js/119.fbd3d7d8.js"><link rel="prefetch" href="/blog/assets/js/12.c28da1fe.js"><link rel="prefetch" href="/blog/assets/js/121.fe8b1fbf.js"><link rel="prefetch" href="/blog/assets/js/122.77d14a10.js"><link rel="prefetch" href="/blog/assets/js/123.9e4f36b3.js"><link rel="prefetch" href="/blog/assets/js/124.e32c3fbc.js"><link rel="prefetch" href="/blog/assets/js/125.40820a9c.js"><link rel="prefetch" href="/blog/assets/js/13.3bfcea68.js"><link rel="prefetch" href="/blog/assets/js/14.5e91563f.js"><link rel="prefetch" href="/blog/assets/js/15.bbe624ea.js"><link rel="prefetch" href="/blog/assets/js/16.e3f08a8c.js"><link rel="prefetch" href="/blog/assets/js/17.266026b8.js"><link rel="prefetch" href="/blog/assets/js/18.98c4e036.js"><link rel="prefetch" href="/blog/assets/js/19.af649a7d.js"><link rel="prefetch" href="/blog/assets/js/20.c8f3d118.js"><link rel="prefetch" href="/blog/assets/js/21.0b934d92.js"><link rel="prefetch" href="/blog/assets/js/22.80702221.js"><link rel="prefetch" href="/blog/assets/js/23.5b00e6a3.js"><link rel="prefetch" href="/blog/assets/js/24.93187db2.js"><link rel="prefetch" href="/blog/assets/js/25.a3c37d42.js"><link rel="prefetch" href="/blog/assets/js/26.bf8dd5ea.js"><link rel="prefetch" href="/blog/assets/js/27.2af582fb.js"><link rel="prefetch" href="/blog/assets/js/28.8b9db5a9.js"><link rel="prefetch" href="/blog/assets/js/29.f707832d.js"><link rel="prefetch" href="/blog/assets/js/30.f8893186.js"><link rel="prefetch" href="/blog/assets/js/31.b38a6988.js"><link rel="prefetch" href="/blog/assets/js/32.a64f03d4.js"><link rel="prefetch" href="/blog/assets/js/33.3efca3c8.js"><link rel="prefetch" href="/blog/assets/js/34.0efe9205.js"><link rel="prefetch" href="/blog/assets/js/35.5257f9cf.js"><link rel="prefetch" href="/blog/assets/js/36.29894302.js"><link rel="prefetch" href="/blog/assets/js/37.835dd643.js"><link rel="prefetch" href="/blog/assets/js/38.a56eba01.js"><link rel="prefetch" href="/blog/assets/js/39.8373e53f.js"><link rel="prefetch" href="/blog/assets/js/4.f2ad145d.js"><link rel="prefetch" href="/blog/assets/js/40.cc877510.js"><link rel="prefetch" href="/blog/assets/js/41.64bff9da.js"><link rel="prefetch" href="/blog/assets/js/42.6c7528bd.js"><link rel="prefetch" href="/blog/assets/js/43.a2838eac.js"><link rel="prefetch" href="/blog/assets/js/44.f13486cd.js"><link rel="prefetch" href="/blog/assets/js/45.93f5b70b.js"><link rel="prefetch" href="/blog/assets/js/46.6f1eb6fb.js"><link rel="prefetch" href="/blog/assets/js/47.aca3e06b.js"><link rel="prefetch" href="/blog/assets/js/48.a386cbe0.js"><link rel="prefetch" href="/blog/assets/js/49.d845e320.js"><link rel="prefetch" href="/blog/assets/js/5.acb9c427.js"><link rel="prefetch" href="/blog/assets/js/50.0db2f824.js"><link rel="prefetch" href="/blog/assets/js/51.e9ed29e0.js"><link rel="prefetch" href="/blog/assets/js/52.ed09b025.js"><link rel="prefetch" href="/blog/assets/js/53.2793a02e.js"><link rel="prefetch" href="/blog/assets/js/54.98d281cf.js"><link rel="prefetch" href="/blog/assets/js/55.4a63e32d.js"><link rel="prefetch" href="/blog/assets/js/56.8c087e30.js"><link rel="prefetch" href="/blog/assets/js/57.20cb7cfb.js"><link rel="prefetch" href="/blog/assets/js/58.6250e7c1.js"><link rel="prefetch" href="/blog/assets/js/59.96395c59.js"><link rel="prefetch" href="/blog/assets/js/6.bf0398c6.js"><link rel="prefetch" href="/blog/assets/js/60.6bcb3992.js"><link rel="prefetch" href="/blog/assets/js/61.734a9217.js"><link rel="prefetch" href="/blog/assets/js/62.95dd7db0.js"><link rel="prefetch" href="/blog/assets/js/63.0c874190.js"><link rel="prefetch" href="/blog/assets/js/64.e0839af9.js"><link rel="prefetch" href="/blog/assets/js/65.dd798114.js"><link rel="prefetch" href="/blog/assets/js/66.8f5b96ca.js"><link rel="prefetch" href="/blog/assets/js/67.dfaee60f.js"><link rel="prefetch" href="/blog/assets/js/68.c9ee3fc9.js"><link rel="prefetch" href="/blog/assets/js/69.b001fe83.js"><link rel="prefetch" href="/blog/assets/js/7.36bc8eb5.js"><link rel="prefetch" href="/blog/assets/js/70.3a3581f4.js"><link rel="prefetch" href="/blog/assets/js/71.04b6be3b.js"><link rel="prefetch" href="/blog/assets/js/72.641865c3.js"><link rel="prefetch" href="/blog/assets/js/73.ac89690d.js"><link rel="prefetch" href="/blog/assets/js/74.c479d3a1.js"><link rel="prefetch" href="/blog/assets/js/75.b34e72e6.js"><link rel="prefetch" href="/blog/assets/js/76.c71b8c70.js"><link rel="prefetch" href="/blog/assets/js/77.8a3be04d.js"><link rel="prefetch" href="/blog/assets/js/78.96d54f80.js"><link rel="prefetch" href="/blog/assets/js/79.6da440db.js"><link rel="prefetch" href="/blog/assets/js/8.43b324b6.js"><link rel="prefetch" href="/blog/assets/js/80.447c0acc.js"><link rel="prefetch" href="/blog/assets/js/81.b9419c6a.js"><link rel="prefetch" href="/blog/assets/js/82.6dd18e6e.js"><link rel="prefetch" href="/blog/assets/js/83.17c3a465.js"><link rel="prefetch" href="/blog/assets/js/84.8495d717.js"><link rel="prefetch" href="/blog/assets/js/85.fbb83329.js"><link rel="prefetch" href="/blog/assets/js/86.fca7db54.js"><link rel="prefetch" href="/blog/assets/js/87.8bd35813.js"><link rel="prefetch" href="/blog/assets/js/88.bdc74531.js"><link rel="prefetch" href="/blog/assets/js/89.84f1ff99.js"><link rel="prefetch" href="/blog/assets/js/9.19cd0a47.js"><link rel="prefetch" href="/blog/assets/js/90.31a729c2.js"><link rel="prefetch" href="/blog/assets/js/91.b7f04c1a.js"><link rel="prefetch" href="/blog/assets/js/92.849d7d72.js"><link rel="prefetch" href="/blog/assets/js/93.2927031e.js"><link rel="prefetch" href="/blog/assets/js/94.96ea5dac.js"><link rel="prefetch" href="/blog/assets/js/95.f7b253d0.js"><link rel="prefetch" href="/blog/assets/js/96.79b1e320.js"><link rel="prefetch" href="/blog/assets/js/97.4630fde6.js"><link rel="prefetch" href="/blog/assets/js/98.0f7731f3.js"><link rel="prefetch" href="/blog/assets/js/99.cc7e1c06.js">
+    <link rel="stylesheet" href="/blog/assets/css/0.styles.20774dd8.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container" data-v-5bb33761><div data-v-5bb33761><div class="password-shadow password-wrapper-out" style="display:none;" data-v-59e6cb88 data-v-5bb33761 data-v-5bb33761><h3 class="title" data-v-59e6cb88>LiAng的博客</h3> <p class="description" data-v-59e6cb88>使用VuePress搭建的个人博客</p> <label id="box" class="inputBox" data-v-59e6cb88><input type="password" value="" data-v-59e6cb88> <span data-v-59e6cb88>Konck! Knock!</span> <button data-v-59e6cb88>OK</button></label> <div class="footer" data-v-59e6cb88><span data-v-59e6cb88><i class="iconfont reco-theme" data-v-59e6cb88></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-59e6cb88>vuePress-theme-reco</a></span> <span data-v-59e6cb88><i class="iconfont reco-copyright" data-v-59e6cb88></i> <a data-v-59e6cb88><span data-v-59e6cb88>LiAng</span>
+          
+        <!---->
+        2022
+      </a></span></div></div> <div class="hide" data-v-5bb33761><header class="navbar" data-v-5bb33761><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog/" class="home-link router-link-active"><!----> <span class="site-name">LiAng的博客</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/blog/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  TimeLine
+</a></div><div class="nav-item"><a href="/blog/websites/websites.html" class="nav-link"><i class="undefined"></i>
+  网站集合
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      Java
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/java/java.html" class="nav-link"><i class="undefined"></i>
+  Java
+</a></li><li class="dropdown-item"><!----> <a href="/blog/javaweb/javaweb.html" class="nav-link"><i class="undefined"></i>
+  JavaWeb
+</a></li><li class="dropdown-item"><!----> <a href="/blog/spring/spring.html" class="nav-link"><i class="undefined"></i>
+  Spring
+</a></li><li class="dropdown-item"><!----> <a href="/blog/springmvc/springmvc.html" class="nav-link"><i class="undefined"></i>
+  SpringMVC
+</a></li><li class="dropdown-item"><!----> <a href="/blog/mybatis/mybatis.html" class="nav-link"><i class="undefined"></i>
+  MyBatis
+</a></li><li class="dropdown-item"><!----> <a href="/blog/springboot/springboot.html" class="nav-link"><i class="undefined"></i>
+  SpringBoot
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      Spider
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/spider/说明.html" class="nav-link"><i class="undefined"></i>
+  爬虫基础
+</a></li><li class="dropdown-item"><!----> <a href="https://note.youdao.com/s/7PwmeCSn" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  Scrapy框架
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      大数据
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://www.yuque.com/liang-znkb8/wqs8e6/wz3m1g" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  环境部署
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      数据库
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/mongodb/MongoDB 介绍.html" class="nav-link"><i class="undefined"></i>
+  MongoDB
+</a></li><li class="dropdown-item"><!----> <a href="/blog/redis/五大常用数据类型.html" class="nav-link"><i class="undefined"></i>
+  Redis
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      Docker
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/docker/docker入门.html" class="nav-link"><i class="undefined"></i>
+  Docker入门
+</a></li><li class="dropdown-item"><!----> <a href="/blog/docker/docker进阶.html" class="nav-link"><i class="undefined"></i>
+  Docker进阶
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      LiAng 的博客
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/Will-Liang" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-5bb33761></div> <aside class="sidebar" data-v-5bb33761><div class="personal-info-wrapper" data-v-1fad0c41 data-v-5bb33761><!----> <h3 class="name" data-v-1fad0c41>
+    LiAng
+  </h3> <div class="num" data-v-1fad0c41><div data-v-1fad0c41><h3 data-v-1fad0c41>114</h3> <h6 data-v-1fad0c41>文章</h6></div> <div data-v-1fad0c41><h3 data-v-1fad0c41>0</h3> <h6 data-v-1fad0c41>标签</h6></div></div> <ul class="social-links" data-v-1fad0c41></ul> <hr data-v-1fad0c41></div> <nav class="nav-links"><div class="nav-item"><a href="/blog/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  TimeLine
+</a></div><div class="nav-item"><a href="/blog/websites/websites.html" class="nav-link"><i class="undefined"></i>
+  网站集合
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      Java
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/java/java.html" class="nav-link"><i class="undefined"></i>
+  Java
+</a></li><li class="dropdown-item"><!----> <a href="/blog/javaweb/javaweb.html" class="nav-link"><i class="undefined"></i>
+  JavaWeb
+</a></li><li class="dropdown-item"><!----> <a href="/blog/spring/spring.html" class="nav-link"><i class="undefined"></i>
+  Spring
+</a></li><li class="dropdown-item"><!----> <a href="/blog/springmvc/springmvc.html" class="nav-link"><i class="undefined"></i>
+  SpringMVC
+</a></li><li class="dropdown-item"><!----> <a href="/blog/mybatis/mybatis.html" class="nav-link"><i class="undefined"></i>
+  MyBatis
+</a></li><li class="dropdown-item"><!----> <a href="/blog/springboot/springboot.html" class="nav-link"><i class="undefined"></i>
+  SpringBoot
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      Spider
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/spider/说明.html" class="nav-link"><i class="undefined"></i>
+  爬虫基础
+</a></li><li class="dropdown-item"><!----> <a href="https://note.youdao.com/s/7PwmeCSn" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  Scrapy框架
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      大数据
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://www.yuque.com/liang-znkb8/wqs8e6/wz3m1g" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  环境部署
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      数据库
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/mongodb/MongoDB 介绍.html" class="nav-link"><i class="undefined"></i>
+  MongoDB
+</a></li><li class="dropdown-item"><!----> <a href="/blog/redis/五大常用数据类型.html" class="nav-link"><i class="undefined"></i>
+  Redis
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      Docker
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/docker/docker入门.html" class="nav-link"><i class="undefined"></i>
+  Docker入门
+</a></li><li class="dropdown-item"><!----> <a href="/blog/docker/docker进阶.html" class="nav-link"><i class="undefined"></i>
+  Docker进阶
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      LiAng 的博客
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/Will-Liang" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav> <ul class="sidebar-links"><li><a href="/blog/websites/websites.html" class="sidebar-link">网站集合</a></li><li><section class="sidebar-group collapsable depth-0"><a href="/blog/java/java" class="sidebar-heading clickable"><span>Java</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/blog/javaweb/javaweb" class="sidebar-heading clickable"><span>JavaWeb</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/blog/spring/spring" class="sidebar-heading clickable"><span>Spring</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/blog/springmvc/springmvc" class="sidebar-heading clickable open"><span>SpringMVC</span> <span class="arrow down"></span></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/springmvc/springmvc.html" class="sidebar-link">SpringMVC介绍</a></li><li><a href="/blog/springmvc/requestmapping.html" class="sidebar-link">RequestMapping</a></li><li><a href="/blog/springmvc/rest.html" class="sidebar-link">Rest-优雅的url请求风格</a></li><li><a href="/blog/springmvc/SpringMVC映射请求数据.html" class="sidebar-link">SpringMVC映射请求数据</a></li><li><a href="/blog/springmvc/模型数据.html" class="sidebar-link">模型数据</a></li><li><a href="/blog/springmvc/视图和视图解析器.html" class="sidebar-link">视图和视图解析器</a></li><li><a href="/blog/springmvc/数据格式化.html" class="active sidebar-link">数据格式化</a></li><li><a href="/blog/springmvc/验证以及国际化.html" class="sidebar-link">验证以及国际化</a></li><li><a href="/blog/springmvc/中文乱码处理.html" class="sidebar-link">中文乱码处理</a></li><li><a href="/blog/springmvc/处理json.html" class="sidebar-link">处理 json 和 HttpMessageConverter&lt;T&gt;</a></li><li><a href="/blog/springmvc/上传文件.html" class="sidebar-link">上传文件</a></li><li><a href="/blog/springmvc/自定义拦截器.html" class="sidebar-link">自定义拦截器</a></li><li><a href="/blog/springmvc/异常处理.html" class="sidebar-link">异常处理</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/blog/mybatis/mybatis" class="sidebar-heading clickable"><span>MyBatis</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/blog/springboot/springboot" class="sidebar-heading clickable"><span>SpringBoot</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/blog/mongodb/MongoDB 介绍" class="sidebar-heading clickable"><span>MongoDB</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/blog/redis/五大常用数据类型" class="sidebar-heading clickable"><span>Redis</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/blog/spider/说明" class="sidebar-heading clickable"><span>Spider</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/blog/docker/docker入门" class="sidebar-heading clickable"><span>Docker</span> <span class="arrow right"></span></a> <!----></section></li></ul> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-59e6cb88 data-v-5bb33761><h3 class="title" data-v-59e6cb88>数据格式化</h3> <!----> <label id="box" class="inputBox" data-v-59e6cb88><input type="password" value="" data-v-59e6cb88> <span data-v-59e6cb88>Konck! Knock!</span> <button data-v-59e6cb88>OK</button></label> <div class="footer" data-v-59e6cb88><span data-v-59e6cb88><i class="iconfont reco-theme" data-v-59e6cb88></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-59e6cb88>vuePress-theme-reco</a></span> <span data-v-59e6cb88><i class="iconfont reco-copyright" data-v-59e6cb88></i> <a data-v-59e6cb88><span data-v-59e6cb88>LiAng</span>
+          
+        <!---->
+        2022
+      </a></span></div></div> <div data-v-5bb33761><div data-v-5bb33761><main class="page"><section style="display:;"><div class="page-title"><h1 class="title">数据格式化</h1> <div data-v-8a445198><i class="iconfont reco-account" data-v-8a445198><span data-v-8a445198>LiAng</span></i> <i class="iconfont reco-date" data-v-8a445198><span data-v-8a445198>2022/8/23</span></i> <!----> <!----></div></div> <div class="theme-reco-content content__default"><h2 id="基本介绍"><a href="#基本介绍" class="header-anchor">#</a> 基本介绍</h2> <p>​		<strong>基本数据类型可以和字符串之间自动完成转换，比如：</strong></p> <p>​		<strong>Spring MVC 上下文中内建了很多转换器，可完成大多数 Java 类型的转换工作。【这里只列出部分】</strong></p> <p>​		ConversionService converters = java.lang.Boolean -&gt; java.lang.String : org.springframework.core.convert.support.ObjectToStringConverter@f874ca</p> <p>​		java.lang.Character -&gt; java.lang.Number : CharacterToNumberFactory@f004c9</p> <p>​		java.lang.Character -&gt; java.lang.String : ObjectToStringConverter@68a961</p> <p>​		java.lang.Enum -&gt; java.lang.String : EnumToStringConverter@12f060a</p> <p>​		java.lang.Number -&gt; java.lang.Character : NumberToCharacterConverter@1482ac5</p> <p>​		java.lang.Number -&gt; java.lang.Number : NumberToNumberConverterFactory@126c6f</p> <p>​		java.lang.Number -&gt; java.lang.String : ObjectToStringConverter@14888e8</p> <p>​		java.lang.String -&gt; java.lang.Boolean : StringToBooleanConverter@1ca6626</p> <p>​		java.lang.String -&gt; java.lang.Character : StringToCharacterConverter@1143800</p> <p>​		java.lang.String -&gt; java.lang.Enum : StringToEnumConverterFactory@1bba86e</p> <p>​		java.lang.String -&gt; java.lang.Number : StringToNumberConverterFactory@18d2c12</p> <p>​		java.lang.String -&gt; java.util.Locale : StringToLocaleConverter@3598e1</p> <p>​		java.lang.String -&gt; java.util.Properties : StringToPropertiesConverter@c90828</p> <p>​		java.lang.String -&gt; java.util.UUID : StringToUUIDConverter@a42f23</p> <p>​		java.util.Locale -&gt; java.lang.String : ObjectToStringConverter@c7e20a</p> <p>​		java.util.Properties -&gt; java.lang.String : PropertiesToStringConverter@367a7f</p> <p>​		java.util.UUID -&gt; java.lang.String : ObjectToStringConverter@112b07f</p> <p><img src="/blog/springmvc/image-20220623143852629.png" alt="image-20220623143852629"></p> <h2 id="基本数据类型和字符串自动转换"><a href="#基本数据类型和字符串自动转换" class="header-anchor">#</a> 基本数据类型和字符串自动转换</h2> <h3 id="应用实例"><a href="#应用实例" class="header-anchor">#</a> 应用实例</h3> <h4 id="创建monster类"><a href="#创建monster类" class="header-anchor">#</a> 创建Monster类</h4> <div class="language-java extra-class"><pre class="language-java"><code><span class="token keyword">package</span> <span class="token namespace">com<span class="token punctuation">.</span>lzw<span class="token punctuation">.</span>web<span class="token punctuation">.</span>datavalid<span class="token punctuation">.</span>entity</span><span class="token punctuation">;</span>
+
+<span class="token comment">/**
+ * @author LiAng
+ */</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Monster</span> <span class="token punctuation">{</span>
+
+    <span class="token keyword">private</span> <span class="token class-name">Integer</span> id<span class="token punctuation">;</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> email<span class="token punctuation">;</span>
+
+    <span class="token keyword">private</span> <span class="token class-name">Integer</span> age<span class="token punctuation">;</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> name<span class="token punctuation">;</span>
+
+    <span class="token keyword">public</span> <span class="token class-name">Monster</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token class-name">Monster</span><span class="token punctuation">(</span><span class="token class-name">Integer</span> id<span class="token punctuation">,</span> <span class="token class-name">String</span> email<span class="token punctuation">,</span> <span class="token class-name">Integer</span> age<span class="token punctuation">,</span> <span class="token class-name">String</span> name<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>id <span class="token operator">=</span> id<span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>email <span class="token operator">=</span> email<span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>age <span class="token operator">=</span> age<span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token class-name">Integer</span> <span class="token function">getId</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> id<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setId</span><span class="token punctuation">(</span><span class="token class-name">Integer</span> id<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>id <span class="token operator">=</span> id<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">getEmail</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> email<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setEmail</span><span class="token punctuation">(</span><span class="token class-name">String</span> email<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>email <span class="token operator">=</span> email<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token class-name">Integer</span> <span class="token function">getAge</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> age<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setAge</span><span class="token punctuation">(</span><span class="token class-name">Integer</span> age<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>age <span class="token operator">=</span> age<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> name<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setName</span><span class="token punctuation">(</span><span class="token class-name">String</span> name<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token string">&quot;Monster{&quot;</span> <span class="token operator">+</span>
+                <span class="token string">&quot;id=&quot;</span> <span class="token operator">+</span> id <span class="token operator">+</span>
+                <span class="token string">&quot;, email='&quot;</span> <span class="token operator">+</span> email <span class="token operator">+</span> <span class="token char">'\''</span> <span class="token operator">+</span>
+                <span class="token string">&quot;, age=&quot;</span> <span class="token operator">+</span> age <span class="token operator">+</span>
+                <span class="token string">&quot;, name='&quot;</span> <span class="token operator">+</span> name <span class="token operator">+</span> <span class="token char">'\''</span> <span class="token operator">+</span>
+                <span class="token char">'}'</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h4 id="创建-web-data-valid-jsp"><a href="#创建-web-data-valid-jsp" class="header-anchor">#</a> 创建 web/data_valid.jsp</h4> <div class="language-jsp extra-class"><pre class="language-text"><code>&lt;%@ page contentType=&quot;text/html;charset=UTF-8&quot; language=&quot;java&quot; %&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Title&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h1&gt;SpringMVC[数据格式/验证等]&lt;/h1&gt;
+&lt;hr&gt;
+&lt;a href=&quot;&lt;%=request.getContextPath()%&gt;/addMonsterUI&quot;&gt;添加妖怪&lt;/a&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div><h4 id="创建-monsterhandler-java"><a href="#创建-monsterhandler-java" class="header-anchor">#</a> 创建 MonsterHandler.java</h4> <div class="language-java extra-class"><pre class="language-java"><code><span class="token keyword">package</span> <span class="token namespace">com<span class="token punctuation">.</span>lzw<span class="token punctuation">.</span>web<span class="token punctuation">.</span>datavalid</span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">com<span class="token punctuation">.</span>lzw<span class="token punctuation">.</span>web<span class="token punctuation">.</span>datavalid<span class="token punctuation">.</span>entity<span class="token punctuation">.</span></span><span class="token class-name">Monster</span></span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">org<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>context<span class="token punctuation">.</span>annotation<span class="token punctuation">.</span></span><span class="token class-name">Scope</span></span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">org<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>stereotype<span class="token punctuation">.</span></span><span class="token class-name">Controller</span></span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">org<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>web<span class="token punctuation">.</span>bind<span class="token punctuation">.</span>annotation<span class="token punctuation">.</span></span><span class="token class-name">RequestMapping</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">Map</span></span><span class="token punctuation">;</span>
+
+<span class="token comment">/**
+ * @author LiAng
+ * MonsterHandler 处理器响应用户提交数据
+ * @Scope(value = &quot;prototype&quot;) 表示每次请求MonsterHandler会生成一个新的对象
+ */</span>
+<span class="token annotation punctuation">@Controller</span>
+<span class="token annotation punctuation">@Scope</span><span class="token punctuation">(</span>value <span class="token operator">=</span> <span class="token string">&quot;prototype&quot;</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">MonsterHandler</span> <span class="token punctuation">{</span>
+    <span class="token comment">/**
+     * 显示添加monster的界面
+     * 1. 这里Map&lt;String, Object&gt; map
+     * 2. 当我们向map添加的数据时，会默认存放到request域
+     * @param map
+     * @return
+     */</span>
+    <span class="token annotation punctuation">@RequestMapping</span><span class="token punctuation">(</span>value <span class="token operator">=</span> <span class="token string">&quot;/addMonsterUI&quot;</span><span class="token punctuation">)</span>
+    <span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">addMonsterUI</span><span class="token punctuation">(</span><span class="token class-name">Map</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">,</span> <span class="token class-name">Object</span><span class="token punctuation">&gt;</span></span> map<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">/**
+         1. 这里的表单，我们使用springMVC的标签来完成
+         2. SpringMVC 表单标签在显示之前必须在 request 中有一个 bean, 该 bean 的属性和表单标签的字段要对应!
+         request 中的 key 为: form 标签的 modelAttrite 属性值， 比如这里的monsters
+         3. SpringMVC 的 form:form 标签的 action 属性值中的 / 不代表 WEB 应用的根目录.
+         4. &lt;form:form action=&quot;?&quot; method=&quot;POST&quot; modelAttribute=&quot;monster&quot;&gt;
+         //这里需要给request增加一个 monster，因为jsp 页面 的modelAttribute=&quot;monster&quot;需要
+         //这时是springMVC的内部的检测机制  即使是一个空的也需要，否则报错.
+         */</span>
+        <span class="token comment">//如果你跳转的页面使用springmvc标签</span>
+        <span class="token comment">//就需要准备一个对象，放入request域中，这个对象的属性名 monster, 对于</span>
+        <span class="token comment">//springmvc表单标签的 modelAttribute=&quot;monster&quot;</span>
+        map<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span><span class="token string">&quot;monster&quot;</span><span class="token punctuation">,</span><span class="token keyword">new</span> <span class="token class-name">Monster</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> <span class="token string">&quot;datavalid/monster_addUI&quot;</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h4 id="创建-web-web-inf-pages-datavalid-monster-addui-jsp"><a href="#创建-web-web-inf-pages-datavalid-monster-addui-jsp" class="header-anchor">#</a> 创建 web/WEB-INF/pages/datavalid/monster_addUI.jsp</h4> <div class="language-jsp extra-class"><pre class="language-text"><code>&lt;%@ taglib prefix=&quot;form&quot; uri=&quot;http://www.springframework.org/tags/form&quot; %&gt;
+&lt;%@ page contentType=&quot;text/html;charset=UTF-8&quot; language=&quot;java&quot; %&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Title&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h3&gt;添加妖怪&lt;/h3&gt;
+&lt;!-- 这里的表单，我们使用springMVC的标签来完成
+特别说明几点:
+    1. SpringMVC 表单标签在显示之前必须在 request 中有一个 bean, 该 bean 的属性和表单标签的字段要对应!
+    request 中的 key 为: form 标签的 modelAttribute 属性值， 比如这里的monsters
+    2. SpringMVC 的 form:form 标签的 action 属性值中的 / 不代表 WEB 应用的根目录.
+    3. 这里使用springmvc的标签的主要的目的是方便提示信息回显
+--&gt;
+&lt;form:form action=&quot;save&quot; method=&quot;post&quot; modelAttribute=&quot;monster&quot;&gt;
+    妖怪名字: &lt;form:input path=&quot;name&quot;/&gt;&lt;br&gt;&lt;br&gt;
+    妖怪年龄~: &lt;form:input path=&quot;age&quot;/&gt;&lt;br&gt;&lt;br&gt;
+    电子邮件: &lt;form:input path=&quot;email&quot;/&gt;&lt;br&gt;&lt;br&gt;
+    &lt;input type=&quot;submit&quot; value=&quot;添加妖怪&quot;/&gt;
+&lt;/form:form&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div><h4 id="测试"><a href="#测试" class="header-anchor">#</a> 测试</h4> <p><img src="/blog/springmvc/image-20220623152355818.png" alt="image-20220623152355818"></p> <h4 id="创建-web-web-inf-pages-datavalid-success-jsp"><a href="#创建-web-web-inf-pages-datavalid-success-jsp" class="header-anchor">#</a> 创建 web/WEB-INF/pages/datavalid/success.jsp</h4> <div class="language-jsp extra-class"><pre class="language-text"><code>&lt;%@ page contentType=&quot;text/html;charset=UTF-8&quot; language=&quot;java&quot; %&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;添加成功&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h1&gt;添加成功！！！&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div><h4 id="修改-monsterhandler-java"><a href="#修改-monsterhandler-java" class="header-anchor">#</a> 修改 MonsterHandler.java</h4> <p>添加方法</p> <div class="language-java extra-class"><pre class="language-java"><code>	<span class="token comment">/**
+     * 编写方法,处理添加妖怪
+     * 1. springmvc可以将提交的数据，按照参数名和对象的属性名匹配
+     * 2. 直接封装到对象中
+     * String =&gt; Integer
+     * @param monster
+     * @return
+     */</span>
+    <span class="token annotation punctuation">@RequestMapping</span><span class="token punctuation">(</span>value <span class="token operator">=</span> <span class="token string">&quot;/save&quot;</span><span class="token punctuation">)</span>
+    <span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">save</span><span class="token punctuation">(</span><span class="token class-name">Monster</span> monster<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;----monster---&quot;</span> <span class="token operator">+</span> monster<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> <span class="token string">&quot;datavalid/success&quot;</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+</code></pre></div><h3 id="完成测试"><a href="#完成测试" class="header-anchor">#</a> 完成测试</h3> <ol><li>如果age 输入的是 数字，则通过, 说明SpringMVC可以将提交的字符串 数字，比如&quot;28&quot;，转成 Integer/int。</li> <li>如果不是数字，则给出 400 的页面。</li></ol> <p><img src="/blog/springmvc/image-20220623152817691.png" alt="image-20220623152817691"><img src="/blog/springmvc/image-20220623152917508.png" alt="image-20220623152917508"></p> <p><img src="/blog/springmvc/image-20220623152931917.png" alt="image-20220623152931917"><img src="/blog/springmvc/image-20220623152938315.png" alt="image-20220623152938315"></p> <h2 id="特殊数据类型和字符串间的转换"><a href="#特殊数据类型和字符串间的转换" class="header-anchor">#</a> 特殊数据类型和字符串间的转换</h2> <h3 id="应用实例-2"><a href="#应用实例-2" class="header-anchor">#</a> 应用实例</h3> <ol><li>特殊数据类型和字符串之间的转换使用注解(比如日期，规定格式的小数比如货币形式等)</li> <li>对于日期和货币可以使用 @DateTimeFormat 和 @NumberFormat 注解，把这两个注解标记在字段上即可</li></ol> <h4 id="修改-monster-java"><a href="#修改-monster-java" class="header-anchor">#</a> 修改 Monster.java</h4> <p>增加字段</p> <div class="language-java extra-class"><pre class="language-java"><code>	<span class="token annotation punctuation">@DateTimeFormat</span><span class="token punctuation">(</span>pattern <span class="token operator">=</span> <span class="token string">&quot;yyyy-MM-dd&quot;</span><span class="token punctuation">)</span>
+    <span class="token keyword">private</span> <span class="token class-name">Date</span> birthday<span class="token punctuation">;</span>
+
+    <span class="token annotation punctuation">@NumberFormat</span><span class="token punctuation">(</span>pattern <span class="token operator">=</span> <span class="token string">&quot;###,###.##&quot;</span><span class="token punctuation">)</span>
+    <span class="token keyword">private</span> <span class="token class-name">Float</span> salary<span class="token punctuation">;</span>
+
+    <span class="token keyword">public</span> <span class="token class-name">Date</span> <span class="token function">getBirthday</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> birthday<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setBirthday</span><span class="token punctuation">(</span><span class="token class-name">Date</span> birthday<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>birthday <span class="token operator">=</span> birthday<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token class-name">Float</span> <span class="token function">getSalary</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> salary<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setSalary</span><span class="token punctuation">(</span><span class="token class-name">Float</span> salary<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>salary <span class="token operator">=</span> salary<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+	<span class="token keyword">public</span> <span class="token class-name">Monster</span><span class="token punctuation">(</span><span class="token class-name">Integer</span> id<span class="token punctuation">,</span> <span class="token class-name">String</span> email<span class="token punctuation">,</span> <span class="token class-name">Integer</span> age<span class="token punctuation">,</span> <span class="token class-name">String</span> name<span class="token punctuation">,</span> <span class="token class-name">Date</span> birthday<span class="token punctuation">,</span> <span class="token class-name">Float</span> salary<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>id <span class="token operator">=</span> id<span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>email <span class="token operator">=</span> email<span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>age <span class="token operator">=</span> age<span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name<span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>birthday <span class="token operator">=</span> birthday<span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>salary <span class="token operator">=</span> salary<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+	<span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token string">&quot;Monster{&quot;</span> <span class="token operator">+</span>
+                <span class="token string">&quot;id=&quot;</span> <span class="token operator">+</span> id <span class="token operator">+</span>
+                <span class="token string">&quot;, email='&quot;</span> <span class="token operator">+</span> email <span class="token operator">+</span> <span class="token char">'\''</span> <span class="token operator">+</span>
+                <span class="token string">&quot;, age=&quot;</span> <span class="token operator">+</span> age <span class="token operator">+</span>
+                <span class="token string">&quot;, name='&quot;</span> <span class="token operator">+</span> name <span class="token operator">+</span> <span class="token char">'\''</span> <span class="token operator">+</span>
+                <span class="token string">&quot;, birthday=&quot;</span> <span class="token operator">+</span> birthday <span class="token operator">+</span>
+                <span class="token string">&quot;, salary=&quot;</span> <span class="token operator">+</span> salary <span class="token operator">+</span>
+                <span class="token char">'}'</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+</code></pre></div><h4 id="修改-web-web-inf-pages-datavalid-monster-addui-jsp"><a href="#修改-web-web-inf-pages-datavalid-monster-addui-jsp" class="header-anchor">#</a> 修改 web/WEB-INF/pages/datavalid/monster_addUI.jsp</h4> <div class="language-jsp extra-class"><pre class="language-text"><code>&lt;form:form action=&quot;save&quot; method=&quot;post&quot; modelAttribute=&quot;monster&quot;&gt;
+    妖怪名字: &lt;form:input path=&quot;name&quot;/&gt;&lt;br&gt;&lt;br&gt;
+    妖怪年龄~: &lt;form:input path=&quot;age&quot;/&gt;&lt;br&gt;&lt;br&gt;
+    电子邮件: &lt;form:input path=&quot;email&quot;/&gt;&lt;br&gt;&lt;br&gt;
+    妖怪生日: &lt;form:input path=&quot;birthday&quot;/&gt;要求以&quot;9999-11-11&quot;的形式&lt;br&gt;&lt;br&gt;
+    妖怪薪水: &lt;form:input path=&quot;salary&quot;/&gt;要求以&quot;123,890.12&quot;的形式&lt;br&gt;&lt;br&gt;
+    &lt;input type=&quot;submit&quot; value=&quot;添加妖怪&quot;/&gt;
+&lt;/form:form&gt;
+</code></pre></div><h3 id="完成测试-2"><a href="#完成测试-2" class="header-anchor">#</a> 完成测试</h3> <p><img src="/blog/springmvc/image-20220623154041920.png" alt="image-20220623154041920"><img src="/blog/springmvc/image-20220623152917508.png" alt="image-20220623152917508"></p> <p><img src="/blog/springmvc/image-20220623154241317.png" alt="image-20220623154241317"> <img src="/blog/springmvc/image-20220623152938315.png" alt="image-20220623152938315"><img src="/blog/springmvc/image-20220623154317898.png" alt="image-20220623154317898"></p></div></section> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev"><a href="/blog/springmvc/视图和视图解析器.html" class="prev">
+          视图和视图解析器
+        </a></span> <span class="next"><a href="/blog/springmvc/验证以及国际化.html">
+          验证以及国际化
+        </a></span></p></div> <div class="comments-wrapper"><!----></div> <ul class="side-bar sub-sidebar-wrapper" style="width:12rem;" data-v-ac050c62><li class="level-2" data-v-ac050c62><a href="/blog/springmvc/%E6%95%B0%E6%8D%AE%E6%A0%BC%E5%BC%8F%E5%8C%96.html#基本介绍" class="sidebar-link reco-side-基本介绍" data-v-ac050c62>基本介绍</a></li><li class="level-2" data-v-ac050c62><a href="/blog/springmvc/%E6%95%B0%E6%8D%AE%E6%A0%BC%E5%BC%8F%E5%8C%96.html#基本数据类型和字符串自动转换" class="sidebar-link reco-side-基本数据类型和字符串自动转换" data-v-ac050c62>基本数据类型和字符串自动转换</a></li><li class="level-3" data-v-ac050c62><a href="/blog/springmvc/%E6%95%B0%E6%8D%AE%E6%A0%BC%E5%BC%8F%E5%8C%96.html#应用实例" class="sidebar-link reco-side-应用实例" data-v-ac050c62>应用实例</a></li><li class="level-3" data-v-ac050c62><a href="/blog/springmvc/%E6%95%B0%E6%8D%AE%E6%A0%BC%E5%BC%8F%E5%8C%96.html#完成测试" class="sidebar-link reco-side-完成测试" data-v-ac050c62>完成测试</a></li><li class="level-2" data-v-ac050c62><a href="/blog/springmvc/%E6%95%B0%E6%8D%AE%E6%A0%BC%E5%BC%8F%E5%8C%96.html#特殊数据类型和字符串间的转换" class="sidebar-link reco-side-特殊数据类型和字符串间的转换" data-v-ac050c62>特殊数据类型和字符串间的转换</a></li><li class="level-3" data-v-ac050c62><a href="/blog/springmvc/%E6%95%B0%E6%8D%AE%E6%A0%BC%E5%BC%8F%E5%8C%96.html#应用实例-2" class="sidebar-link reco-side-应用实例-2" data-v-ac050c62>应用实例</a></li><li class="level-3" data-v-ac050c62><a href="/blog/springmvc/%E6%95%B0%E6%8D%AE%E6%A0%BC%E5%BC%8F%E5%8C%96.html#完成测试-2" class="sidebar-link reco-side-完成测试-2" data-v-ac050c62>完成测试</a></li></ul></main></div> <!----></div></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-c6073ba8 data-v-c6073ba8><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-c6073ba8><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-c6073ba8></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-c6073ba8></path></svg></div></div></div>
+    <script src="/blog/assets/js/app.3330eed2.js" defer></script><script src="/blog/assets/js/3.6c5b35bb.js" defer></script><script src="/blog/assets/js/1.504525ea.js" defer></script><script src="/blog/assets/js/120.44e6da3c.js" defer></script>
+  </body>
+</html>

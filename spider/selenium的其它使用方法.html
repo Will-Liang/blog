@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>selenium的其它使用方法 | LiAng的博客</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <link rel="icon" href="logo.png">
+    <meta name="description" content="使用VuePress搭建的个人博客">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    
+    <link rel="preload" href="/blog/assets/css/0.styles.20774dd8.css" as="style"><link rel="preload" href="/blog/assets/js/app.3330eed2.js" as="script"><link rel="preload" href="/blog/assets/js/3.6c5b35bb.js" as="script"><link rel="preload" href="/blog/assets/js/1.504525ea.js" as="script"><link rel="preload" href="/blog/assets/js/75.b34e72e6.js" as="script"><link rel="prefetch" href="/blog/assets/js/10.ae134eec.js"><link rel="prefetch" href="/blog/assets/js/100.f494bb12.js"><link rel="prefetch" href="/blog/assets/js/101.1abed729.js"><link rel="prefetch" href="/blog/assets/js/102.3dae5b73.js"><link rel="prefetch" href="/blog/assets/js/103.d4c1df48.js"><link rel="prefetch" href="/blog/assets/js/104.97769664.js"><link rel="prefetch" href="/blog/assets/js/105.e1d4b509.js"><link rel="prefetch" href="/blog/assets/js/106.d2de4d87.js"><link rel="prefetch" href="/blog/assets/js/107.32eb9a4b.js"><link rel="prefetch" href="/blog/assets/js/108.6176ba6f.js"><link rel="prefetch" href="/blog/assets/js/109.c2517b07.js"><link rel="prefetch" href="/blog/assets/js/11.3ad7e7ee.js"><link rel="prefetch" href="/blog/assets/js/110.5473f89e.js"><link rel="prefetch" href="/blog/assets/js/111.e5313fb6.js"><link rel="prefetch" href="/blog/assets/js/112.45abac2a.js"><link rel="prefetch" href="/blog/assets/js/113.2529321a.js"><link rel="prefetch" href="/blog/assets/js/114.aecf45e8.js"><link rel="prefetch" href="/blog/assets/js/115.7bfd8d11.js"><link rel="prefetch" href="/blog/assets/js/116.a8923bc8.js"><link rel="prefetch" href="/blog/assets/js/117.eb510836.js"><link rel="prefetch" href="/blog/assets/js/118.2d9e2dde.js"><link rel="prefetch" href="/blog/assets/js/119.fbd3d7d8.js"><link rel="prefetch" href="/blog/assets/js/12.c28da1fe.js"><link rel="prefetch" href="/blog/assets/js/120.44e6da3c.js"><link rel="prefetch" href="/blog/assets/js/121.fe8b1fbf.js"><link rel="prefetch" href="/blog/assets/js/122.77d14a10.js"><link rel="prefetch" href="/blog/assets/js/123.9e4f36b3.js"><link rel="prefetch" href="/blog/assets/js/124.e32c3fbc.js"><link rel="prefetch" href="/blog/assets/js/125.40820a9c.js"><link rel="prefetch" href="/blog/assets/js/13.3bfcea68.js"><link rel="prefetch" href="/blog/assets/js/14.5e91563f.js"><link rel="prefetch" href="/blog/assets/js/15.bbe624ea.js"><link rel="prefetch" href="/blog/assets/js/16.e3f08a8c.js"><link rel="prefetch" href="/blog/assets/js/17.266026b8.js"><link rel="prefetch" href="/blog/assets/js/18.98c4e036.js"><link rel="prefetch" href="/blog/assets/js/19.af649a7d.js"><link rel="prefetch" href="/blog/assets/js/20.c8f3d118.js"><link rel="prefetch" href="/blog/assets/js/21.0b934d92.js"><link rel="prefetch" href="/blog/assets/js/22.80702221.js"><link rel="prefetch" href="/blog/assets/js/23.5b00e6a3.js"><link rel="prefetch" href="/blog/assets/js/24.93187db2.js"><link rel="prefetch" href="/blog/assets/js/25.a3c37d42.js"><link rel="prefetch" href="/blog/assets/js/26.bf8dd5ea.js"><link rel="prefetch" href="/blog/assets/js/27.2af582fb.js"><link rel="prefetch" href="/blog/assets/js/28.8b9db5a9.js"><link rel="prefetch" href="/blog/assets/js/29.f707832d.js"><link rel="prefetch" href="/blog/assets/js/30.f8893186.js"><link rel="prefetch" href="/blog/assets/js/31.b38a6988.js"><link rel="prefetch" href="/blog/assets/js/32.a64f03d4.js"><link rel="prefetch" href="/blog/assets/js/33.3efca3c8.js"><link rel="prefetch" href="/blog/assets/js/34.0efe9205.js"><link rel="prefetch" href="/blog/assets/js/35.5257f9cf.js"><link rel="prefetch" href="/blog/assets/js/36.29894302.js"><link rel="prefetch" href="/blog/assets/js/37.835dd643.js"><link rel="prefetch" href="/blog/assets/js/38.a56eba01.js"><link rel="prefetch" href="/blog/assets/js/39.8373e53f.js"><link rel="prefetch" href="/blog/assets/js/4.f2ad145d.js"><link rel="prefetch" href="/blog/assets/js/40.cc877510.js"><link rel="prefetch" href="/blog/assets/js/41.64bff9da.js"><link rel="prefetch" href="/blog/assets/js/42.6c7528bd.js"><link rel="prefetch" href="/blog/assets/js/43.a2838eac.js"><link rel="prefetch" href="/blog/assets/js/44.f13486cd.js"><link rel="prefetch" href="/blog/assets/js/45.93f5b70b.js"><link rel="prefetch" href="/blog/assets/js/46.6f1eb6fb.js"><link rel="prefetch" href="/blog/assets/js/47.aca3e06b.js"><link rel="prefetch" href="/blog/assets/js/48.a386cbe0.js"><link rel="prefetch" href="/blog/assets/js/49.d845e320.js"><link rel="prefetch" href="/blog/assets/js/5.acb9c427.js"><link rel="prefetch" href="/blog/assets/js/50.0db2f824.js"><link rel="prefetch" href="/blog/assets/js/51.e9ed29e0.js"><link rel="prefetch" href="/blog/assets/js/52.ed09b025.js"><link rel="prefetch" href="/blog/assets/js/53.2793a02e.js"><link rel="prefetch" href="/blog/assets/js/54.98d281cf.js"><link rel="prefetch" href="/blog/assets/js/55.4a63e32d.js"><link rel="prefetch" href="/blog/assets/js/56.8c087e30.js"><link rel="prefetch" href="/blog/assets/js/57.20cb7cfb.js"><link rel="prefetch" href="/blog/assets/js/58.6250e7c1.js"><link rel="prefetch" href="/blog/assets/js/59.96395c59.js"><link rel="prefetch" href="/blog/assets/js/6.bf0398c6.js"><link rel="prefetch" href="/blog/assets/js/60.6bcb3992.js"><link rel="prefetch" href="/blog/assets/js/61.734a9217.js"><link rel="prefetch" href="/blog/assets/js/62.95dd7db0.js"><link rel="prefetch" href="/blog/assets/js/63.0c874190.js"><link rel="prefetch" href="/blog/assets/js/64.e0839af9.js"><link rel="prefetch" href="/blog/assets/js/65.dd798114.js"><link rel="prefetch" href="/blog/assets/js/66.8f5b96ca.js"><link rel="prefetch" href="/blog/assets/js/67.dfaee60f.js"><link rel="prefetch" href="/blog/assets/js/68.c9ee3fc9.js"><link rel="prefetch" href="/blog/assets/js/69.b001fe83.js"><link rel="prefetch" href="/blog/assets/js/7.36bc8eb5.js"><link rel="prefetch" href="/blog/assets/js/70.3a3581f4.js"><link rel="prefetch" href="/blog/assets/js/71.04b6be3b.js"><link rel="prefetch" href="/blog/assets/js/72.641865c3.js"><link rel="prefetch" href="/blog/assets/js/73.ac89690d.js"><link rel="prefetch" href="/blog/assets/js/74.c479d3a1.js"><link rel="prefetch" href="/blog/assets/js/76.c71b8c70.js"><link rel="prefetch" href="/blog/assets/js/77.8a3be04d.js"><link rel="prefetch" href="/blog/assets/js/78.96d54f80.js"><link rel="prefetch" href="/blog/assets/js/79.6da440db.js"><link rel="prefetch" href="/blog/assets/js/8.43b324b6.js"><link rel="prefetch" href="/blog/assets/js/80.447c0acc.js"><link rel="prefetch" href="/blog/assets/js/81.b9419c6a.js"><link rel="prefetch" href="/blog/assets/js/82.6dd18e6e.js"><link rel="prefetch" href="/blog/assets/js/83.17c3a465.js"><link rel="prefetch" href="/blog/assets/js/84.8495d717.js"><link rel="prefetch" href="/blog/assets/js/85.fbb83329.js"><link rel="prefetch" href="/blog/assets/js/86.fca7db54.js"><link rel="prefetch" href="/blog/assets/js/87.8bd35813.js"><link rel="prefetch" href="/blog/assets/js/88.bdc74531.js"><link rel="prefetch" href="/blog/assets/js/89.84f1ff99.js"><link rel="prefetch" href="/blog/assets/js/9.19cd0a47.js"><link rel="prefetch" href="/blog/assets/js/90.31a729c2.js"><link rel="prefetch" href="/blog/assets/js/91.b7f04c1a.js"><link rel="prefetch" href="/blog/assets/js/92.849d7d72.js"><link rel="prefetch" href="/blog/assets/js/93.2927031e.js"><link rel="prefetch" href="/blog/assets/js/94.96ea5dac.js"><link rel="prefetch" href="/blog/assets/js/95.f7b253d0.js"><link rel="prefetch" href="/blog/assets/js/96.79b1e320.js"><link rel="prefetch" href="/blog/assets/js/97.4630fde6.js"><link rel="prefetch" href="/blog/assets/js/98.0f7731f3.js"><link rel="prefetch" href="/blog/assets/js/99.cc7e1c06.js">
+    <link rel="stylesheet" href="/blog/assets/css/0.styles.20774dd8.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container" data-v-5bb33761><div data-v-5bb33761><div class="password-shadow password-wrapper-out" style="display:none;" data-v-59e6cb88 data-v-5bb33761 data-v-5bb33761><h3 class="title" data-v-59e6cb88>LiAng的博客</h3> <p class="description" data-v-59e6cb88>使用VuePress搭建的个人博客</p> <label id="box" class="inputBox" data-v-59e6cb88><input type="password" value="" data-v-59e6cb88> <span data-v-59e6cb88>Konck! Knock!</span> <button data-v-59e6cb88>OK</button></label> <div class="footer" data-v-59e6cb88><span data-v-59e6cb88><i class="iconfont reco-theme" data-v-59e6cb88></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-59e6cb88>vuePress-theme-reco</a></span> <span data-v-59e6cb88><i class="iconfont reco-copyright" data-v-59e6cb88></i> <a data-v-59e6cb88><span data-v-59e6cb88>LiAng</span>
+          
+        <!---->
+        2022
+      </a></span></div></div> <div class="hide" data-v-5bb33761><header class="navbar" data-v-5bb33761><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog/" class="home-link router-link-active"><!----> <span class="site-name">LiAng的博客</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/blog/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  TimeLine
+</a></div><div class="nav-item"><a href="/blog/websites/websites.html" class="nav-link"><i class="undefined"></i>
+  网站集合
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      Java
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/java/java.html" class="nav-link"><i class="undefined"></i>
+  Java
+</a></li><li class="dropdown-item"><!----> <a href="/blog/javaweb/javaweb.html" class="nav-link"><i class="undefined"></i>
+  JavaWeb
+</a></li><li class="dropdown-item"><!----> <a href="/blog/spring/spring.html" class="nav-link"><i class="undefined"></i>
+  Spring
+</a></li><li class="dropdown-item"><!----> <a href="/blog/springmvc/springmvc.html" class="nav-link"><i class="undefined"></i>
+  SpringMVC
+</a></li><li class="dropdown-item"><!----> <a href="/blog/mybatis/mybatis.html" class="nav-link"><i class="undefined"></i>
+  MyBatis
+</a></li><li class="dropdown-item"><!----> <a href="/blog/springboot/springboot.html" class="nav-link"><i class="undefined"></i>
+  SpringBoot
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      Spider
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/spider/说明.html" class="nav-link"><i class="undefined"></i>
+  爬虫基础
+</a></li><li class="dropdown-item"><!----> <a href="https://note.youdao.com/s/7PwmeCSn" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  Scrapy框架
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      大数据
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://www.yuque.com/liang-znkb8/wqs8e6/wz3m1g" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  环境部署
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      数据库
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/mongodb/MongoDB 介绍.html" class="nav-link"><i class="undefined"></i>
+  MongoDB
+</a></li><li class="dropdown-item"><!----> <a href="/blog/redis/五大常用数据类型.html" class="nav-link"><i class="undefined"></i>
+  Redis
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      Docker
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/docker/docker入门.html" class="nav-link"><i class="undefined"></i>
+  Docker入门
+</a></li><li class="dropdown-item"><!----> <a href="/blog/docker/docker进阶.html" class="nav-link"><i class="undefined"></i>
+  Docker进阶
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      LiAng 的博客
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/Will-Liang" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-5bb33761></div> <aside class="sidebar" data-v-5bb33761><div class="personal-info-wrapper" data-v-1fad0c41 data-v-5bb33761><!----> <h3 class="name" data-v-1fad0c41>
+    LiAng
+  </h3> <div class="num" data-v-1fad0c41><div data-v-1fad0c41><h3 data-v-1fad0c41>114</h3> <h6 data-v-1fad0c41>文章</h6></div> <div data-v-1fad0c41><h3 data-v-1fad0c41>0</h3> <h6 data-v-1fad0c41>标签</h6></div></div> <ul class="social-links" data-v-1fad0c41></ul> <hr data-v-1fad0c41></div> <nav class="nav-links"><div class="nav-item"><a href="/blog/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  TimeLine
+</a></div><div class="nav-item"><a href="/blog/websites/websites.html" class="nav-link"><i class="undefined"></i>
+  网站集合
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      Java
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/java/java.html" class="nav-link"><i class="undefined"></i>
+  Java
+</a></li><li class="dropdown-item"><!----> <a href="/blog/javaweb/javaweb.html" class="nav-link"><i class="undefined"></i>
+  JavaWeb
+</a></li><li class="dropdown-item"><!----> <a href="/blog/spring/spring.html" class="nav-link"><i class="undefined"></i>
+  Spring
+</a></li><li class="dropdown-item"><!----> <a href="/blog/springmvc/springmvc.html" class="nav-link"><i class="undefined"></i>
+  SpringMVC
+</a></li><li class="dropdown-item"><!----> <a href="/blog/mybatis/mybatis.html" class="nav-link"><i class="undefined"></i>
+  MyBatis
+</a></li><li class="dropdown-item"><!----> <a href="/blog/springboot/springboot.html" class="nav-link"><i class="undefined"></i>
+  SpringBoot
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      Spider
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/spider/说明.html" class="nav-link"><i class="undefined"></i>
+  爬虫基础
+</a></li><li class="dropdown-item"><!----> <a href="https://note.youdao.com/s/7PwmeCSn" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  Scrapy框架
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      大数据
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://www.yuque.com/liang-znkb8/wqs8e6/wz3m1g" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  环境部署
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      数据库
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/mongodb/MongoDB 介绍.html" class="nav-link"><i class="undefined"></i>
+  MongoDB
+</a></li><li class="dropdown-item"><!----> <a href="/blog/redis/五大常用数据类型.html" class="nav-link"><i class="undefined"></i>
+  Redis
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      Docker
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/docker/docker入门.html" class="nav-link"><i class="undefined"></i>
+  Docker入门
+</a></li><li class="dropdown-item"><!----> <a href="/blog/docker/docker进阶.html" class="nav-link"><i class="undefined"></i>
+  Docker进阶
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      LiAng 的博客
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/Will-Liang" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav> <ul class="sidebar-links"><li><a href="/blog/websites/websites.html" class="sidebar-link">网站集合</a></li><li><section class="sidebar-group collapsable depth-0"><a href="/blog/java/java" class="sidebar-heading clickable"><span>Java</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/blog/javaweb/javaweb" class="sidebar-heading clickable"><span>JavaWeb</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/blog/spring/spring" class="sidebar-heading clickable"><span>Spring</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/blog/springmvc/springmvc" class="sidebar-heading clickable"><span>SpringMVC</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/blog/mybatis/mybatis" class="sidebar-heading clickable"><span>MyBatis</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/blog/springboot/springboot" class="sidebar-heading clickable"><span>SpringBoot</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/blog/mongodb/MongoDB 介绍" class="sidebar-heading clickable"><span>MongoDB</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/blog/redis/五大常用数据类型" class="sidebar-heading clickable"><span>Redis</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/blog/spider/说明" class="sidebar-heading clickable open"><span>Spider</span> <span class="arrow down"></span></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/spider/说明.html" class="sidebar-link">说明</a></li><li><a href="/blog/spider/爬虫介绍.html" class="sidebar-link">爬虫介绍</a></li><li><a href="/blog/spider/urllib库.html" class="sidebar-link">urllib库</a></li><li><a href="/blog/spider/urllib库的高级用法.html" class="sidebar-link">urllib库的高级用法</a></li><li><a href="/blog/spider/URLError与Cookie.html" class="sidebar-link">URLError与Cookie</a></li><li><a href="/blog/spider/Requests库的用法.html" class="sidebar-link">Requests库的用法</a></li><li><a href="/blog/spider/数据提取-正则表达式.html" class="sidebar-link">数据提取-正则表达式</a></li><li><a href="/blog/spider/数据提取-Beautiful Soup.html" class="sidebar-link">数据提取-Beautiful Soup</a></li><li><a href="/blog/spider/数据提取-XPath.html" class="sidebar-link">数据提取-XPath</a></li><li><a href="/blog/spider/数据提取-JsonPath.html" class="sidebar-link">数据提取-JsonPath</a></li><li><a href="/blog/spider/数据提取-PyQuery.html" class="sidebar-link">数据提取-PyQuery</a></li><li><a href="/blog/spider/爬虫之多线程.html" class="sidebar-link">爬虫之多线程</a></li><li><a href="/blog/spider/selenium与scrapy结合.html" class="sidebar-link">Selenium与Scrapy结合</a></li><li><a href="/blog/spider/Selenium与PhantomJS.html" class="sidebar-link">Selenium与PhantomJS</a></li><li><a href="/blog/spider/selenium的介绍.html" class="sidebar-link">selenium的介绍</a></li><li><a href="/blog/spider/selenium定位获取标签对象并提取数据.html" class="sidebar-link">selenium定位获取标签对象并提取数据</a></li><li><a href="/blog/spider/selenium的其它使用方法.html" class="active sidebar-link">selenium的其它使用方法</a></li><li><a href="/blog/spider/Selenium 处理滚动条.html" class="sidebar-link">Selenium 处理滚动条</a></li><li><a href="/blog/spider/Python下Tesseract Ocr引擎及安装介绍.html" class="sidebar-link">Python下Tesseract Ocr引擎及安装介绍</a></li><li><a href="/blog/spider/scrapy框架.html" class="sidebar-link">Scrapy框架</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/blog/docker/docker入门" class="sidebar-heading clickable"><span>Docker</span> <span class="arrow right"></span></a> <!----></section></li></ul> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-59e6cb88 data-v-5bb33761><h3 class="title" data-v-59e6cb88>selenium的其它使用方法</h3> <!----> <label id="box" class="inputBox" data-v-59e6cb88><input type="password" value="" data-v-59e6cb88> <span data-v-59e6cb88>Konck! Knock!</span> <button data-v-59e6cb88>OK</button></label> <div class="footer" data-v-59e6cb88><span data-v-59e6cb88><i class="iconfont reco-theme" data-v-59e6cb88></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-59e6cb88>vuePress-theme-reco</a></span> <span data-v-59e6cb88><i class="iconfont reco-copyright" data-v-59e6cb88></i> <a data-v-59e6cb88><span data-v-59e6cb88>LiAng</span>
+          
+        <!---->
+        2022
+      </a></span></div></div> <div data-v-5bb33761><div data-v-5bb33761><main class="page"><section style="display:;"><div class="page-title"><h1 class="title">selenium的其它使用方法</h1> <div data-v-8a445198><i class="iconfont reco-account" data-v-8a445198><span data-v-8a445198>LiAng</span></i> <i class="iconfont reco-date" data-v-8a445198><span data-v-8a445198>2022/10/10</span></i> <!----> <!----></div></div> <div class="theme-reco-content content__default"><p><strong>知识点：</strong></p> <ul><li>掌握 selenium控制标签页的切换</li> <li>掌握 selenium控制iframe的切换</li> <li>掌握 利用selenium获取cookie的方法</li> <li>掌握 手动实现页面等待</li> <li>掌握 selenium控制浏览器执行js代码的方法</li> <li>掌握 selenium开启无界面模式</li> <li>了解 selenium使用代理ip</li> <li>了解 selenium替换user-agent</li></ul> <h2 id="_1-selenium标签页的切换"><a href="#_1-selenium标签页的切换" class="header-anchor">#</a> 1. selenium标签页的切换</h2> <blockquote><p>当selenium控制浏览器打开多个标签页时，如何控制浏览器在不同的标签页中进行切换呢？需要我们做以下两步：</p></blockquote> <ul><li><p>获取所有标签页的窗口句柄</p></li> <li><p>利用窗口句柄字切换到句柄指向的标签页</p> <ul><li>这里的窗口句柄是指：指向标签页对象的标识</li> <li><a href="https://baike.baidu.com/item/%E5%8F%A5%E6%9F%84/3527587?fr=aladdin" target="_blank" rel="noopener noreferrer">句柄<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li> <li><p>具体的方法</p> <div class="language- extra-class"><pre class="language-text"><code># 1. 获取当前所有的标签页的句柄构成的列表
+current_windows = driver.window_handles
+
+# 2. 根据标签页句柄列表索引下标进行切换
+driver.switch_to.window(current_windows[0])
+</code></pre></div></li> <li><p>参考代码示例：</p> <div class="language-python extra-class"><pre class="language-python"><code><span class="token keyword">import</span> time
+<span class="token keyword">from</span> selenium <span class="token keyword">import</span> webdriver
+
+driver <span class="token operator">=</span> webdriver<span class="token punctuation">.</span>Chrome<span class="token punctuation">(</span><span class="token punctuation">)</span>
+driver<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">&quot;https://www.baidu.com/&quot;</span><span class="token punctuation">)</span>
+
+time<span class="token punctuation">.</span>sleep<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
+driver<span class="token punctuation">.</span>find_element_by_id<span class="token punctuation">(</span><span class="token string">'kw'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>send_keys<span class="token punctuation">(</span><span class="token string">'python'</span><span class="token punctuation">)</span>
+time<span class="token punctuation">.</span>sleep<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
+driver<span class="token punctuation">.</span>find_element_by_id<span class="token punctuation">(</span><span class="token string">'su'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>click<span class="token punctuation">(</span><span class="token punctuation">)</span>
+time<span class="token punctuation">.</span>sleep<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 通过执行js来新开一个标签页</span>
+js <span class="token operator">=</span> <span class="token string">'window.open(&quot;https://www.sogou.com&quot;);'</span>
+driver<span class="token punctuation">.</span>execute_script<span class="token punctuation">(</span>js<span class="token punctuation">)</span>
+time<span class="token punctuation">.</span>sleep<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 1. 获取当前所有的窗口</span>
+windows <span class="token operator">=</span> driver<span class="token punctuation">.</span>window_handles
+
+time<span class="token punctuation">.</span>sleep<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span>
+<span class="token comment"># 2. 根据窗口索引进行切换</span>
+driver<span class="token punctuation">.</span>switch_to<span class="token punctuation">.</span>window<span class="token punctuation">(</span>windows<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+time<span class="token punctuation">.</span>sleep<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span>
+driver<span class="token punctuation">.</span>switch_to<span class="token punctuation">.</span>window<span class="token punctuation">(</span>windows<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+time<span class="token punctuation">.</span>sleep<span class="token punctuation">(</span><span class="token number">6</span><span class="token punctuation">)</span>
+driver<span class="token punctuation">.</span>quit<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre></div></li></ul> <h2 id="_2-switch-to切换frame标签"><a href="#_2-switch-to切换frame标签" class="header-anchor">#</a> 2. switch_to切换frame标签</h2> <blockquote><h5 id="iframe是html中常用的一种技术-即一个页面中嵌套了另一个网页-selenium默认是访问不了frame中的内容的-对应的解决思路是driver-switch-to-frame-frame-element-。接下来我们通过qq邮箱模拟登陆来学习这个知识点"><a href="#iframe是html中常用的一种技术-即一个页面中嵌套了另一个网页-selenium默认是访问不了frame中的内容的-对应的解决思路是driver-switch-to-frame-frame-element-。接下来我们通过qq邮箱模拟登陆来学习这个知识点" class="header-anchor">#</a> iframe是html中常用的一种技术，即一个页面中嵌套了另一个网页，selenium默认是访问不了frame中的内容的，对应的解决思路是<code>driver.switch_to.frame(frame_element)</code>。接下来我们通过qq邮箱模拟登陆来学习这个知识点</h5></blockquote> <ul><li><p>参考代码：</p> <div class="language-python extra-class"><pre class="language-python"><code><span class="token keyword">import</span> time
+<span class="token keyword">from</span> selenium <span class="token keyword">import</span> webdriver
+
+driver <span class="token operator">=</span> webdriver<span class="token punctuation">.</span>Chrome<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+url <span class="token operator">=</span> <span class="token string">'https://mail.qq.com/cgi-bin/loginpage'</span>
+driver<span class="token punctuation">.</span>get<span class="token punctuation">(</span>url<span class="token punctuation">)</span>
+time<span class="token punctuation">.</span>sleep<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span>
+
+login_frame <span class="token operator">=</span> driver<span class="token punctuation">.</span>find_element_by_id<span class="token punctuation">(</span><span class="token string">'login_frame'</span><span class="token punctuation">)</span> <span class="token comment"># 根据id定位 frame元素</span>
+driver<span class="token punctuation">.</span>switch_to<span class="token punctuation">.</span>frame<span class="token punctuation">(</span>login_frame<span class="token punctuation">)</span> <span class="token comment"># 转向到该frame中</span>
+
+driver<span class="token punctuation">.</span>find_element_by_xpath<span class="token punctuation">(</span><span class="token string">'//*[@id=&quot;u&quot;]'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>send_keys<span class="token punctuation">(</span><span class="token string">'1596930226@qq.com'</span><span class="token punctuation">)</span>
+time<span class="token punctuation">.</span>sleep<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span>
+
+driver<span class="token punctuation">.</span>find_element_by_xpath<span class="token punctuation">(</span><span class="token string">'//*[@id=&quot;p&quot;]'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>send_keys<span class="token punctuation">(</span><span class="token string">'hahamimashicuode'</span><span class="token punctuation">)</span>
+time<span class="token punctuation">.</span>sleep<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span>
+
+driver<span class="token punctuation">.</span>find_element_by_xpath<span class="token punctuation">(</span><span class="token string">'//*[@id=&quot;login_button&quot;]'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>click<span class="token punctuation">(</span><span class="token punctuation">)</span>
+time<span class="token punctuation">.</span>sleep<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span>
+
+<span class="token triple-quoted-string string">&quot;&quot;&quot;操作frame外边的元素需要切换出去&quot;&quot;&quot;</span>
+windows <span class="token operator">=</span> driver<span class="token punctuation">.</span>window_handles
+driver<span class="token punctuation">.</span>switch_to<span class="token punctuation">.</span>window<span class="token punctuation">(</span>windows<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+content <span class="token operator">=</span> driver<span class="token punctuation">.</span>find_element_by_class_name<span class="token punctuation">(</span><span class="token string">'login_pictures_title'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>text
+<span class="token keyword">print</span><span class="token punctuation">(</span>content<span class="token punctuation">)</span>
+
+driver<span class="token punctuation">.</span>quit<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre></div></li> <li><p>总结：</p> <ul><li><p>切换到定位的frame标签嵌套的页面中</p> <ul><li><code>driver.switch_to.frame(通过find_element_by函数定位的frame、iframe标签对象)</code></li></ul></li> <li><p>利用切换标签页的方式切出frame标签</p> <ul><li><div class="language- extra-class"><pre class="language-text"><code>windows = driver.window_handles
+driver.switch_to.window(windows[0])
+</code></pre></div></li></ul></li></ul></li></ul> <h2 id="_3-selenium对cookie的处理"><a href="#_3-selenium对cookie的处理" class="header-anchor">#</a> 3. selenium对cookie的处理</h2> <blockquote><p>selenium能够帮助我们处理页面中的cookie，比如获取、删除，接下来我们就学习这部分知识</p></blockquote> <h3 id="_3-1-获取cookie"><a href="#_3-1-获取cookie" class="header-anchor">#</a> 3.1 获取cookie</h3> <blockquote><p><code>driver.get_cookies()</code>返回列表，其中包含的是完整的cookie信息！不光有name、value，还有domain等cookie其他维度的信息。所以如果想要把获取的cookie信息和requests模块配合使用的话，需要转换为name、value作为键值对的cookie字典</p></blockquote> <div class="language- extra-class"><pre class="language-text"><code># 获取当前标签页的全部cookie信息
+print(driver.get_cookies())
+# 把cookie转化为字典
+cookies_dict = {cookie[‘name’]: cookie[‘value’] for cookie in driver.get_cookies()}
+</code></pre></div><h3 id="_3-2-删除cookie"><a href="#_3-2-删除cookie" class="header-anchor">#</a> 3.2 删除cookie</h3> <div class="language- extra-class"><pre class="language-text"><code>#删除一条cookie
+driver.delete_cookie(&quot;CookieName&quot;)
+
+# 删除所有的cookie
+driver.delete_all_cookies()
+</code></pre></div><h2 id="_4-selenium控制浏览器执行js代码"><a href="#_4-selenium控制浏览器执行js代码" class="header-anchor">#</a> 4. selenium控制浏览器执行js代码</h2> <blockquote><p>selenium可以让浏览器执行我们规定的js代码，运行下列代码查看运行效果</p></blockquote> <div class="language-python extra-class"><pre class="language-python"><code><span class="token keyword">import</span> time
+<span class="token keyword">from</span> selenium <span class="token keyword">import</span> webdriver
+
+driver <span class="token operator">=</span> webdriver<span class="token punctuation">.</span>Chrome<span class="token punctuation">(</span><span class="token punctuation">)</span>
+driver<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">&quot;http://www.itcast.cn/&quot;</span><span class="token punctuation">)</span>
+time<span class="token punctuation">.</span>sleep<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
+
+js <span class="token operator">=</span> <span class="token string">'window.scrollTo(0,document.body.scrollHeight)'</span> <span class="token comment"># js语句</span>
+driver<span class="token punctuation">.</span>execute_script<span class="token punctuation">(</span>js<span class="token punctuation">)</span> <span class="token comment"># 执行js的方法</span>
+
+time<span class="token punctuation">.</span>sleep<span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span>
+driver<span class="token punctuation">.</span>quit<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre></div><ul><li>执行js的方法：<code>driver.execute_script(js)</code></li></ul> <h2 id="_5-页面等待"><a href="#_5-页面等待" class="header-anchor">#</a> 5. 页面等待</h2> <blockquote><p>页面在加载的过程中需要花费时间等待网站服务器的响应，在这个过程中标签元素有可能还没有加载出来，是不可见的，如何处理这种情况呢？</p></blockquote> <ol><li>页面等待分类</li> <li>强制等待介绍</li> <li>显式等待介绍</li> <li>隐式等待介绍</li> <li>手动实现页面等待</li></ol> <h3 id="_5-1-页面等待的分类"><a href="#_5-1-页面等待的分类" class="header-anchor">#</a> 5.1 页面等待的分类</h3> <blockquote><p>首先我们就来了解以下selenium页面等待的分类</p></blockquote> <ol><li>强制等待</li> <li>隐式等待</li> <li>显式等待</li></ol> <h3 id="_5-2-强制等待-了解"><a href="#_5-2-强制等待-了解" class="header-anchor">#</a> 5.2 强制等待（了解）</h3> <ul><li>其实就是time.sleep()</li> <li>缺点时不智能，设置的时间太短，元素还没有加载出来；设置的时间太长，则会浪费时间</li></ul> <h3 id="_5-3-隐式等待"><a href="#_5-3-隐式等待" class="header-anchor">#</a> 5.3 隐式等待</h3> <ul><li><p>隐式等待针对的是元素定位，隐式等待设置了一个时间，在一段时间内判断元素是否定位成功，如果完成了，就进行下一步</p></li> <li><p>在设置的时间内没有定位成功，则会报超时加载</p></li> <li><p>示例代码</p> <div class="language- extra-class"><pre class="language-text"><code>from selenium import webdriver
+
+driver = webdriver.Chrome()  
+
+driver.implicitly_wait(10) # 隐式等待，最长等20秒  
+
+driver.get('https://www.baidu.com')
+
+driver.find_element_by_xpath()
+
+</code></pre></div></li></ul> <h3 id="_5-4-显式等待-了解"><a href="#_5-4-显式等待-了解" class="header-anchor">#</a> 5.4 显式等待（了解）</h3> <ul><li><p>每经过多少秒就查看一次等待条件是否达成，如果达成就停止等待，继续执行后续代码</p></li> <li><p>如果没有达成就继续等待直到超过规定的时间后，报超时异常</p></li> <li><p>示例代码</p> <div class="language- extra-class"><pre class="language-text"><code>from selenium import webdriver  
+from selenium.webdriver.support.wait import WebDriverWait  
+from selenium.webdriver.support import expected_conditions as EC  
+from selenium.webdriver.common.by import By 
+
+driver = webdriver.Chrome()
+
+driver.get('https://www.baidu.com')
+
+# 显式等待
+WebDriverWait(driver, 20, 0.5).until(
+    EC.presence_of_element_located((By.LINK_TEXT, '好123')))  
+# 参数20表示最长等待20秒
+# 参数0.5表示0.5秒检查一次规定的标签是否存在
+# EC.presence_of_element_located((By.LINK_TEXT, '好123')) 表示通过链接文本内容定位标签
+# 每0.5秒一次检查，通过链接文本内容定位标签是否存在，如果存在就向下继续执行；如果不存在，直到20秒上限就抛出异常
+
+print(driver.find_element_by_link_text('好123').get_attribute('href'))
+driver.quit() 
+</code></pre></div></li></ul> <h3 id="_5-5-手动实现页面等待"><a href="#_5-5-手动实现页面等待" class="header-anchor">#</a> 5.5 手动实现页面等待</h3> <blockquote><p>在了解了隐式等待和显式等待以及强制等待后，我们发现并没有一种通用的方法来解决页面等待的问题，比如“页面需要滑动才能触发ajax异步加载”的场景，那么接下来我们就以<a href="https://www.taobao.com" target="_blank" rel="noopener noreferrer">淘宝网首页<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>为例，手动实现页面等待</p></blockquote> <ul><li>原理：
+<ul><li>利用强制等待和显式等待的思路来手动实现</li> <li>不停的判断或有次数限制的判断某一个标签对象是否加载完毕（是否存在）</li></ul></li> <li>实现代码如下：</li></ul> <div class="language- extra-class"><pre class="language-text"><code>import time
+from selenium import webdriver
+driver = webdriver.Chrome('/home/worker/Desktop/driver/chromedriver')
+
+driver.get('https://www.taobao.com/')
+time.sleep(1)
+
+# i = 0
+# while True:
+for i in range(10):
+    i += 1
+    try:
+        time.sleep(3)
+        element = driver.find_element_by_xpath('//div[@class=&quot;shop-inner&quot;]/h3[1]/a')
+        print(element.get_attribute('href'))
+        break
+    except:
+        js = 'window.scrollTo(0, {})'.format(i*500) # js语句
+        driver.execute_script(js) # 执行js的方法
+driver.quit()
+</code></pre></div><h2 id="_6-selenium开启无界面模式"><a href="#_6-selenium开启无界面模式" class="header-anchor">#</a> 6. selenium开启无界面模式</h2> <blockquote><p>绝大多数服务器是没有界面的，selenium控制谷歌浏览器也是存在无界面模式的，这一小节我们就来学习如何开启无界面模式（又称之为无头模式）</p></blockquote> <ul><li>开启无界面模式的方法
+<ul><li>实例化配置对象
+<ul><li><code>options = webdriver.ChromeOptions()</code></li></ul></li> <li>配置对象添加开启无界面模式的命令
+<ul><li><code>options.add_argument(&quot;--headless&quot;)</code></li></ul></li> <li>配置对象添加禁用gpu的命令
+<ul><li><code>options.add_argument(&quot;--disable-gpu&quot;)</code></li></ul></li> <li>实例化带有配置对象的driver对象
+<ul><li><code>driver = webdriver.Chrome(chrome_options=options)</code></li></ul></li></ul></li> <li>注意：macos中chrome浏览器59+版本，Linux中57+版本才能使用无界面模式！</li> <li>参考代码如下：</li></ul> <div class="language-python extra-class"><pre class="language-python"><code><span class="token keyword">from</span> selenium <span class="token keyword">import</span> webdriver
+
+options <span class="token operator">=</span> webdriver<span class="token punctuation">.</span>ChromeOptions<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment"># 创建一个配置对象</span>
+options<span class="token punctuation">.</span>add_argument<span class="token punctuation">(</span><span class="token string">&quot;--headless&quot;</span><span class="token punctuation">)</span> <span class="token comment"># 开启无界面模式</span>
+options<span class="token punctuation">.</span>add_argument<span class="token punctuation">(</span><span class="token string">&quot;--disable-gpu&quot;</span><span class="token punctuation">)</span> <span class="token comment"># 禁用gpu</span>
+
+<span class="token comment"># options.set_headles() # 无界面模式的另外一种开启方式</span>
+driver <span class="token operator">=</span> webdriver<span class="token punctuation">.</span>Chrome<span class="token punctuation">(</span>chrome_options<span class="token operator">=</span>options<span class="token punctuation">)</span> <span class="token comment"># 实例化带有配置的driver对象</span>
+
+driver<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">'http://www.itcast.cn'</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>driver<span class="token punctuation">.</span>title<span class="token punctuation">)</span>
+driver<span class="token punctuation">.</span>quit<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre></div><h2 id="_7-selenium使用代理ip"><a href="#_7-selenium使用代理ip" class="header-anchor">#</a> 7. selenium使用代理ip</h2> <blockquote><p>selenium控制浏览器也是可以使用代理ip的！</p></blockquote> <ul><li><p>使用代理ip的方法</p> <ul><li>实例化配置对象
+<ul><li><code>options = webdriver.ChromeOptions()</code></li></ul></li> <li>配置对象添加使用代理ip的命令
+<ul><li><code>options.add_argument('--proxy-server=http://202.20.16.82:9527')</code></li></ul></li> <li>实例化带有配置对象的driver对象
+<ul><li><code>driver = webdriver.Chrome('./chromedriver', chrome_options=options)</code></li></ul></li></ul></li> <li><p>参考代码如下：</p> <div class="language-python extra-class"><pre class="language-python"><code><span class="token keyword">from</span> selenium <span class="token keyword">import</span> webdriver
+
+options <span class="token operator">=</span> webdriver<span class="token punctuation">.</span>ChromeOptions<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment"># 创建一个配置对象</span>
+options<span class="token punctuation">.</span>add_argument<span class="token punctuation">(</span><span class="token string">'--proxy-server=http://202.20.16.82:9527'</span><span class="token punctuation">)</span> <span class="token comment"># 使用代理ip</span>
+
+driver <span class="token operator">=</span> webdriver<span class="token punctuation">.</span>Chrome<span class="token punctuation">(</span>chrome_options<span class="token operator">=</span>options<span class="token punctuation">)</span> <span class="token comment"># 实例化带有配置的driver对象</span>
+
+driver<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">'http://www.itcast.cn'</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>driver<span class="token punctuation">.</span>title<span class="token punctuation">)</span>
+driver<span class="token punctuation">.</span>quit<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre></div></li></ul> <h2 id="_8-selenium替换user-agent"><a href="#_8-selenium替换user-agent" class="header-anchor">#</a> 8. selenium替换user-agent</h2> <blockquote><p>selenium控制谷歌浏览器时，User-Agent默认是谷歌浏览器的，这一小节我们就来学习使用不同的User-Agent</p></blockquote> <ul><li><p>替换user-agent的方法</p> <ul><li>实例化配置对象
+<ul><li><code>options = webdriver.ChromeOptions()</code></li></ul></li> <li>配置对象添加替换UA的命令
+<ul><li><code>options.add_argument('--user-agent=Mozilla/5.0 HAHA')</code></li></ul></li> <li>实例化带有配置对象的driver对象
+<ul><li><code>driver = webdriver.Chrome('./chromedriver', chrome_options=options)</code></li></ul></li></ul></li> <li><p>参考代码如下：</p> <div class="language-python extra-class"><pre class="language-python"><code><span class="token keyword">from</span> selenium <span class="token keyword">import</span> webdriver
+
+options <span class="token operator">=</span> webdriver<span class="token punctuation">.</span>ChromeOptions<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment"># 创建一个配置对象</span>
+options<span class="token punctuation">.</span>add_argument<span class="token punctuation">(</span><span class="token string">'--user-agent=Mozilla/5.0 HAHA'</span><span class="token punctuation">)</span> <span class="token comment"># 替换User-Agent</span>
+
+driver <span class="token operator">=</span> webdriver<span class="token punctuation">.</span>Chrome<span class="token punctuation">(</span><span class="token string">'./chromedriver'</span><span class="token punctuation">,</span> chrome_options<span class="token operator">=</span>options<span class="token punctuation">)</span>
+
+driver<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">'http://www.itcast.cn'</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>driver<span class="token punctuation">.</span>title<span class="token punctuation">)</span>
+driver<span class="token punctuation">.</span>quit<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre></div></li></ul></div></section> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev"><a href="/blog/spider/selenium定位获取标签对象并提取数据.html" class="prev">
+          selenium定位获取标签对象并提取数据
+        </a></span> <span class="next"><a href="/blog/spider/Selenium 处理滚动条.html">
+          Selenium 处理滚动条
+        </a></span></p></div> <div class="comments-wrapper"><!----></div> <ul class="side-bar sub-sidebar-wrapper" style="width:12rem;" data-v-ac050c62><li class="level-2" data-v-ac050c62><a href="/blog/spider/selenium%E7%9A%84%E5%85%B6%E5%AE%83%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95.html#_1-selenium标签页的切换" class="sidebar-link reco-side-_1-selenium标签页的切换" data-v-ac050c62>1. selenium标签页的切换</a></li><li class="level-2" data-v-ac050c62><a href="/blog/spider/selenium%E7%9A%84%E5%85%B6%E5%AE%83%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95.html#_2-switch-to切换frame标签" class="sidebar-link reco-side-_2-switch-to切换frame标签" data-v-ac050c62>2. switch_to切换frame标签</a></li><li class="level-2" data-v-ac050c62><a href="/blog/spider/selenium%E7%9A%84%E5%85%B6%E5%AE%83%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95.html#_3-selenium对cookie的处理" class="sidebar-link reco-side-_3-selenium对cookie的处理" data-v-ac050c62>3. selenium对cookie的处理</a></li><li class="level-3" data-v-ac050c62><a href="/blog/spider/selenium%E7%9A%84%E5%85%B6%E5%AE%83%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95.html#_3-1-获取cookie" class="sidebar-link reco-side-_3-1-获取cookie" data-v-ac050c62>3.1 获取cookie</a></li><li class="level-3" data-v-ac050c62><a href="/blog/spider/selenium%E7%9A%84%E5%85%B6%E5%AE%83%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95.html#_3-2-删除cookie" class="sidebar-link reco-side-_3-2-删除cookie" data-v-ac050c62>3.2 删除cookie</a></li><li class="level-2" data-v-ac050c62><a href="/blog/spider/selenium%E7%9A%84%E5%85%B6%E5%AE%83%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95.html#_4-selenium控制浏览器执行js代码" class="sidebar-link reco-side-_4-selenium控制浏览器执行js代码" data-v-ac050c62>4. selenium控制浏览器执行js代码</a></li><li class="level-2" data-v-ac050c62><a href="/blog/spider/selenium%E7%9A%84%E5%85%B6%E5%AE%83%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95.html#_5-页面等待" class="sidebar-link reco-side-_5-页面等待" data-v-ac050c62>5. 页面等待</a></li><li class="level-3" data-v-ac050c62><a href="/blog/spider/selenium%E7%9A%84%E5%85%B6%E5%AE%83%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95.html#_5-1-页面等待的分类" class="sidebar-link reco-side-_5-1-页面等待的分类" data-v-ac050c62>5.1 页面等待的分类</a></li><li class="level-3" data-v-ac050c62><a href="/blog/spider/selenium%E7%9A%84%E5%85%B6%E5%AE%83%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95.html#_5-2-强制等待-了解" class="sidebar-link reco-side-_5-2-强制等待-了解" data-v-ac050c62>5.2 强制等待（了解）</a></li><li class="level-3" data-v-ac050c62><a href="/blog/spider/selenium%E7%9A%84%E5%85%B6%E5%AE%83%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95.html#_5-3-隐式等待" class="sidebar-link reco-side-_5-3-隐式等待" data-v-ac050c62>5.3 隐式等待</a></li><li class="level-3" data-v-ac050c62><a href="/blog/spider/selenium%E7%9A%84%E5%85%B6%E5%AE%83%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95.html#_5-4-显式等待-了解" class="sidebar-link reco-side-_5-4-显式等待-了解" data-v-ac050c62>5.4 显式等待（了解）</a></li><li class="level-3" data-v-ac050c62><a href="/blog/spider/selenium%E7%9A%84%E5%85%B6%E5%AE%83%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95.html#_5-5-手动实现页面等待" class="sidebar-link reco-side-_5-5-手动实现页面等待" data-v-ac050c62>5.5 手动实现页面等待</a></li><li class="level-2" data-v-ac050c62><a href="/blog/spider/selenium%E7%9A%84%E5%85%B6%E5%AE%83%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95.html#_6-selenium开启无界面模式" class="sidebar-link reco-side-_6-selenium开启无界面模式" data-v-ac050c62>6. selenium开启无界面模式</a></li><li class="level-2" data-v-ac050c62><a href="/blog/spider/selenium%E7%9A%84%E5%85%B6%E5%AE%83%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95.html#_7-selenium使用代理ip" class="sidebar-link reco-side-_7-selenium使用代理ip" data-v-ac050c62>7. selenium使用代理ip</a></li><li class="level-2" data-v-ac050c62><a href="/blog/spider/selenium%E7%9A%84%E5%85%B6%E5%AE%83%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95.html#_8-selenium替换user-agent" class="sidebar-link reco-side-_8-selenium替换user-agent" data-v-ac050c62>8. selenium替换user-agent</a></li></ul></main></div> <!----></div></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-c6073ba8 data-v-c6073ba8><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-c6073ba8><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-c6073ba8></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-c6073ba8></path></svg></div></div></div>
+    <script src="/blog/assets/js/app.3330eed2.js" defer></script><script src="/blog/assets/js/3.6c5b35bb.js" defer></script><script src="/blog/assets/js/1.504525ea.js" defer></script><script src="/blog/assets/js/75.b34e72e6.js" defer></script>
+  </body>
+</html>

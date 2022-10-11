@@ -1,0 +1,1025 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Docker进阶 | LiAng的博客</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <link rel="icon" href="logo.png">
+    <meta name="description" content="使用VuePress搭建的个人博客">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    
+    <link rel="preload" href="/blog/assets/css/0.styles.20774dd8.css" as="style"><link rel="preload" href="/blog/assets/js/app.3330eed2.js" as="script"><link rel="preload" href="/blog/assets/js/3.6c5b35bb.js" as="script"><link rel="preload" href="/blog/assets/js/1.504525ea.js" as="script"><link rel="preload" href="/blog/assets/js/12.c28da1fe.js" as="script"><link rel="prefetch" href="/blog/assets/js/10.ae134eec.js"><link rel="prefetch" href="/blog/assets/js/100.f494bb12.js"><link rel="prefetch" href="/blog/assets/js/101.1abed729.js"><link rel="prefetch" href="/blog/assets/js/102.3dae5b73.js"><link rel="prefetch" href="/blog/assets/js/103.d4c1df48.js"><link rel="prefetch" href="/blog/assets/js/104.97769664.js"><link rel="prefetch" href="/blog/assets/js/105.e1d4b509.js"><link rel="prefetch" href="/blog/assets/js/106.d2de4d87.js"><link rel="prefetch" href="/blog/assets/js/107.32eb9a4b.js"><link rel="prefetch" href="/blog/assets/js/108.6176ba6f.js"><link rel="prefetch" href="/blog/assets/js/109.c2517b07.js"><link rel="prefetch" href="/blog/assets/js/11.3ad7e7ee.js"><link rel="prefetch" href="/blog/assets/js/110.5473f89e.js"><link rel="prefetch" href="/blog/assets/js/111.e5313fb6.js"><link rel="prefetch" href="/blog/assets/js/112.45abac2a.js"><link rel="prefetch" href="/blog/assets/js/113.2529321a.js"><link rel="prefetch" href="/blog/assets/js/114.aecf45e8.js"><link rel="prefetch" href="/blog/assets/js/115.7bfd8d11.js"><link rel="prefetch" href="/blog/assets/js/116.a8923bc8.js"><link rel="prefetch" href="/blog/assets/js/117.eb510836.js"><link rel="prefetch" href="/blog/assets/js/118.2d9e2dde.js"><link rel="prefetch" href="/blog/assets/js/119.fbd3d7d8.js"><link rel="prefetch" href="/blog/assets/js/120.44e6da3c.js"><link rel="prefetch" href="/blog/assets/js/121.fe8b1fbf.js"><link rel="prefetch" href="/blog/assets/js/122.77d14a10.js"><link rel="prefetch" href="/blog/assets/js/123.9e4f36b3.js"><link rel="prefetch" href="/blog/assets/js/124.e32c3fbc.js"><link rel="prefetch" href="/blog/assets/js/125.40820a9c.js"><link rel="prefetch" href="/blog/assets/js/13.3bfcea68.js"><link rel="prefetch" href="/blog/assets/js/14.5e91563f.js"><link rel="prefetch" href="/blog/assets/js/15.bbe624ea.js"><link rel="prefetch" href="/blog/assets/js/16.e3f08a8c.js"><link rel="prefetch" href="/blog/assets/js/17.266026b8.js"><link rel="prefetch" href="/blog/assets/js/18.98c4e036.js"><link rel="prefetch" href="/blog/assets/js/19.af649a7d.js"><link rel="prefetch" href="/blog/assets/js/20.c8f3d118.js"><link rel="prefetch" href="/blog/assets/js/21.0b934d92.js"><link rel="prefetch" href="/blog/assets/js/22.80702221.js"><link rel="prefetch" href="/blog/assets/js/23.5b00e6a3.js"><link rel="prefetch" href="/blog/assets/js/24.93187db2.js"><link rel="prefetch" href="/blog/assets/js/25.a3c37d42.js"><link rel="prefetch" href="/blog/assets/js/26.bf8dd5ea.js"><link rel="prefetch" href="/blog/assets/js/27.2af582fb.js"><link rel="prefetch" href="/blog/assets/js/28.8b9db5a9.js"><link rel="prefetch" href="/blog/assets/js/29.f707832d.js"><link rel="prefetch" href="/blog/assets/js/30.f8893186.js"><link rel="prefetch" href="/blog/assets/js/31.b38a6988.js"><link rel="prefetch" href="/blog/assets/js/32.a64f03d4.js"><link rel="prefetch" href="/blog/assets/js/33.3efca3c8.js"><link rel="prefetch" href="/blog/assets/js/34.0efe9205.js"><link rel="prefetch" href="/blog/assets/js/35.5257f9cf.js"><link rel="prefetch" href="/blog/assets/js/36.29894302.js"><link rel="prefetch" href="/blog/assets/js/37.835dd643.js"><link rel="prefetch" href="/blog/assets/js/38.a56eba01.js"><link rel="prefetch" href="/blog/assets/js/39.8373e53f.js"><link rel="prefetch" href="/blog/assets/js/4.f2ad145d.js"><link rel="prefetch" href="/blog/assets/js/40.cc877510.js"><link rel="prefetch" href="/blog/assets/js/41.64bff9da.js"><link rel="prefetch" href="/blog/assets/js/42.6c7528bd.js"><link rel="prefetch" href="/blog/assets/js/43.a2838eac.js"><link rel="prefetch" href="/blog/assets/js/44.f13486cd.js"><link rel="prefetch" href="/blog/assets/js/45.93f5b70b.js"><link rel="prefetch" href="/blog/assets/js/46.6f1eb6fb.js"><link rel="prefetch" href="/blog/assets/js/47.aca3e06b.js"><link rel="prefetch" href="/blog/assets/js/48.a386cbe0.js"><link rel="prefetch" href="/blog/assets/js/49.d845e320.js"><link rel="prefetch" href="/blog/assets/js/5.acb9c427.js"><link rel="prefetch" href="/blog/assets/js/50.0db2f824.js"><link rel="prefetch" href="/blog/assets/js/51.e9ed29e0.js"><link rel="prefetch" href="/blog/assets/js/52.ed09b025.js"><link rel="prefetch" href="/blog/assets/js/53.2793a02e.js"><link rel="prefetch" href="/blog/assets/js/54.98d281cf.js"><link rel="prefetch" href="/blog/assets/js/55.4a63e32d.js"><link rel="prefetch" href="/blog/assets/js/56.8c087e30.js"><link rel="prefetch" href="/blog/assets/js/57.20cb7cfb.js"><link rel="prefetch" href="/blog/assets/js/58.6250e7c1.js"><link rel="prefetch" href="/blog/assets/js/59.96395c59.js"><link rel="prefetch" href="/blog/assets/js/6.bf0398c6.js"><link rel="prefetch" href="/blog/assets/js/60.6bcb3992.js"><link rel="prefetch" href="/blog/assets/js/61.734a9217.js"><link rel="prefetch" href="/blog/assets/js/62.95dd7db0.js"><link rel="prefetch" href="/blog/assets/js/63.0c874190.js"><link rel="prefetch" href="/blog/assets/js/64.e0839af9.js"><link rel="prefetch" href="/blog/assets/js/65.dd798114.js"><link rel="prefetch" href="/blog/assets/js/66.8f5b96ca.js"><link rel="prefetch" href="/blog/assets/js/67.dfaee60f.js"><link rel="prefetch" href="/blog/assets/js/68.c9ee3fc9.js"><link rel="prefetch" href="/blog/assets/js/69.b001fe83.js"><link rel="prefetch" href="/blog/assets/js/7.36bc8eb5.js"><link rel="prefetch" href="/blog/assets/js/70.3a3581f4.js"><link rel="prefetch" href="/blog/assets/js/71.04b6be3b.js"><link rel="prefetch" href="/blog/assets/js/72.641865c3.js"><link rel="prefetch" href="/blog/assets/js/73.ac89690d.js"><link rel="prefetch" href="/blog/assets/js/74.c479d3a1.js"><link rel="prefetch" href="/blog/assets/js/75.b34e72e6.js"><link rel="prefetch" href="/blog/assets/js/76.c71b8c70.js"><link rel="prefetch" href="/blog/assets/js/77.8a3be04d.js"><link rel="prefetch" href="/blog/assets/js/78.96d54f80.js"><link rel="prefetch" href="/blog/assets/js/79.6da440db.js"><link rel="prefetch" href="/blog/assets/js/8.43b324b6.js"><link rel="prefetch" href="/blog/assets/js/80.447c0acc.js"><link rel="prefetch" href="/blog/assets/js/81.b9419c6a.js"><link rel="prefetch" href="/blog/assets/js/82.6dd18e6e.js"><link rel="prefetch" href="/blog/assets/js/83.17c3a465.js"><link rel="prefetch" href="/blog/assets/js/84.8495d717.js"><link rel="prefetch" href="/blog/assets/js/85.fbb83329.js"><link rel="prefetch" href="/blog/assets/js/86.fca7db54.js"><link rel="prefetch" href="/blog/assets/js/87.8bd35813.js"><link rel="prefetch" href="/blog/assets/js/88.bdc74531.js"><link rel="prefetch" href="/blog/assets/js/89.84f1ff99.js"><link rel="prefetch" href="/blog/assets/js/9.19cd0a47.js"><link rel="prefetch" href="/blog/assets/js/90.31a729c2.js"><link rel="prefetch" href="/blog/assets/js/91.b7f04c1a.js"><link rel="prefetch" href="/blog/assets/js/92.849d7d72.js"><link rel="prefetch" href="/blog/assets/js/93.2927031e.js"><link rel="prefetch" href="/blog/assets/js/94.96ea5dac.js"><link rel="prefetch" href="/blog/assets/js/95.f7b253d0.js"><link rel="prefetch" href="/blog/assets/js/96.79b1e320.js"><link rel="prefetch" href="/blog/assets/js/97.4630fde6.js"><link rel="prefetch" href="/blog/assets/js/98.0f7731f3.js"><link rel="prefetch" href="/blog/assets/js/99.cc7e1c06.js">
+    <link rel="stylesheet" href="/blog/assets/css/0.styles.20774dd8.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container" data-v-5bb33761><div data-v-5bb33761><div class="password-shadow password-wrapper-out" style="display:none;" data-v-59e6cb88 data-v-5bb33761 data-v-5bb33761><h3 class="title" data-v-59e6cb88>LiAng的博客</h3> <p class="description" data-v-59e6cb88>使用VuePress搭建的个人博客</p> <label id="box" class="inputBox" data-v-59e6cb88><input type="password" value="" data-v-59e6cb88> <span data-v-59e6cb88>Konck! Knock!</span> <button data-v-59e6cb88>OK</button></label> <div class="footer" data-v-59e6cb88><span data-v-59e6cb88><i class="iconfont reco-theme" data-v-59e6cb88></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-59e6cb88>vuePress-theme-reco</a></span> <span data-v-59e6cb88><i class="iconfont reco-copyright" data-v-59e6cb88></i> <a data-v-59e6cb88><span data-v-59e6cb88>LiAng</span>
+          
+        <!---->
+        2022
+      </a></span></div></div> <div class="hide" data-v-5bb33761><header class="navbar" data-v-5bb33761><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog/" class="home-link router-link-active"><!----> <span class="site-name">LiAng的博客</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/blog/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  TimeLine
+</a></div><div class="nav-item"><a href="/blog/websites/websites.html" class="nav-link"><i class="undefined"></i>
+  网站集合
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      Java
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/java/java.html" class="nav-link"><i class="undefined"></i>
+  Java
+</a></li><li class="dropdown-item"><!----> <a href="/blog/javaweb/javaweb.html" class="nav-link"><i class="undefined"></i>
+  JavaWeb
+</a></li><li class="dropdown-item"><!----> <a href="/blog/spring/spring.html" class="nav-link"><i class="undefined"></i>
+  Spring
+</a></li><li class="dropdown-item"><!----> <a href="/blog/springmvc/springmvc.html" class="nav-link"><i class="undefined"></i>
+  SpringMVC
+</a></li><li class="dropdown-item"><!----> <a href="/blog/mybatis/mybatis.html" class="nav-link"><i class="undefined"></i>
+  MyBatis
+</a></li><li class="dropdown-item"><!----> <a href="/blog/springboot/springboot.html" class="nav-link"><i class="undefined"></i>
+  SpringBoot
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      Spider
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/spider/说明.html" class="nav-link"><i class="undefined"></i>
+  爬虫基础
+</a></li><li class="dropdown-item"><!----> <a href="https://note.youdao.com/s/7PwmeCSn" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  Scrapy框架
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      大数据
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://www.yuque.com/liang-znkb8/wqs8e6/wz3m1g" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  环境部署
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      数据库
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/mongodb/MongoDB 介绍.html" class="nav-link"><i class="undefined"></i>
+  MongoDB
+</a></li><li class="dropdown-item"><!----> <a href="/blog/redis/五大常用数据类型.html" class="nav-link"><i class="undefined"></i>
+  Redis
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      Docker
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/docker/docker入门.html" class="nav-link"><i class="undefined"></i>
+  Docker入门
+</a></li><li class="dropdown-item"><!----> <a href="/blog/docker/docker进阶.html" class="nav-link"><i class="undefined"></i>
+  Docker进阶
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      LiAng 的博客
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/Will-Liang" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-5bb33761></div> <aside class="sidebar" data-v-5bb33761><div class="personal-info-wrapper" data-v-1fad0c41 data-v-5bb33761><!----> <h3 class="name" data-v-1fad0c41>
+    LiAng
+  </h3> <div class="num" data-v-1fad0c41><div data-v-1fad0c41><h3 data-v-1fad0c41>114</h3> <h6 data-v-1fad0c41>文章</h6></div> <div data-v-1fad0c41><h3 data-v-1fad0c41>0</h3> <h6 data-v-1fad0c41>标签</h6></div></div> <ul class="social-links" data-v-1fad0c41></ul> <hr data-v-1fad0c41></div> <nav class="nav-links"><div class="nav-item"><a href="/blog/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  TimeLine
+</a></div><div class="nav-item"><a href="/blog/websites/websites.html" class="nav-link"><i class="undefined"></i>
+  网站集合
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      Java
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/java/java.html" class="nav-link"><i class="undefined"></i>
+  Java
+</a></li><li class="dropdown-item"><!----> <a href="/blog/javaweb/javaweb.html" class="nav-link"><i class="undefined"></i>
+  JavaWeb
+</a></li><li class="dropdown-item"><!----> <a href="/blog/spring/spring.html" class="nav-link"><i class="undefined"></i>
+  Spring
+</a></li><li class="dropdown-item"><!----> <a href="/blog/springmvc/springmvc.html" class="nav-link"><i class="undefined"></i>
+  SpringMVC
+</a></li><li class="dropdown-item"><!----> <a href="/blog/mybatis/mybatis.html" class="nav-link"><i class="undefined"></i>
+  MyBatis
+</a></li><li class="dropdown-item"><!----> <a href="/blog/springboot/springboot.html" class="nav-link"><i class="undefined"></i>
+  SpringBoot
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      Spider
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/spider/说明.html" class="nav-link"><i class="undefined"></i>
+  爬虫基础
+</a></li><li class="dropdown-item"><!----> <a href="https://note.youdao.com/s/7PwmeCSn" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  Scrapy框架
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      大数据
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://www.yuque.com/liang-znkb8/wqs8e6/wz3m1g" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  环境部署
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      数据库
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/mongodb/MongoDB 介绍.html" class="nav-link"><i class="undefined"></i>
+  MongoDB
+</a></li><li class="dropdown-item"><!----> <a href="/blog/redis/五大常用数据类型.html" class="nav-link"><i class="undefined"></i>
+  Redis
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      Docker
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/docker/docker入门.html" class="nav-link"><i class="undefined"></i>
+  Docker入门
+</a></li><li class="dropdown-item"><!----> <a href="/blog/docker/docker进阶.html" class="nav-link"><i class="undefined"></i>
+  Docker进阶
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      LiAng 的博客
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/Will-Liang" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav> <ul class="sidebar-links"><li><a href="/blog/websites/websites.html" class="sidebar-link">网站集合</a></li><li><section class="sidebar-group collapsable depth-0"><a href="/blog/java/java" class="sidebar-heading clickable"><span>Java</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/blog/javaweb/javaweb" class="sidebar-heading clickable"><span>JavaWeb</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/blog/spring/spring" class="sidebar-heading clickable"><span>Spring</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/blog/springmvc/springmvc" class="sidebar-heading clickable"><span>SpringMVC</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/blog/mybatis/mybatis" class="sidebar-heading clickable"><span>MyBatis</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/blog/springboot/springboot" class="sidebar-heading clickable"><span>SpringBoot</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/blog/mongodb/MongoDB 介绍" class="sidebar-heading clickable"><span>MongoDB</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/blog/redis/五大常用数据类型" class="sidebar-heading clickable"><span>Redis</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/blog/spider/说明" class="sidebar-heading clickable"><span>Spider</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/blog/docker/docker入门" class="sidebar-heading clickable open"><span>Docker</span> <span class="arrow down"></span></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/docker/docker入门.html" class="sidebar-link">Docker入门</a></li><li><a href="/blog/docker/docker进阶.html" class="active sidebar-link">Docker进阶</a></li></ul></section></li></ul> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-59e6cb88 data-v-5bb33761><h3 class="title" data-v-59e6cb88>Docker进阶</h3> <!----> <label id="box" class="inputBox" data-v-59e6cb88><input type="password" value="" data-v-59e6cb88> <span data-v-59e6cb88>Konck! Knock!</span> <button data-v-59e6cb88>OK</button></label> <div class="footer" data-v-59e6cb88><span data-v-59e6cb88><i class="iconfont reco-theme" data-v-59e6cb88></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-59e6cb88>vuePress-theme-reco</a></span> <span data-v-59e6cb88><i class="iconfont reco-copyright" data-v-59e6cb88></i> <a data-v-59e6cb88><span data-v-59e6cb88>LiAng</span>
+          
+        <!---->
+        2022
+      </a></span></div></div> <div data-v-5bb33761><div data-v-5bb33761><main class="page"><section style="display:;"><div class="page-title"><h1 class="title">Docker进阶</h1> <div data-v-8a445198><i class="iconfont reco-account" data-v-8a445198><span data-v-8a445198>LiAng</span></i> <i class="iconfont reco-date" data-v-8a445198><span data-v-8a445198>2022/8/27</span></i> <!----> <!----></div></div> <div class="theme-reco-content content__default"><h2 id="容器数据卷"><a href="#容器数据卷" class="header-anchor">#</a> 容器数据卷</h2> <h3 id="介绍"><a href="#介绍" class="header-anchor">#</a> 介绍</h3> <p>Docker将运用与运行的环境打包形成容器运行， Docker容器产生的数据，如果不通过docker commit生成新的镜像，使得数据做为镜像的一部分保存下来， 那么当容器删除后，数据自然也就没有了。 为了能保存数据在Docker中我们使用卷。</p> <p>卷就是目录或文件，存在于一个或多个容器中，由Docker挂载到容器，但卷不属于联合文件系统（Union FileSystem），因此能够绕过联合文件系统提供一些用于持续存储或共享数据的特性。</p> <p>数据卷的特点:</p> <ol><li><p>数据卷可在容器之间共享或重用数据</p></li> <li><p>卷中的更改可以直接生效</p></li> <li><p>数据卷中的更改不会包含在镜像的更新中</p></li> <li><p>数据卷的生命周期一直持续到没有容器使用它为止</p></li></ol> <p><img src="/blog/docker/image-20220823095408955.png" alt="image-20220823095408955"></p> <h3 id="简单使用"><a href="#简单使用" class="header-anchor">#</a> 简单使用</h3> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token comment"># 直接使用命令来挂载 -v</span>
+<span class="token function">docker</span> run -it -v 主机内目录:容器内目录 镜像名/id
+
+<span class="token punctuation">[</span>root@Docker ~<span class="token punctuation">]</span><span class="token comment"># cd /home</span>
+<span class="token punctuation">[</span>root@Docker home<span class="token punctuation">]</span><span class="token comment"># ls</span>
+lzw  test.java
+<span class="token punctuation">[</span>root@Docker home<span class="token punctuation">]</span><span class="token comment"># docker run -it -v /home/ceshi:/home centos /bin/bash</span>
+<span class="token punctuation">[</span>root@Docker ceshi<span class="token punctuation">]</span><span class="token comment"># docker inspect d1447b4d5d49</span>
+。。。
+		<span class="token string">&quot;Mounts&quot;</span><span class="token builtin class-name">:</span> <span class="token punctuation">[</span>
+            <span class="token punctuation">{</span>
+                <span class="token string">&quot;Type&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;bind&quot;</span>,
+                <span class="token string">&quot;Source&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;/home/ceshi&quot;</span>,<span class="token comment"># 主机内地址</span>
+                <span class="token string">&quot;Destination&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;/home&quot;</span>, <span class="token comment"># docekr容器内地址</span>
+                <span class="token string">&quot;Mode&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;&quot;</span>,
+                <span class="token string">&quot;RW&quot;</span><span class="token builtin class-name">:</span> true,
+                <span class="token string">&quot;Propagation&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;rprivate&quot;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">]</span>,
+。。。
+
+<span class="token comment"># 容器内</span>
+<span class="token punctuation">[</span>root@d1447b4d5d49 /<span class="token punctuation">]</span><span class="token comment"># cd /home</span>
+<span class="token punctuation">[</span>root@d1447b4d5d49 home<span class="token punctuation">]</span><span class="token comment"># ls</span>
+<span class="token punctuation">[</span>root@d1447b4d5d49 home<span class="token punctuation">]</span><span class="token comment"># touch test.java</span>
+
+<span class="token comment"># 容器外</span>
+<span class="token punctuation">[</span>root@Docker ceshi<span class="token punctuation">]</span><span class="token comment"># ls</span>
+test.java
+
+<span class="token comment"># 容器内 停止容器</span>
+<span class="token punctuation">[</span>root@d1447b4d5d49 home<span class="token punctuation">]</span><span class="token comment"># exit</span>
+<span class="token builtin class-name">exit</span>
+
+<span class="token comment"># 容器外 宿主机新增/修改文件</span>
+<span class="token punctuation">[</span>root@Docker ceshi<span class="token punctuation">]</span><span class="token comment"># docker ps</span>
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+<span class="token punctuation">[</span>root@Docker ceshi<span class="token punctuation">]</span><span class="token comment"># vim test2.java</span>
+Hello linux update
+
+<span class="token comment"># 容器内 启动容器，容器内数据依旧是同步的</span>
+<span class="token punctuation">[</span>root@Docker home<span class="token punctuation">]</span><span class="token comment"># docker start d1447b4d5d49</span>
+d1447b4d5d49
+<span class="token punctuation">[</span>root@Docker home<span class="token punctuation">]</span><span class="token comment"># docker attach d1447b4d5d49</span>
+<span class="token punctuation">[</span>root@d1447b4d5d49 /<span class="token punctuation">]</span><span class="token comment"># cd /home</span>
+<span class="token punctuation">[</span>root@d1447b4d5d49 home<span class="token punctuation">]</span><span class="token comment"># ls</span>
+test.java  test2.java
+<span class="token punctuation">[</span>root@d1447b4d5d49 home<span class="token punctuation">]</span><span class="token comment"># cat test2.java </span>
+Hello linux update
+</code></pre></div><p>好处：修改只需要在本地修改即可，容器内会自动同步！</p> <h3 id="mysql容器建立数据卷同步数据"><a href="#mysql容器建立数据卷同步数据" class="header-anchor">#</a> MySQL容器建立数据卷同步数据</h3> <p>在Linux下的MySQL默认的数据文档存储目录为/var/lib/mysql，默认的配置文件的位置/etc/mysql/conf.d，为了确保MySQL镜像或容器删除后，不会造成的数据丢失，下面建立数据卷保存MySQL的数据和文件。</p> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token comment"># 运行容器，需要做数据挂载  # 安装启动mysql，需要配置密码</span>
+-d 后台运行
+-p 端口映射
+-v 数据卷挂载
+-e 环境配置
+--name 容器名字
+<span class="token punctuation">[</span>root@Docker home<span class="token punctuation">]</span><span class="token comment"># docker run -d -p 3310:3306 -v /home/mysql/conf:/etc/mysql/conf.d -v /home/mysql/data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=123456 --name mysql01 mysql:5.7</span>
+81514929bce44cda5c966cffbde06a6ccbe8ddbb9d11e088f63bfa730442ed71
+
+<span class="token comment"># 启动成功后，在本地测试连接</span>
+</code></pre></div><p><img src="/blog/docker/image-20220823102858693.png" alt="image-20220823102858693"></p> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token punctuation">[</span>root@Docker ~<span class="token punctuation">]</span><span class="token comment"># cd /home</span>
+<span class="token punctuation">[</span>root@Docker home<span class="token punctuation">]</span><span class="token comment"># ls</span>
+ceshi  lzw  mysql  test.java
+<span class="token punctuation">[</span>root@Docker home<span class="token punctuation">]</span><span class="token comment"># cd mysql/</span>
+<span class="token punctuation">[</span>root@Docker mysql<span class="token punctuation">]</span><span class="token comment"># ls</span>
+conf  data
+<span class="token punctuation">[</span>root@Docker mysql<span class="token punctuation">]</span><span class="token comment"># cd data/</span>
+<span class="token punctuation">[</span>root@Docker data<span class="token punctuation">]</span><span class="token comment"># ls</span>
+auto.cnf         client-key.pem  ib_logfile1         private_key.pem  sys
+ca-key.pem       ib_buffer_pool  ibtmp1              public_key.pem
+ca.pem           ibdata1         mysql               server-cert.pem
+client-cert.pem  ib_logfile0     performance_schema  server-key.pem
+</code></pre></div><p>使用navicat创建个 test 数据库</p> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token punctuation">[</span>root@Docker data<span class="token punctuation">]</span><span class="token comment"># ls</span>
+auto.cnf         client-key.pem  ib_logfile1         private_key.pem  sys
+ca-key.pem       ib_buffer_pool  ibtmp1              public_key.pem   <span class="token builtin class-name">test</span>
+ca.pem           ibdata1         mysql               server-cert.pem
+client-cert.pem  ib_logfile0     performance_schema  server-key.pem
+</code></pre></div><h3 id="常用命令"><a href="#常用命令" class="header-anchor">#</a> 常用命令</h3> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token comment"># 创建数据卷</span>
+<span class="token punctuation">[</span>root@Docker ~<span class="token punctuation">]</span><span class="token comment"># docker volume create xxx</span>
+
+<span class="token comment"># 查看所有的数据卷</span>
+<span class="token punctuation">[</span>root@Docker ~<span class="token punctuation">]</span><span class="token comment"># docker volume ls</span>
+
+<span class="token comment"># 查看指定数据卷的信息</span>
+<span class="token punctuation">[</span>root@Docker ~<span class="token punctuation">]</span><span class="token comment"># docker volume inspect xxx</span>
+</code></pre></div><h3 id="具名和匿名挂载"><a href="#具名和匿名挂载" class="header-anchor">#</a> 具名和匿名挂载</h3> <p><strong>匿名挂载</strong></p> <p>匿名挂载就是在指定数据卷的时候，不指定容器路径对应的主机路径，这样对应映射的主机路径就是默认的路径<code>/var/lib/docker/volumes/</code>中自动生成一个随机命名的文件夹。</p> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token comment"># 匿名挂载</span>
+<span class="token function">docker</span> run -d -P --name 名字 -v 容器内路径 镜像名/id
+
+</code></pre></div><p><strong>具名挂载</strong>(常用)</p> <p>具名挂载，就是指定文件夹名称，区别于指定路径挂载，这里的指定文件夹名称是在Docker指定的默认数据卷路径下的。通过<code>docker volume ls</code>命令可以查看当前数据卷的目录情况。</p> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token punctuation">[</span>root@Docker ~<span class="token punctuation">]</span><span class="token comment"># docker run -d -P --name 名字 -v 卷名:容器内路径 镜像名/id</span>
+</code></pre></div><p>匿名挂载，具名挂载，指定路径挂载的命令区别如下</p> <div class="language-shell extra-class"><pre class="language-shell"><code>-v 容器内路径 <span class="token comment">#匿名挂载</span>
+
+-v 卷名:容器内路径 <span class="token comment">#具名挂载</span>
+
+-v /宿主机路径:容器内路径 <span class="token comment">#指定路径挂载</span>
+</code></pre></div><p><strong>拓展</strong></p> <p>ro —— readonly 只读。说明这个路径只能通过宿主机来操作，容器内部是无法操作！</p> <p>rw ----- readwrite 可读可写。</p> <h3 id="初识dockerfile"><a href="#初识dockerfile" class="header-anchor">#</a> 初识DockerFile</h3> <p>Dockerfile是用来构建docker镜像的构建文件。命令脚本</p> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token punctuation">[</span>root@Docker home<span class="token punctuation">]</span><span class="token comment"># mkdir docker-test-volume</span>
+<span class="token punctuation">[</span>root@Docker home<span class="token punctuation">]</span><span class="token comment"># cd docker-test-volume/</span>
+<span class="token punctuation">[</span>root@Docker docker-test-volume<span class="token punctuation">]</span><span class="token comment"># pwd</span>
+/home/docker-test-volume
+
+<span class="token comment"># ------</span>
+<span class="token comment"># 创建一个dockerfile文件</span>
+<span class="token comment"># 写一个脚本，通过这个脚本可以生成一个镜像，镜像是一层一层的，脚本是一个个的命令，每个命令都是一层。（指令大写）</span>
+<span class="token punctuation">[</span>root@Docker docker-test-volume<span class="token punctuation">]</span><span class="token comment"># vim dockerfile1</span>
+FROM centos
+
+VOLUME <span class="token punctuation">[</span><span class="token string">&quot;/volume01&quot;</span>,<span class="token string">&quot;/volume02&quot;</span><span class="token punctuation">]</span>
+
+CMD <span class="token builtin class-name">echo</span> <span class="token string">&quot;----end----&quot;</span>
+CMD /bin/bash
+<span class="token comment"># ------</span>
+<span class="token punctuation">[</span>root@Docker docker-test-volume<span class="token punctuation">]</span><span class="token comment"># cat dockerfile1 </span>
+FROM centos
+
+VOLUME <span class="token punctuation">[</span><span class="token string">&quot;/volume01&quot;</span>,<span class="token string">&quot;/volume02&quot;</span><span class="token punctuation">]</span>
+
+CMD <span class="token builtin class-name">echo</span> <span class="token string">&quot;----end----&quot;</span>
+CMD /bin/bash
+
+
+<span class="token punctuation">[</span>root@Docker docker-test-volume<span class="token punctuation">]</span><span class="token comment"># docker build -f dockerfile1 -t lzw/centos:1.0 .</span>
+Sending build context to Docker daemon  <span class="token number">2</span>.048kB
+Step <span class="token number">1</span>/4 <span class="token builtin class-name">:</span> FROM centos
+ ---<span class="token operator">&gt;</span> 5d0da3dc9764
+Step <span class="token number">2</span>/4 <span class="token builtin class-name">:</span> VOLUME <span class="token punctuation">[</span><span class="token string">&quot;/volume01&quot;</span>,<span class="token string">&quot;/volume02&quot;</span><span class="token punctuation">]</span>
+ ---<span class="token operator">&gt;</span> Running <span class="token keyword">in</span> c3c326145e4a
+Removing intermediate container c3c326145e4a
+ ---<span class="token operator">&gt;</span> aee64cb803da
+Step <span class="token number">3</span>/4 <span class="token builtin class-name">:</span> CMD <span class="token builtin class-name">echo</span> <span class="token string">&quot;----end----&quot;</span>
+ ---<span class="token operator">&gt;</span> Running <span class="token keyword">in</span> 623ee6b549b0
+Removing intermediate container 623ee6b549b0
+ ---<span class="token operator">&gt;</span> f1070d1df5fd
+Step <span class="token number">4</span>/4 <span class="token builtin class-name">:</span> CMD /bin/bash
+ ---<span class="token operator">&gt;</span> Running <span class="token keyword">in</span> cc879a8e6758
+Removing intermediate container cc879a8e6758
+ ---<span class="token operator">&gt;</span> 8878616edc11
+Successfully built 8878616edc11
+Successfully tagged lzw/centos:1.0
+</code></pre></div><div class="language-shell extra-class"><pre class="language-shell"><code><span class="token comment"># 启动自己写的容器</span>
+<span class="token punctuation">[</span>root@Docker docker-test-volume<span class="token punctuation">]</span><span class="token comment"># docker run -it 8878616edc11 /bin/bash</span>
+</code></pre></div><p><img src="/blog/docker/image-20220823110827764.png" alt="image-20220823110827764"></p> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token comment"># 容器内创建个文件</span>
+<span class="token punctuation">[</span>root@4e4b7c36901d /<span class="token punctuation">]</span><span class="token comment"># cd volume01</span>
+<span class="token punctuation">[</span>root@4e4b7c36901d volume01<span class="token punctuation">]</span><span class="token comment"># touch container.txt</span>
+<span class="token punctuation">[</span>root@4e4b7c36901d volume01<span class="token punctuation">]</span><span class="token comment"># ls</span>
+container.txt
+
+
+<span class="token punctuation">[</span>root@Docker data<span class="token punctuation">]</span><span class="token comment"># docker ps</span>
+CONTAINER ID   IMAGE          COMMAND                  CREATED          STATUS          PORTS                                                  NAMES
+4e4b7c36901d   8878616edc11   <span class="token string">&quot;/bin/bash&quot;</span>              <span class="token number">4</span> minutes ago    Up <span class="token number">4</span> minutes                                                           romantic_panini
+
+<span class="token comment"># 查看卷挂载的路径，确实是匿名挂载</span>
+<span class="token punctuation">[</span>root@Docker data<span class="token punctuation">]</span><span class="token comment"># docker inspect 4e4b7c36901d</span>
+。。。
+		<span class="token string">&quot;Mounts&quot;</span><span class="token builtin class-name">:</span> <span class="token punctuation">[</span>
+            <span class="token punctuation">{</span>
+                <span class="token string">&quot;Type&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;volume&quot;</span>,
+                <span class="token string">&quot;Name&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;f257f6e6a1ecb3cefea2d37958b6ff7c9c8db6b44fdd2c5c6af0c0174efc2454&quot;</span>,
+                <span class="token string">&quot;Source&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;/var/lib/docker/volumes/f257f6e6a1ecb3cefea2d37958b6ff7c9c8db6b44fdd2c5c6af0c0174efc2454/_data&quot;</span>,
+                <span class="token string">&quot;Destination&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;/volume02&quot;</span>,
+                <span class="token string">&quot;Driver&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;local&quot;</span>,
+                <span class="token string">&quot;Mode&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;&quot;</span>,
+                <span class="token string">&quot;RW&quot;</span><span class="token builtin class-name">:</span> true,
+                <span class="token string">&quot;Propagation&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;&quot;</span>
+            <span class="token punctuation">}</span>,
+            <span class="token punctuation">{</span>
+                <span class="token string">&quot;Type&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;volume&quot;</span>,
+                <span class="token string">&quot;Name&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;c92a88b147e06b7ed3c3118d54fdc10017fb45c54dc38ca35e74e6553d9ac4d0&quot;</span>,
+                <span class="token string">&quot;Source&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;/var/lib/docker/volumes/c92a88b147e06b7ed3c3118d54fdc10017fb45c54dc38ca35e74e6553d9ac4d0/_data&quot;</span>,
+                <span class="token string">&quot;Destination&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;/volume01&quot;</span>,
+                <span class="token string">&quot;Driver&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;local&quot;</span>,
+                <span class="token string">&quot;Mode&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;&quot;</span>,
+                <span class="token string">&quot;RW&quot;</span><span class="token builtin class-name">:</span> true,
+                <span class="token string">&quot;Propagation&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;&quot;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">]</span>,
+
+。。。
+</code></pre></div><div class="language-shell extra-class"><pre class="language-shell"><code><span class="token comment"># 测试刚才的文件是否同步出去了</span>
+<span class="token punctuation">[</span>root@Docker data<span class="token punctuation">]</span><span class="token comment"># cd /var/lib/docker/volumes/c92a88b147e06b7ed3c3118d54fdc10017fb45c54dc38ca35e74e6553d9ac4d0/_data</span>
+<span class="token punctuation">[</span>root@Docker _data<span class="token punctuation">]</span><span class="token comment"># ls</span>
+container.txt
+</code></pre></div><h3 id="数据卷容器"><a href="#数据卷容器" class="header-anchor">#</a> 数据卷容器</h3> <p>容器数据卷是指建立数据卷，来同步多个容器间的数据，实现容器间的数据同步。</p> <p><img src="/blog/docker/image-20220823111629290.png" alt="image-20220823111629290"></p> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token punctuation">[</span>root@Docker /<span class="token punctuation">]</span><span class="token comment"># docker images</span>
+REPOSITORY   TAG       IMAGE ID       CREATED          SIZE
+lzw/centos   <span class="token number">1.0</span>       8878616edc11   <span class="token number">17</span> minutes ago   231MB
+mysql        <span class="token number">5.7</span>       c20987f18b13   <span class="token number">8</span> months ago     448MB
+centos       latest    5d0da3dc9764   <span class="token number">11</span> months ago    231MB
+<span class="token comment"># 启动docker02</span>
+<span class="token punctuation">[</span>root@Docker /<span class="token punctuation">]</span><span class="token comment"># docker run -it --name docker01 lzw/centos:1.0</span>
+<span class="token punctuation">[</span>root@f10f851b5d5a /<span class="token punctuation">]</span><span class="token comment"># ls</span>
+bin  etc   lib	  lost+found  mnt  proc  run   srv  tmp  var	   volume02
+dev  home  lib64  media       opt  root  sbin  sys  usr  volume01
+<span class="token punctuation">[</span>root@f10f851b5d5a /<span class="token punctuation">]</span><span class="token comment"># ls -l</span>
+total <span class="token number">0</span>
+lrwxrwxrwx.   <span class="token number">1</span> root root   <span class="token number">7</span> Nov  <span class="token number">3</span>  <span class="token number">2020</span> bin -<span class="token operator">&gt;</span> usr/bin
+drwxr-xr-x.   <span class="token number">5</span> root root <span class="token number">360</span> Aug <span class="token number">23</span> 03:18 dev
+drwxr-xr-x.   <span class="token number">1</span> root root  <span class="token number">66</span> Aug <span class="token number">23</span> 03:18 etc
+drwxr-xr-x.   <span class="token number">2</span> root root   <span class="token number">6</span> Nov  <span class="token number">3</span>  <span class="token number">2020</span> home
+lrwxrwxrwx.   <span class="token number">1</span> root root   <span class="token number">7</span> Nov  <span class="token number">3</span>  <span class="token number">2020</span> lib -<span class="token operator">&gt;</span> usr/lib
+lrwxrwxrwx.   <span class="token number">1</span> root root   <span class="token number">9</span> Nov  <span class="token number">3</span>  <span class="token number">2020</span> lib64 -<span class="token operator">&gt;</span> usr/lib64
+drwx------.   <span class="token number">2</span> root root   <span class="token number">6</span> Sep <span class="token number">15</span>  <span class="token number">2021</span> lost+found
+drwxr-xr-x.   <span class="token number">2</span> root root   <span class="token number">6</span> Nov  <span class="token number">3</span>  <span class="token number">2020</span> media
+drwxr-xr-x.   <span class="token number">2</span> root root   <span class="token number">6</span> Nov  <span class="token number">3</span>  <span class="token number">2020</span> mnt
+drwxr-xr-x.   <span class="token number">2</span> root root   <span class="token number">6</span> Nov  <span class="token number">3</span>  <span class="token number">2020</span> opt
+dr-xr-xr-x. <span class="token number">241</span> root root   <span class="token number">0</span> Aug <span class="token number">23</span> 03:18 proc
+dr-xr-x---.   <span class="token number">2</span> root root <span class="token number">162</span> Sep <span class="token number">15</span>  <span class="token number">2021</span> root
+drwxr-xr-x.  <span class="token number">11</span> root root <span class="token number">163</span> Sep <span class="token number">15</span>  <span class="token number">2021</span> run
+lrwxrwxrwx.   <span class="token number">1</span> root root   <span class="token number">8</span> Nov  <span class="token number">3</span>  <span class="token number">2020</span> sbin -<span class="token operator">&gt;</span> usr/sbin
+drwxr-xr-x.   <span class="token number">2</span> root root   <span class="token number">6</span> Nov  <span class="token number">3</span>  <span class="token number">2020</span> srv
+dr-xr-xr-x.  <span class="token number">13</span> root root   <span class="token number">0</span> Aug <span class="token number">21</span> 09:44 sys
+drwxrwxrwt.   <span class="token number">7</span> root root <span class="token number">171</span> Sep <span class="token number">15</span>  <span class="token number">2021</span> tmp
+drwxr-xr-x.  <span class="token number">12</span> root root <span class="token number">144</span> Sep <span class="token number">15</span>  <span class="token number">2021</span> usr
+drwxr-xr-x.  <span class="token number">20</span> root root <span class="token number">262</span> Sep <span class="token number">15</span>  <span class="token number">2021</span> var
+drwxr-xr-x.   <span class="token number">2</span> root root   <span class="token number">6</span> Aug <span class="token number">23</span> 03:18 volume01
+drwxr-xr-x.   <span class="token number">2</span> root root   <span class="token number">6</span> Aug <span class="token number">23</span> 03:18 volume02
+
+ctrl+p+q
+
+<span class="token punctuation">[</span>root@f10f851b5d5a /<span class="token punctuation">]</span><span class="token comment"># [root@Docker /]# docker ps</span>
+CONTAINER ID   IMAGE            COMMAND                  CREATED              PORTS     NAMES
+f10f851b5d5a   lzw/centos:1.0   <span class="token string">&quot;/bin/sh -c /bin/bash&quot;</span>   <span class="token number">2</span> minutes ago   es             docker01
+
+<span class="token comment"># 启动docker02</span>
+<span class="token punctuation">[</span>root@Docker /<span class="token punctuation">]</span><span class="token comment"># docker run -it --name docker02 --volumes-from docker01 lzw/centos:1.0</span>
+<span class="token punctuation">[</span>root@dc4df8c2ca5f /<span class="token punctuation">]</span><span class="token comment"># ls -l</span>
+total <span class="token number">0</span>
+lrwxrwxrwx.   <span class="token number">1</span> root root   <span class="token number">7</span> Nov  <span class="token number">3</span>  <span class="token number">2020</span> bin -<span class="token operator">&gt;</span> usr/bin
+drwxr-xr-x.   <span class="token number">5</span> root root <span class="token number">360</span> Aug <span class="token number">23</span> 03:21 dev
+drwxr-xr-x.   <span class="token number">1</span> root root  <span class="token number">66</span> Aug <span class="token number">23</span> 03:21 etc
+drwxr-xr-x.   <span class="token number">2</span> root root   <span class="token number">6</span> Nov  <span class="token number">3</span>  <span class="token number">2020</span> home
+lrwxrwxrwx.   <span class="token number">1</span> root root   <span class="token number">7</span> Nov  <span class="token number">3</span>  <span class="token number">2020</span> lib -<span class="token operator">&gt;</span> usr/lib
+lrwxrwxrwx.   <span class="token number">1</span> root root   <span class="token number">9</span> Nov  <span class="token number">3</span>  <span class="token number">2020</span> lib64 -<span class="token operator">&gt;</span> usr/lib64
+drwx------.   <span class="token number">2</span> root root   <span class="token number">6</span> Sep <span class="token number">15</span>  <span class="token number">2021</span> lost+found
+drwxr-xr-x.   <span class="token number">2</span> root root   <span class="token number">6</span> Nov  <span class="token number">3</span>  <span class="token number">2020</span> media
+drwxr-xr-x.   <span class="token number">2</span> root root   <span class="token number">6</span> Nov  <span class="token number">3</span>  <span class="token number">2020</span> mnt
+drwxr-xr-x.   <span class="token number">2</span> root root   <span class="token number">6</span> Nov  <span class="token number">3</span>  <span class="token number">2020</span> opt
+dr-xr-xr-x. <span class="token number">237</span> root root   <span class="token number">0</span> Aug <span class="token number">23</span> 03:21 proc
+dr-xr-x---.   <span class="token number">2</span> root root <span class="token number">162</span> Sep <span class="token number">15</span>  <span class="token number">2021</span> root
+drwxr-xr-x.  <span class="token number">11</span> root root <span class="token number">163</span> Sep <span class="token number">15</span>  <span class="token number">2021</span> run
+lrwxrwxrwx.   <span class="token number">1</span> root root   <span class="token number">8</span> Nov  <span class="token number">3</span>  <span class="token number">2020</span> sbin -<span class="token operator">&gt;</span> usr/sbin
+drwxr-xr-x.   <span class="token number">2</span> root root   <span class="token number">6</span> Nov  <span class="token number">3</span>  <span class="token number">2020</span> srv
+dr-xr-xr-x.  <span class="token number">13</span> root root   <span class="token number">0</span> Aug <span class="token number">21</span> 09:44 sys
+drwxrwxrwt.   <span class="token number">7</span> root root <span class="token number">171</span> Sep <span class="token number">15</span>  <span class="token number">2021</span> tmp
+drwxr-xr-x.  <span class="token number">12</span> root root <span class="token number">144</span> Sep <span class="token number">15</span>  <span class="token number">2021</span> usr
+drwxr-xr-x.  <span class="token number">20</span> root root <span class="token number">262</span> Sep <span class="token number">15</span>  <span class="token number">2021</span> var
+drwxr-xr-x.   <span class="token number">2</span> root root   <span class="token number">6</span> Aug <span class="token number">23</span> 03:18 volume01
+drwxr-xr-x.   <span class="token number">2</span> root root   <span class="token number">6</span> Aug <span class="token number">23</span> 03:18 volume02
+
+<span class="token comment"># 进入docker01</span>
+<span class="token punctuation">[</span>root@Docker ~<span class="token punctuation">]</span><span class="token comment"># docker attach f10f851b5d5a</span>
+<span class="token punctuation">[</span>root@f10f851b5d5a /<span class="token punctuation">]</span><span class="token comment"># cd volume01</span>
+<span class="token punctuation">[</span>root@f10f851b5d5a volume01<span class="token punctuation">]</span><span class="token comment"># ls</span>
+<span class="token punctuation">[</span>root@f10f851b5d5a volume01<span class="token punctuation">]</span><span class="token comment"># touch docker01</span>
+
+<span class="token comment"># 进入docker02，docker01创建的数据同步到了docker02</span>
+<span class="token punctuation">[</span>root@dc4df8c2ca5f /<span class="token punctuation">]</span><span class="token comment"># cd volume01</span>
+<span class="token punctuation">[</span>root@dc4df8c2ca5f volume01<span class="token punctuation">]</span><span class="token comment"># ls</span>
+docker01
+
+ctrl+p+q
+
+<span class="token comment"># 启动docker03</span>
+<span class="token punctuation">[</span>root@dc4df8c2ca5f volume01<span class="token punctuation">]</span><span class="token comment"># [root@Docker /]# docker run -it --name docker03 --volumes-from docker01 lzw/centos:1.0</span>
+<span class="token punctuation">[</span>root@5e791361fc4f /<span class="token punctuation">]</span><span class="token comment"># cd volume01</span>
+<span class="token punctuation">[</span>root@5e791361fc4f volume01<span class="token punctuation">]</span><span class="token comment"># ls</span>
+docker01
+<span class="token punctuation">[</span>root@5e791361fc4f volume01<span class="token punctuation">]</span><span class="token comment"># touch docker03</span>
+
+<span class="token comment"># 在docker01查看</span>
+<span class="token punctuation">[</span>root@f10f851b5d5a volume01<span class="token punctuation">]</span><span class="token comment"># ls    </span>
+docker01  docker03
+
+<span class="token comment"># 测试，可以删除docker01容器，查看一下docker02和docker03</span>
+<span class="token comment"># 还可以访问docekr01文件</span>
+
+<span class="token comment"># 备份机制</span>
+</code></pre></div><p>容器之间配置信息的传递，数据卷容器的声明周期一直持续到没有容器使用为止。</p> <h2 id="dockerfile"><a href="#dockerfile" class="header-anchor">#</a> DockerFile</h2> <h3 id="介绍-2"><a href="#介绍-2" class="header-anchor">#</a> 介绍</h3> <p>Dockerfile是用来构建Docker镜像的文本文件，也可以说是命令参数脚本。docker build命令用于从Dockerfile构建镜像。可以在<code>docker build</code>命令中使用-f标志指向文件系统中任何位置的Dockerfile。</p> <p>Docker镜像发布的步骤：</p> <p>1、编写一个dockerfile文件</p> <p>2、docker build 构建成为一个镜像</p> <p>3、docker run 镜像</p> <p>4、docker push 镜像（发布镜像到DockerHub、阿里云镜像仓库）</p> <p><img src="/blog/docker/image-20220823114803935.png" alt="image-20220823114803935"></p> <h3 id="dockerfile指令"><a href="#dockerfile指令" class="header-anchor">#</a> DockerFile指令</h3> <table><thead><tr><th>指令</th><th>说明</th></tr></thead><tbody><tr><td>FROM</td><td>指定基础镜像</td></tr><tr><td>MAINTAINER</td><td>镜像是谁写的，姓名+邮箱</td></tr><tr><td>RUN</td><td>镜像构建的时候需要运行的命令</td></tr><tr><td>ADD</td><td>将本地文件添加到容器中，tar类型文件会自动解压(网络压缩资源不会被解压)，可以访问网络资源，类似wget</td></tr><tr><td>WORKDIR</td><td>镜像的工作目录</td></tr><tr><td>VOLUME</td><td>挂载的目录</td></tr><tr><td>EXPOSE</td><td>保留端口配置</td></tr><tr><td>CMD</td><td>指定这个容器启动的时候要运行的命令（只有最后一个会生效）</td></tr><tr><td>EMTRYPOINT</td><td>指定这个容器启动的时候要运行的命令，可以追加命令</td></tr><tr><td>ONBUILD</td><td>当构建一个被继承DockerFile，这个时候就会运行ONBUILD的指令，触发指令</td></tr><tr><td>COPY</td><td>功能类似ADD，但是是不会自动解压文件，也不能访问网络资源</td></tr><tr><td>ENV</td><td>构建的时候设置环境变量</td></tr></tbody></table> <p><img src="/blog/docker/image-20220823115243952.png" alt="image-20220823115243952"></p> <h3 id="dockerfile构建过程"><a href="#dockerfile构建过程" class="header-anchor">#</a> DockerFile构建过程</h3> <p>Dockerfile 一般分为四部分：基础镜像信息、维护者信息、镜像操作指令和容器启动时执行指令，’#’ 为 Dockerfile 中的注释。</p> <p>关于DockerFile文件的脚本注意点有：</p> <p>1、每个保留关键字（指令）都必须是大写字母</p> <p>2、文件中的指令从上到下顺序执行，第一个指令必须是FROM</p> <p>3、# 号表示注释</p> <p>4、每一个指令都会创建提交一个新的镜像层，并提交！</p> <p>关于Dockerfile指令的详细语法解释：Dockerfile文件详解</p> <p>Dockerfile指令介绍的官方文档：https://docs.docker.com/engine/reference/builder/</p> <h3 id="构建自己的centos"><a href="#构建自己的centos" class="header-anchor">#</a> 构建自己的centos</h3> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token punctuation">[</span>root@Docker home<span class="token punctuation">]</span><span class="token comment"># mkdir dockerfile</span>
+<span class="token punctuation">[</span>root@Docker home<span class="token punctuation">]</span><span class="token comment"># ls</span>
+ceshi  dockerfile  docker-test-volume  lzw  mysql  test.java
+<span class="token punctuation">[</span>root@Docker home<span class="token punctuation">]</span><span class="token comment"># cd dockerfile/</span>
+<span class="token punctuation">[</span>root@Docker dockerfile<span class="token punctuation">]</span><span class="token comment"># ls</span>
+<span class="token comment"># 1.编写Dockerfile文件</span>
+<span class="token punctuation">[</span>root@Docker dockerfile<span class="token punctuation">]</span><span class="token comment"># vim mydockerfile-centos</span>
+文件开始
+FROM centos:7
+MAINTAINER LiAng <span class="token operator">&lt;</span><span class="token number">2545721422</span>@qq.com<span class="token operator">&gt;</span>
+
+ENV MYPATH /usr/local
+WORKDIR <span class="token variable">$MYPATH</span>
+
+RUN yum -y <span class="token function">install</span> <span class="token function">vim</span>
+RUN yum -y <span class="token function">install</span> net-tools
+
+EXPOSE <span class="token number">80</span>
+
+CMD <span class="token builtin class-name">echo</span> <span class="token variable">$MYPATH</span>
+CMD <span class="token builtin class-name">echo</span> <span class="token string">&quot;-----end-----&quot;</span>
+CMD /bin/bash
+文件结束
+
+<span class="token comment"># 2.通过这个文件构建镜像</span>
+<span class="token comment"># 命令 docker build -f dockerfile文件路径 -t 镜像名[:版本号] .（这里有个小点.）</span>
+<span class="token punctuation">[</span>root@Docker dockerfile<span class="token punctuation">]</span><span class="token comment"># docker build -f mydockerfile-centos -t mycentos:0.1 .</span>
+。。。
+。。。
+Successfully built f438f070a046
+Successfully tagged mycentos:0.1
+
+<span class="token comment"># 3.测试运行</span>
+<span class="token comment"># (1) 工作目录修改为 /usr/local</span>
+<span class="token comment"># (2) 可以使用 ifconfig 和 pwd 命令</span>
+<span class="token punctuation">[</span>root@Docker dockerfile<span class="token punctuation">]</span><span class="token comment"># docker images</span>
+REPOSITORY   TAG       IMAGE ID       CREATED         SIZE
+mycentos     <span class="token number">0.1</span>       f438f070a046   <span class="token number">4</span> minutes ago   623MB
+lzw/centos   <span class="token number">1.0</span>       8878616edc11   <span class="token number">4</span> hours ago     231MB
+mysql        <span class="token number">5.7</span>       c20987f18b13   <span class="token number">8</span> months ago    448MB
+centos       <span class="token number">7</span>         eeb6ee3f44bd   <span class="token number">11</span> months ago   204MB
+centos       latest    5d0da3dc9764   <span class="token number">11</span> months ago   231MB
+<span class="token punctuation">[</span>root@Docker dockerfile<span class="token punctuation">]</span><span class="token comment"># docker run -it mycentos:0.1</span>
+<span class="token punctuation">[</span>root@90041c3ce177 local<span class="token punctuation">]</span><span class="token comment"># pwd</span>
+/usr/local
+<span class="token punctuation">[</span>root@90041c3ce177 local<span class="token punctuation">]</span><span class="token comment"># ifconfig</span>
+eth0: <span class="token assign-left variable">flags</span><span class="token operator">=</span><span class="token number">416</span><span class="token operator"><span class="token file-descriptor important">3</span>&lt;</span>UP,BROADCAST,RUNNING,MULTICAST<span class="token operator">&gt;</span>  mtu <span class="token number">1500</span>
+        inet <span class="token number">172.17</span>.0.4  netmask <span class="token number">255.255</span>.0.0  broadcast <span class="token number">172.17</span>.255.255
+        ether 02:42:ac:11:00:04  txqueuelen <span class="token number">0</span>  <span class="token punctuation">(</span>Ethernet<span class="token punctuation">)</span>
+        RX packets <span class="token number">8</span>  bytes <span class="token number">648</span> <span class="token punctuation">(</span><span class="token number">648.0</span> B<span class="token punctuation">)</span>
+        RX errors <span class="token number">0</span>  dropped <span class="token number">0</span>  overruns <span class="token number">0</span>  frame <span class="token number">0</span>
+        TX packets <span class="token number">0</span>  bytes <span class="token number">0</span> <span class="token punctuation">(</span><span class="token number">0.0</span> B<span class="token punctuation">)</span>
+        TX errors <span class="token number">0</span>  dropped <span class="token number">0</span> overruns <span class="token number">0</span>  carrier <span class="token number">0</span>  collisions <span class="token number">0</span>
+
+lo: <span class="token assign-left variable">flags</span><span class="token operator">=</span><span class="token number">7</span><span class="token operator"><span class="token file-descriptor important">3</span>&lt;</span>UP,LOOPBACK,RUNNING<span class="token operator">&gt;</span>  mtu <span class="token number">65536</span>
+        inet <span class="token number">127.0</span>.0.1  netmask <span class="token number">255.0</span>.0.0
+        loop  txqueuelen <span class="token number">1000</span>  <span class="token punctuation">(</span>Local Loopback<span class="token punctuation">)</span>
+        RX packets <span class="token number">0</span>  bytes <span class="token number">0</span> <span class="token punctuation">(</span><span class="token number">0.0</span> B<span class="token punctuation">)</span>
+        RX errors <span class="token number">0</span>  dropped <span class="token number">0</span>  overruns <span class="token number">0</span>  frame <span class="token number">0</span>
+        TX packets <span class="token number">0</span>  bytes <span class="token number">0</span> <span class="token punctuation">(</span><span class="token number">0.0</span> B<span class="token punctuation">)</span>
+        TX errors <span class="token number">0</span>  dropped <span class="token number">0</span> overruns <span class="token number">0</span>  carrier <span class="token number">0</span>  collisions <span class="token number">0</span>
+
+<span class="token punctuation">[</span>root@90041c3ce177 local<span class="token punctuation">]</span><span class="token comment"># vim test</span>
+</code></pre></div><div class="language-shell extra-class"><pre class="language-shell"><code><span class="token comment"># 列出本地进行的变更历史</span>
+<span class="token punctuation">[</span>root@Docker dockerfile<span class="token punctuation">]</span><span class="token comment"># docker history f438f070a046</span>
+IMAGE          CREATED         CREATED BY                                      SIZE      COMMENT
+f438f070a046   <span class="token number">8</span> minutes ago   /bin/sh -c <span class="token comment">#(nop)  CMD [&quot;/bin/sh&quot; &quot;-c&quot; &quot;/bin…   0B        </span>
+63bc0ce23b51   <span class="token number">8</span> minutes ago   /bin/sh -c <span class="token comment">#(nop)  CMD [&quot;/bin/sh&quot; &quot;-c&quot; &quot;echo…   0B        </span>
+ae2f7705d524   <span class="token number">8</span> minutes ago   /bin/sh -c <span class="token comment">#(nop)  CMD [&quot;/bin/sh&quot; &quot;-c&quot; &quot;echo…   0B        </span>
+cf319886180c   <span class="token number">8</span> minutes ago   /bin/sh -c <span class="token comment">#(nop)  EXPOSE 80                    0B        </span>
+b69d4ca1380d   <span class="token number">8</span> minutes ago   /bin/sh -c yum -y <span class="token function">install</span> net-tools             182MB     
+9ed35242ab7a   <span class="token number">8</span> minutes ago   /bin/sh -c yum -y <span class="token function">install</span> <span class="token function">vim</span>                   237MB     
+113d028d1ba7   <span class="token number">8</span> minutes ago   /bin/sh -c <span class="token comment">#(nop) WORKDIR /usr/local            0B        </span>
+7c0a7a1f5246   <span class="token number">8</span> minutes ago   /bin/sh -c <span class="token comment">#(nop)  ENV MYPATH=/usr/local        0B        </span>
+2a121798ffce   <span class="token number">8</span> minutes ago   /bin/sh -c <span class="token comment">#(nop)  MAINTAINER LiAng &lt;2545721…   0B        </span>
+eeb6ee3f44bd   <span class="token number">11</span> months ago   /bin/sh -c <span class="token comment">#(nop)  CMD [&quot;/bin/bash&quot;]            0B        </span>
+<span class="token operator">&lt;</span>missing<span class="token operator">&gt;</span>      <span class="token number">11</span> months ago   /bin/sh -c <span class="token comment">#(nop)  LABEL org.label-schema.sc…   0B        </span>
+<span class="token operator">&lt;</span>missing<span class="token operator">&gt;</span>      <span class="token number">11</span> months ago   /bin/sh -c <span class="token comment">#(nop) ADD file:b3ebbe8bd304723d4…   204MB</span>
+</code></pre></div><h3 id="run-cmd和entrypoint的区别"><a href="#run-cmd和entrypoint的区别" class="header-anchor">#</a> RUN，CMD和ENTRYPOINT的区别</h3> <p>RUN命令与CMD命令的区别在哪里？</p> <p>简单说，RUN命令在 image 文件的构建阶段执行，执行结果都会打包进入 image 文件；CMD命令则是在容器启动后执行。另外，一个 Dockerfile 可以包含多个RUN命令，但是只能有一个CMD命令。</p> <p>注意，指定了CMD命令以后，docker container run命令就不能附加命令了（比如前面的/bin/bash），否则它会覆盖CMD命令。</p> <p>原文链接：https://blog.csdn.net/huangjhai/article/details/120278039</p> <div class="language-shell extra-class"><pre class="language-shell"><code>CMD <span class="token comment">#指定容器启动的时候要运行的命令，只有最后一个会生效，可被替代</span>
+ENTRYPOINT <span class="token comment">#指定容器启动的时候要运行的命令，命令可以追加</span>
+</code></pre></div><p>测试CMD命令</p> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token comment"># 编写dockerfile文件</span>
+<span class="token punctuation">[</span>root@Docker dockerfile<span class="token punctuation">]</span><span class="token comment"># vim dockerfile-cmd-test</span>
+文件开始
+FROM centos
+CMD <span class="token punctuation">[</span><span class="token string">&quot;ls&quot;</span>,<span class="token string">&quot;-a&quot;</span><span class="token punctuation">]</span>
+文件结束
+
+<span class="token comment"># 构建镜像</span>
+<span class="token punctuation">[</span>root@Docker dockerfile<span class="token punctuation">]</span><span class="token comment"># docker build -f dockerfile-cmd-test -t cmdtest .</span>
+Sending build context to Docker daemon  <span class="token number">3</span>.072kB
+Step <span class="token number">1</span>/2 <span class="token builtin class-name">:</span> FROM centos
+ ---<span class="token operator">&gt;</span> 5d0da3dc9764
+Step <span class="token number">2</span>/2 <span class="token builtin class-name">:</span> CMD <span class="token punctuation">[</span><span class="token string">&quot;ls&quot;</span>,<span class="token string">&quot;-a&quot;</span><span class="token punctuation">]</span>
+ ---<span class="token operator">&gt;</span> Running <span class="token keyword">in</span> c7b0acaa1ee2
+Removing intermediate container c7b0acaa1ee2
+ ---<span class="token operator">&gt;</span> aeed102d492f
+Successfully built aeed102d492f
+Successfully tagged cmdtest:latest
+
+<span class="token comment"># run运行，发现 ls -a 生效了</span>
+<span class="token punctuation">[</span>root@Docker dockerfile<span class="token punctuation">]</span><span class="token comment"># docker run aeed102d492f</span>
+<span class="token builtin class-name">.</span>
+<span class="token punctuation">..</span>
+.dockerenv
+bin
+dev
+etc
+home
+lib
+lib64
+lost+found
+media
+mnt
+opt
+proc
+root
+run
+sbin
+srv
+sys
+tmp
+usr
+var
+
+<span class="token comment"># 想追加一个命令 -l  ls -al</span>
+<span class="token punctuation">[</span>root@Docker dockerfile<span class="token punctuation">]</span><span class="token comment"># docker run aeed102d492f -l</span>
+docker: Error response from daemon: failed to create shim task: OCI runtime create failed: runc create failed: unable to start container process: exec: <span class="token string">&quot;-l&quot;</span><span class="token builtin class-name">:</span> executable <span class="token function">file</span> not found <span class="token keyword">in</span> <span class="token environment constant">$PATH</span><span class="token builtin class-name">:</span> unknown.
+ERRO<span class="token punctuation">[</span>0000<span class="token punctuation">]</span> error waiting <span class="token keyword">for</span> container: context canceled
+<span class="token comment">#由于使用的是 CMD指令，命令无追加，-l取代了原本的ls -a，而-l命令不存在所以报错</span>
+
+
+</code></pre></div><p>测试 ENTRYPOINT</p> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token punctuation">[</span>root@Docker dockerfile<span class="token punctuation">]</span><span class="token comment"># vim dockerfile-cmd-entrypoint</span>
+文件开始
+FROM centos
+ENTRYPOINT <span class="token punctuation">[</span><span class="token string">&quot;ls&quot;</span>,<span class="token string">&quot;-a&quot;</span><span class="token punctuation">]</span>
+文件结束
+
+<span class="token punctuation">[</span>root@Docker dockerfile<span class="token punctuation">]</span><span class="token comment"># </span>
+<span class="token punctuation">[</span>root@Docker dockerfile<span class="token punctuation">]</span><span class="token comment"># docker build -f dockerfile-cmd-entrypoint -t entrypoint-test .</span>
+Sending build context to Docker daemon  <span class="token number">4</span>.096kB
+Step <span class="token number">1</span>/2 <span class="token builtin class-name">:</span> FROM centos
+ ---<span class="token operator">&gt;</span> 5d0da3dc9764
+Step <span class="token number">2</span>/2 <span class="token builtin class-name">:</span> ENTRYPOINT <span class="token punctuation">[</span><span class="token string">&quot;ls&quot;</span>,<span class="token string">&quot;-a&quot;</span><span class="token punctuation">]</span>
+ ---<span class="token operator">&gt;</span> Running <span class="token keyword">in</span> e18a28971236
+Removing intermediate container e18a28971236
+ ---<span class="token operator">&gt;</span> 0fe895df8b53
+Successfully built 0fe895df8b53
+Successfully tagged entrypoint-test:latest
+
+<span class="token punctuation">[</span>root@Docker dockerfile<span class="token punctuation">]</span><span class="token comment"># docker run 0fe895df8b53</span>
+<span class="token builtin class-name">.</span>
+<span class="token punctuation">..</span>
+.dockerenv
+bin
+dev
+etc
+home
+lib
+lib64
+lost+found
+media
+mnt
+opt
+proc
+root
+run
+sbin
+srv
+sys
+tmp
+usr
+var
+
+<span class="token comment"># 追加命令，是直接拼接 ENTRYPOINT 命令的后面</span>
+<span class="token punctuation">[</span>root@Docker dockerfile<span class="token punctuation">]</span><span class="token comment"># docker run 0fe895df8b53 -l</span>
+total <span class="token number">0</span>
+drwxr-xr-x.   <span class="token number">1</span> root root   <span class="token number">6</span> Aug <span class="token number">23</span> 07:26 <span class="token builtin class-name">.</span>
+drwxr-xr-x.   <span class="token number">1</span> root root   <span class="token number">6</span> Aug <span class="token number">23</span> 07:26 <span class="token punctuation">..</span>
+-rwxr-xr-x.   <span class="token number">1</span> root root   <span class="token number">0</span> Aug <span class="token number">23</span> 07:26 .dockerenv
+lrwxrwxrwx.   <span class="token number">1</span> root root   <span class="token number">7</span> Nov  <span class="token number">3</span>  <span class="token number">2020</span> bin -<span class="token operator">&gt;</span> usr/bin
+drwxr-xr-x.   <span class="token number">5</span> root root <span class="token number">340</span> Aug <span class="token number">23</span> 07:26 dev
+drwxr-xr-x.   <span class="token number">1</span> root root  <span class="token number">66</span> Aug <span class="token number">23</span> 07:26 etc
+drwxr-xr-x.   <span class="token number">2</span> root root   <span class="token number">6</span> Nov  <span class="token number">3</span>  <span class="token number">2020</span> home
+lrwxrwxrwx.   <span class="token number">1</span> root root   <span class="token number">7</span> Nov  <span class="token number">3</span>  <span class="token number">2020</span> lib -<span class="token operator">&gt;</span> usr/lib
+lrwxrwxrwx.   <span class="token number">1</span> root root   <span class="token number">9</span> Nov  <span class="token number">3</span>  <span class="token number">2020</span> lib64 -<span class="token operator">&gt;</span> usr/lib64
+drwx------.   <span class="token number">2</span> root root   <span class="token number">6</span> Sep <span class="token number">15</span>  <span class="token number">2021</span> lost+found
+drwxr-xr-x.   <span class="token number">2</span> root root   <span class="token number">6</span> Nov  <span class="token number">3</span>  <span class="token number">2020</span> media
+drwxr-xr-x.   <span class="token number">2</span> root root   <span class="token number">6</span> Nov  <span class="token number">3</span>  <span class="token number">2020</span> mnt
+drwxr-xr-x.   <span class="token number">2</span> root root   <span class="token number">6</span> Nov  <span class="token number">3</span>  <span class="token number">2020</span> opt
+dr-xr-xr-x. <span class="token number">242</span> root root   <span class="token number">0</span> Aug <span class="token number">23</span> 07:26 proc
+dr-xr-x---.   <span class="token number">2</span> root root <span class="token number">162</span> Sep <span class="token number">15</span>  <span class="token number">2021</span> root
+drwxr-xr-x.  <span class="token number">11</span> root root <span class="token number">163</span> Sep <span class="token number">15</span>  <span class="token number">2021</span> run
+lrwxrwxrwx.   <span class="token number">1</span> root root   <span class="token number">8</span> Nov  <span class="token number">3</span>  <span class="token number">2020</span> sbin -<span class="token operator">&gt;</span> usr/sbin
+drwxr-xr-x.   <span class="token number">2</span> root root   <span class="token number">6</span> Nov  <span class="token number">3</span>  <span class="token number">2020</span> srv
+dr-xr-xr-x.  <span class="token number">13</span> root root   <span class="token number">0</span> Aug <span class="token number">21</span> 09:44 sys
+drwxrwxrwt.   <span class="token number">7</span> root root <span class="token number">171</span> Sep <span class="token number">15</span>  <span class="token number">2021</span> tmp
+drwxr-xr-x.  <span class="token number">12</span> root root <span class="token number">144</span> Sep <span class="token number">15</span>  <span class="token number">2021</span> usr
+drwxr-xr-x.  <span class="token number">20</span> root root <span class="token number">262</span> Sep <span class="token number">15</span>  <span class="token number">2021</span> var
+</code></pre></div><h3 id="制作tomcat镜像"><a href="#制作tomcat镜像" class="header-anchor">#</a> 制作tomcat镜像</h3> <ol><li>准备镜像文件tomcat、jdk压缩包</li></ol> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token punctuation">[</span>root@Docker lzw<span class="token punctuation">]</span><span class="token comment"># ls</span>
+apache-tomcat-8.5.59.tar.gz  公共  视频  文档  音乐
+jdk-8u212-linux-x64.tar.gz   模板  图片  下载  桌面
+<span class="token punctuation">[</span>root@Docker lzw<span class="token punctuation">]</span><span class="token comment"># touch readme.txt</span>
+</code></pre></div><ol start="2"><li>编写dockerfile文件，文件名使用官方命名：Dockerfile ，build的时候会默认寻找当前目录下的文件，不需要使用-f参数指定</li></ol> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token punctuation">[</span>root@Docker lzw<span class="token punctuation">]</span><span class="token comment"># vim Dockerfile</span>
+文件开始
+FROM centos:7
+MAINTAINET LiAng<span class="token operator">&lt;</span><span class="token number">2545721422</span>@qq.com<span class="token operator">&gt;</span>
+
+COPY readme.txt /usr/local/readme.txt
+ADD jdk-8u212-linux-x64.tar.gz /usr/local/
+ADD apache-tomcat-8.5.59.tar.gz /usr/local/
+
+RUN yum -y <span class="token function">install</span> <span class="token function">vim</span>
+
+ENV MYPATH /usr/local
+WORKDIR <span class="token variable">$MYPATH</span>
+
+ENV JAVA_HOME /usr/local/jdk1.8.0_212
+ENV CLASSPATH <span class="token variable">$JAVA_HOME</span>/lib/dt.jar:<span class="token variable">$JAVA_HOME</span>/lib/tools.jar
+ENV CATALINA_HOME /usr/local/apache-tomcat-8.5.59
+ENV CATALINA_BASH /usr/local/apache-tomcat-8.5.59
+ENV <span class="token environment constant">PATH</span> <span class="token environment constant">$PATH</span><span class="token builtin class-name">:</span><span class="token variable">$JAVA_HOME</span>/bin:<span class="token variable">$CATALINA_HOME</span>/lib:CATALINA_HOME/bin
+
+EXPOSE <span class="token number">8080</span>
+
+CMD /usr/local/apache-tomcat-8.5.59/bin/startup.sh <span class="token operator">&amp;&amp;</span> <span class="token function">tail</span> -F /usr/local/apache-tomcat-8.5.59/bin/logs/catalina.out
+文件结束
+</code></pre></div><ol start="3"><li>使用该Dockerfile构建镜像</li></ol> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token punctuation">[</span>root@Docker lzw<span class="token punctuation">]</span><span class="token comment"># docker build -t diytomcat .</span>
+。。。
+Successfully built 0a4664c025c9
+Successfully tagged diytomcat:latest
+</code></pre></div><ol start="4"><li>启动生成的镜像，构建Tomcat容器</li></ol> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token punctuation">[</span>root@Docker lzw<span class="token punctuation">]</span><span class="token comment"># docker images</span>
+REPOSITORY        TAG       IMAGE ID       CREATED              SIZE
+diytomcat         latest    0a4664c025c9   About a minute ago   862MB
+entrypoint-test   latest    0fe895df8b53   <span class="token number">19</span> minutes ago       231MB
+cmdtest           latest    aeed102d492f   <span class="token number">26</span> minutes ago       231MB
+mycentos          <span class="token number">0.1</span>       f438f070a046   <span class="token number">42</span> minutes ago       623MB
+lzw/centos        <span class="token number">1.0</span>       8878616edc11   <span class="token number">5</span> hours ago          231MB
+mysql             <span class="token number">5.7</span>       c20987f18b13   <span class="token number">8</span> months ago         448MB
+centos            <span class="token number">7</span>         eeb6ee3f44bd   <span class="token number">11</span> months ago        204MB
+centos            latest    5d0da3dc9764   <span class="token number">11</span> months ago        231MB
+<span class="token punctuation">[</span>root@Docker lzw<span class="token punctuation">]</span><span class="token comment"># docker run -d -p 9090:8080 --name lzwtomcat -v /home/lzw/tomcat/test:/usr/local/apache-tomcat-8.5.59/webapps/test -v /home/lzw/tomcat/tomcatlogs/:/usr/local/apache-tomcat-8.5.59/logs diytomcat</span>
+6fb61b189d99938e92fb4ae9f21c64d8d01520d7e50c752eb868b0473d24ab56
+
+<span class="token punctuation">[</span>root@Docker tomcat<span class="token punctuation">]</span><span class="token comment"># docker ps</span>
+CONTAINER ID   IMAGE            COMMAND                  CREATED              STATUS              PORTS                                       NAMES
+6fb61b189d99   diytomcat        <span class="token string">&quot;/bin/sh -c '/usr/lo…&quot;</span>   About a minute ago   Up About a minute   <span class="token number">0.0</span>.0.0:9090-<span class="token operator">&gt;</span><span class="token number">8080</span>/tcp, :::9090-<span class="token operator">&gt;</span><span class="token number">8080</span>/tcp   lzwtomcat
+<span class="token punctuation">[</span>root@Docker tomcat<span class="token punctuation">]</span><span class="token comment"># docker exec -it 6fb61b189d99 /bin/bash</span>
+<span class="token punctuation">[</span>root@6fb61b189d99 local<span class="token punctuation">]</span><span class="token comment"># ls</span>
+apache-tomcat-8.5.59  etc    include       lib    libexec     sbin   src
+bin                   games  jdk1.8.0_212  lib64  readme.txt  share
+<span class="token punctuation">[</span>root@6fb61b189d99 local<span class="token punctuation">]</span><span class="token comment"># pwd</span>
+/usr/local
+</code></pre></div><p>本地测试</p> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token punctuation">[</span>root@Docker tomcat<span class="token punctuation">]</span><span class="token comment"># curl localhost:9090</span>
+
+
+
+<span class="token operator">&lt;</span><span class="token operator">!</span>DOCTYPE html<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>html <span class="token assign-left variable">lang</span><span class="token operator">=</span><span class="token string">&quot;en&quot;</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>head<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>meta <span class="token assign-left variable">charset</span><span class="token operator">=</span><span class="token string">&quot;UTF-8&quot;</span> /<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>title<span class="token operator">&gt;</span>Apache Tomcat/8.5.5<span class="token operator"><span class="token file-descriptor important">9</span>&lt;</span>/title<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>link <span class="token assign-left variable">href</span><span class="token operator">=</span><span class="token string">&quot;favicon.ico&quot;</span> <span class="token assign-left variable">rel</span><span class="token operator">=</span><span class="token string">&quot;icon&quot;</span> <span class="token assign-left variable">type</span><span class="token operator">=</span><span class="token string">&quot;image/x-icon&quot;</span> /<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>link <span class="token assign-left variable">href</span><span class="token operator">=</span><span class="token string">&quot;favicon.ico&quot;</span> <span class="token assign-left variable">rel</span><span class="token operator">=</span><span class="token string">&quot;shortcut icon&quot;</span> <span class="token assign-left variable">type</span><span class="token operator">=</span><span class="token string">&quot;image/x-icon&quot;</span> /<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>link <span class="token assign-left variable">href</span><span class="token operator">=</span><span class="token string">&quot;tomcat.css&quot;</span> <span class="token assign-left variable">rel</span><span class="token operator">=</span><span class="token string">&quot;stylesheet&quot;</span> <span class="token assign-left variable">type</span><span class="token operator">=</span><span class="token string">&quot;text/css&quot;</span> /<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>/head<span class="token operator">&gt;</span>
+
+    <span class="token operator">&lt;</span>body<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>div <span class="token assign-left variable">id</span><span class="token operator">=</span><span class="token string">&quot;wrapper&quot;</span><span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span>div <span class="token assign-left variable">id</span><span class="token operator">=</span><span class="token string">&quot;navigation&quot;</span> <span class="token assign-left variable">class</span><span class="token operator">=</span><span class="token string">&quot;curved container&quot;</span><span class="token operator">&gt;</span>
+                <span class="token operator">&lt;</span>span <span class="token assign-left variable">id</span><span class="token operator">=</span><span class="token string">&quot;nav-home&quot;</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span>a <span class="token assign-left variable">href</span><span class="token operator">=</span><span class="token string">&quot;https://tomcat.apache.org/&quot;</span><span class="token operator">&gt;</span>Home<span class="token operator">&lt;</span>/a<span class="token operator">&gt;</span><span class="token operator">&lt;</span>/span<span class="token operator">&gt;</span>
+                <span class="token operator">&lt;</span>span <span class="token assign-left variable">id</span><span class="token operator">=</span><span class="token string">&quot;nav-hosts&quot;</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span>a <span class="token assign-left variable">href</span><span class="token operator">=</span><span class="token string">&quot;/docs/&quot;</span><span class="token operator">&gt;</span>Documentation<span class="token operator">&lt;</span>/a<span class="token operator">&gt;</span><span class="token operator">&lt;</span>/span<span class="token operator">&gt;</span>
+                <span class="token operator">&lt;</span>span <span class="token assign-left variable">id</span><span class="token operator">=</span><span class="token string">&quot;nav-config&quot;</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span>a <span class="token assign-left variable">href</span><span class="token operator">=</span><span class="token string">&quot;/docs/config/&quot;</span><span class="token operator">&gt;</span>Configuration<span class="token operator">&lt;</span>/a<span class="token operator">&gt;</span><span class="token operator">&lt;</span>/span<span class="token operator">&gt;</span>
+                <span class="token operator">&lt;</span>span <span class="token assign-left variable">id</span><span class="token operator">=</span><span class="token string">&quot;nav-examples&quot;</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span>a <span class="token assign-left variable">href</span><span class="token operator">=</span><span class="token string">&quot;/examples/&quot;</span><span class="token operator">&gt;</span>Examples<span class="token operator">&lt;</span>/a<span class="token operator">&gt;</span><span class="token operator">&lt;</span>/span<span class="token operator">&gt;</span>
+                <span class="token operator">&lt;</span>span <span class="token assign-left variable">id</span><span class="token operator">=</span><span class="token string">&quot;nav-wiki&quot;</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span>a <span class="token assign-left variable">href</span><span class="token operator">=</span><span class="token string">&quot;https://wiki.apache.org/tomcat/FrontPage&quot;</span><span class="token operator">&gt;</span>Wiki<span class="token operator">&lt;</span>/a<span class="token operator">&gt;</span><span class="token operator">&lt;</span>/span<span class="token operator">&gt;</span>
+                <span class="token operator">&lt;</span>span <span class="token assign-left variable">id</span><span class="token operator">=</span><span class="token string">&quot;nav-lists&quot;</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span>a <span class="token assign-left variable">href</span><span class="token operator">=</span><span class="token string">&quot;https://tomcat.apache.org/lists.html&quot;</span><span class="token operator">&gt;</span>Mailing Lists<span class="token operator">&lt;</span>/a<span class="token operator">&gt;</span><span class="token operator">&lt;</span>/span<span class="token operator">&gt;</span>
+                <span class="token operator">&lt;</span>span <span class="token assign-left variable">id</span><span class="token operator">=</span><span class="token string">&quot;nav-help&quot;</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span>a <span class="token assign-left variable">href</span><span class="token operator">=</span><span class="token string">&quot;https://tomcat.apache.org/findhelp.html&quot;</span><span class="token operator">&gt;</span>Find Help<span class="token operator">&lt;</span>/a<span class="token operator">&gt;</span><span class="token operator">&lt;</span>/span<span class="token operator">&gt;</span>
+                <span class="token operator">&lt;</span>br <span class="token assign-left variable">class</span><span class="token operator">=</span><span class="token string">&quot;separator&quot;</span> /<span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span>/div<span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span>div <span class="token assign-left variable">id</span><span class="token operator">=</span><span class="token string">&quot;asf-box&quot;</span><span class="token operator">&gt;</span>
+                <span class="token operator">&lt;</span>h<span class="token operator"><span class="token file-descriptor important">1</span>&gt;</span>Apache Tomcat/8.5.5<span class="token operator"><span class="token file-descriptor important">9</span>&lt;</span>/h<span class="token operator"><span class="token file-descriptor important">1</span>&gt;</span>
+            <span class="token operator">&lt;</span>/div<span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span>div <span class="token assign-left variable">id</span><span class="token operator">=</span><span class="token string">&quot;upper&quot;</span> <span class="token assign-left variable">class</span><span class="token operator">=</span><span class="token string">&quot;curved container&quot;</span><span class="token operator">&gt;</span>
+                <span class="token operator">&lt;</span>div <span class="token assign-left variable">id</span><span class="token operator">=</span><span class="token string">&quot;congrats&quot;</span> <span class="token assign-left variable">class</span><span class="token operator">=</span><span class="token string">&quot;curved container&quot;</span><span class="token operator">&gt;</span>
+                    <span class="token operator">&lt;</span>h<span class="token operator"><span class="token file-descriptor important">2</span>&gt;</span>If you<span class="token string">'re seeing this, you'</span>ve successfully installed Tomcat. Congratulations<span class="token operator">!</span><span class="token operator">&lt;</span>/h<span class="token operator"><span class="token file-descriptor important">2</span>&gt;</span>
+                <span class="token operator">&lt;</span>/div<span class="token operator">&gt;</span>
+                <span class="token operator">&lt;</span>div <span class="token assign-left variable">id</span><span class="token operator">=</span><span class="token string">&quot;notice&quot;</span><span class="token operator">&gt;</span>
+                    <span class="token operator">&lt;</span>img <span class="token assign-left variable">src</span><span class="token operator">=</span><span class="token string">&quot;tomcat.png&quot;</span> <span class="token assign-left variable">alt</span><span class="token operator">=</span><span class="token string">&quot;[tomcat logo]&quot;</span> /<span class="token operator">&gt;</span>
+                    <span class="token operator">&lt;</span>div <span class="token assign-left variable">id</span><span class="token operator">=</span><span class="token string">&quot;tasks&quot;</span><span class="token operator">&gt;</span>
+                        <span class="token operator">&lt;</span>h<span class="token operator"><span class="token file-descriptor important">3</span>&gt;</span>Recommended Reading:<span class="token operator">&lt;</span>/h<span class="token operator"><span class="token file-descriptor important">3</span>&gt;</span>
+                        <span class="token operator">&lt;</span>h<span class="token operator"><span class="token file-descriptor important">4</span>&gt;</span><span class="token operator">&lt;</span>a <span class="token assign-left variable">href</span><span class="token operator">=</span><span class="token string">&quot;/docs/security-howto.html&quot;</span><span class="token operator">&gt;</span>Security Considerations How-To<span class="token operator">&lt;</span>/a<span class="token operator">&gt;</span><span class="token operator">&lt;</span>/h<span class="token operator"><span class="token file-descriptor important">4</span>&gt;</span>
+                        <span class="token operator">&lt;</span>h<span class="token operator"><span class="token file-descriptor important">4</span>&gt;</span><span class="token operator">&lt;</span>a <span class="token assign-left variable">href</span><span class="token operator">=</span><span class="token string">&quot;/docs/manager-howto.html&quot;</span><span class="token operator">&gt;</span>Manager Application How-To<span class="token operator">&lt;</span>/a<span class="token operator">&gt;</span><span class="token operator">&lt;</span>/h<span class="token operator"><span class="token file-descriptor important">4</span>&gt;</span>
+                        <span class="token operator">&lt;</span>h<span class="token operator"><span class="token file-descriptor important">4</span>&gt;</span><span class="token operator">&lt;</span>a <span class="token assign-left variable">href</span><span class="token operator">=</span><span class="token string">&quot;/docs/cluster-howto.html&quot;</span><span class="token operator">&gt;</span>Clustering/Session Replication How-To<span class="token operator">&lt;</span>/a<span class="token operator">&gt;</span><span class="token operator">&lt;</span>/h<span class="token operator"><span class="token file-descriptor important">4</span>&gt;</span>
+                    <span class="token operator">&lt;</span>/div<span class="token operator">&gt;</span>
+                <span class="token operator">&lt;</span>/div<span class="token operator">&gt;</span>
+                <span class="token operator">&lt;</span>div <span class="token assign-left variable">id</span><span class="token operator">=</span><span class="token string">&quot;actions&quot;</span><span class="token operator">&gt;</span>
+                    <span class="token operator">&lt;</span>div <span class="token assign-left variable">class</span><span class="token operator">=</span><span class="token string">&quot;button&quot;</span><span class="token operator">&gt;</span>
+                        <span class="token operator">&lt;</span>a <span class="token assign-left variable">class</span><span class="token operator">=</span><span class="token string">&quot;container shadow&quot;</span> <span class="token assign-left variable">href</span><span class="token operator">=</span><span class="token string">&quot;/manager/status&quot;</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span>span<span class="token operator">&gt;</span>Server Status<span class="token operator">&lt;</span>/span<span class="token operator">&gt;</span><span class="token operator">&lt;</span>/a<span class="token operator">&gt;</span>
+                    <span class="token operator">&lt;</span>/div<span class="token operator">&gt;</span>
+                    <span class="token operator">&lt;</span>div <span class="token assign-left variable">class</span><span class="token operator">=</span><span class="token string">&quot;button&quot;</span><span class="token operator">&gt;</span>
+                        <span class="token operator">&lt;</span>a <span class="token assign-left variable">class</span><span class="token operator">=</span><span class="token string">&quot;container shadow&quot;</span> <span class="token assign-left variable">href</span><span class="token operator">=</span><span class="token string">&quot;/manager/html&quot;</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span>span<span class="token operator">&gt;</span>Manager App<span class="token operator">&lt;</span>/span<span class="token operator">&gt;</span><span class="token operator">&lt;</span>/a<span class="token operator">&gt;</span>
+                    <span class="token operator">&lt;</span>/div<span class="token operator">&gt;</span>
+                    <span class="token operator">&lt;</span>div <span class="token assign-left variable">class</span><span class="token operator">=</span><span class="token string">&quot;button&quot;</span><span class="token operator">&gt;</span>
+                        <span class="token operator">&lt;</span>a <span class="token assign-left variable">class</span><span class="token operator">=</span><span class="token string">&quot;container shadow&quot;</span> <span class="token assign-left variable">href</span><span class="token operator">=</span><span class="token string">&quot;/host-manager/html&quot;</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span>span<span class="token operator">&gt;</span>Host Manager<span class="token operator">&lt;</span>/span<span class="token operator">&gt;</span><span class="token operator">&lt;</span>/a<span class="token operator">&gt;</span>
+                    <span class="token operator">&lt;</span>/div<span class="token operator">&gt;</span>
+                <span class="token operator">&lt;</span>/div<span class="token operator">&gt;</span>
+                <span class="token operator">&lt;</span>br <span class="token assign-left variable">class</span><span class="token operator">=</span><span class="token string">&quot;separator&quot;</span> /<span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span>/div<span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span>div <span class="token assign-left variable">id</span><span class="token operator">=</span><span class="token string">&quot;middle&quot;</span> <span class="token assign-left variable">class</span><span class="token operator">=</span><span class="token string">&quot;curved container&quot;</span><span class="token operator">&gt;</span>
+                <span class="token operator">&lt;</span>h<span class="token operator"><span class="token file-descriptor important">3</span>&gt;</span>Developer Quick Start<span class="token operator">&lt;</span>/h<span class="token operator"><span class="token file-descriptor important">3</span>&gt;</span>
+                <span class="token operator">&lt;</span>div <span class="token assign-left variable">class</span><span class="token operator">=</span><span class="token string">&quot;col25&quot;</span><span class="token operator">&gt;</span>
+                    <span class="token operator">&lt;</span>div <span class="token assign-left variable">class</span><span class="token operator">=</span><span class="token string">&quot;container&quot;</span><span class="token operator">&gt;</span>
+                        <span class="token operator">&lt;</span>p<span class="token operator">&gt;</span><span class="token operator">&lt;</span>a <span class="token assign-left variable">href</span><span class="token operator">=</span><span class="token string">&quot;/docs/setup.html&quot;</span><span class="token operator">&gt;</span>Tomcat Setup<span class="token operator">&lt;</span>/a<span class="token operator">&gt;</span><span class="token operator">&lt;</span>/p<span class="token operator">&gt;</span>
+                        <span class="token operator">&lt;</span>p<span class="token operator">&gt;</span><span class="token operator">&lt;</span>a <span class="token assign-left variable">href</span><span class="token operator">=</span><span class="token string">&quot;/docs/appdev/&quot;</span><span class="token operator">&gt;</span>First Web Application<span class="token operator">&lt;</span>/a<span class="token operator">&gt;</span><span class="token operator">&lt;</span>/p<span class="token operator">&gt;</span>
+                    <span class="token operator">&lt;</span>/div<span class="token operator">&gt;</span>
+                <span class="token operator">&lt;</span>/div<span class="token operator">&gt;</span>
+                <span class="token operator">&lt;</span>div <span class="token assign-left variable">class</span><span class="token operator">=</span><span class="token string">&quot;col25&quot;</span><span class="token operator">&gt;</span>
+                    <span class="token operator">&lt;</span>div <span class="token assign-left variable">class</span><span class="token operator">=</span><span class="token string">&quot;container&quot;</span><span class="token operator">&gt;</span>
+                        <span class="token operator">&lt;</span>p<span class="token operator">&gt;</span><span class="token operator">&lt;</span>a <span class="token assign-left variable">href</span><span class="token operator">=</span><span class="token string">&quot;/docs/realm-howto.html&quot;</span><span class="token operator">&gt;</span>Realms <span class="token operator">&amp;</span>amp<span class="token punctuation">;</span> AAA<span class="token operator">&lt;</span>/a<span class="token operator">&gt;</span><span class="token operator">&lt;</span>/p<span class="token operator">&gt;</span>
+                        <span class="token operator">&lt;</span>p<span class="token operator">&gt;</span><span class="token operator">&lt;</span>a <span class="token assign-left variable">href</span><span class="token operator">=</span><span class="token string">&quot;/docs/jndi-datasource-examples-howto.html&quot;</span><span class="token operator">&gt;</span>JDBC DataSources<span class="token operator">&lt;</span>/a<span class="token operator">&gt;</span><span class="token operator">&lt;</span>/p<span class="token operator">&gt;</span>
+                    <span class="token operator">&lt;</span>/div<span class="token operator">&gt;</span>
+                <span class="token operator">&lt;</span>/div<span class="token operator">&gt;</span>
+                <span class="token operator">&lt;</span>div <span class="token assign-left variable">class</span><span class="token operator">=</span><span class="token string">&quot;col25&quot;</span><span class="token operator">&gt;</span>
+                    <span class="token operator">&lt;</span>div <span class="token assign-left variable">class</span><span class="token operator">=</span><span class="token string">&quot;container&quot;</span><span class="token operator">&gt;</span>
+                        <span class="token operator">&lt;</span>p<span class="token operator">&gt;</span><span class="token operator">&lt;</span>a <span class="token assign-left variable">href</span><span class="token operator">=</span><span class="token string">&quot;/examples/&quot;</span><span class="token operator">&gt;</span>Examples<span class="token operator">&lt;</span>/a<span class="token operator">&gt;</span><span class="token operator">&lt;</span>/p<span class="token operator">&gt;</span>
+                    <span class="token operator">&lt;</span>/div<span class="token operator">&gt;</span>
+                <span class="token operator">&lt;</span>/div<span class="token operator">&gt;</span>
+                <span class="token operator">&lt;</span>div <span class="token assign-left variable">class</span><span class="token operator">=</span><span class="token string">&quot;col25&quot;</span><span class="token operator">&gt;</span>
+                    <span class="token operator">&lt;</span>div <span class="token assign-left variable">class</span><span class="token operator">=</span><span class="token string">&quot;container&quot;</span><span class="token operator">&gt;</span>
+                        <span class="token operator">&lt;</span>p<span class="token operator">&gt;</span><span class="token operator">&lt;</span>a <span class="token assign-left variable">href</span><span class="token operator">=</span><span class="token string">&quot;https://wiki.apache.org/tomcat/Specifications&quot;</span><span class="token operator">&gt;</span>Servlet Specifications<span class="token operator">&lt;</span>/a<span class="token operator">&gt;</span><span class="token operator">&lt;</span>/p<span class="token operator">&gt;</span>
+                        <span class="token operator">&lt;</span>p<span class="token operator">&gt;</span><span class="token operator">&lt;</span>a <span class="token assign-left variable">href</span><span class="token operator">=</span><span class="token string">&quot;https://wiki.apache.org/tomcat/TomcatVersions&quot;</span><span class="token operator">&gt;</span>Tomcat Versions<span class="token operator">&lt;</span>/a<span class="token operator">&gt;</span><span class="token operator">&lt;</span>/p<span class="token operator">&gt;</span>
+                    <span class="token operator">&lt;</span>/div<span class="token operator">&gt;</span>
+                <span class="token operator">&lt;</span>/div<span class="token operator">&gt;</span>
+                <span class="token operator">&lt;</span>br <span class="token assign-left variable">class</span><span class="token operator">=</span><span class="token string">&quot;separator&quot;</span> /<span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span>/div<span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span>div <span class="token assign-left variable">id</span><span class="token operator">=</span><span class="token string">&quot;lower&quot;</span><span class="token operator">&gt;</span>
+                <span class="token operator">&lt;</span>div <span class="token assign-left variable">id</span><span class="token operator">=</span><span class="token string">&quot;low-manage&quot;</span> <span class="token assign-left variable">class</span><span class="token operator">=</span><span class="token string">&quot;&quot;</span><span class="token operator">&gt;</span>
+                    <span class="token operator">&lt;</span>div <span class="token assign-left variable">class</span><span class="token operator">=</span><span class="token string">&quot;curved container&quot;</span><span class="token operator">&gt;</span>
+                        <span class="token operator">&lt;</span>h<span class="token operator"><span class="token file-descriptor important">3</span>&gt;</span>Managing Tomcat<span class="token operator">&lt;</span>/h<span class="token operator"><span class="token file-descriptor important">3</span>&gt;</span>
+                        <span class="token operator">&lt;</span>p<span class="token operator">&gt;</span>For security, access to the <span class="token operator">&lt;</span>a <span class="token assign-left variable">href</span><span class="token operator">=</span><span class="token string">&quot;/manager/html&quot;</span><span class="token operator">&gt;</span>manager webapp<span class="token operator">&lt;</span>/a<span class="token operator">&gt;</span> is restricted.
+                        Users are defined in:<span class="token operator">&lt;</span>/p<span class="token operator">&gt;</span>
+                        <span class="token operator">&lt;</span>pre<span class="token operator">&gt;</span><span class="token variable">$CATALINA_HOME</span>/conf/tomcat-users.xml<span class="token operator">&lt;</span>/pre<span class="token operator">&gt;</span>
+                        <span class="token operator">&lt;</span>p<span class="token operator">&gt;</span>In Tomcat <span class="token number">8.5</span> access to the manager application is <span class="token function">split</span> between
+                           different users. <span class="token operator">&amp;</span>nbsp<span class="token punctuation">;</span> <span class="token operator">&lt;</span>a <span class="token assign-left variable">href</span><span class="token operator">=</span><span class="token string">&quot;/docs/manager-howto.html&quot;</span><span class="token operator">&gt;</span>Read more<span class="token punctuation">..</span>.<span class="token operator">&lt;</span>/a<span class="token operator">&gt;</span><span class="token operator">&lt;</span>/p<span class="token operator">&gt;</span>
+                        <span class="token operator">&lt;</span>br /<span class="token operator">&gt;</span>
+                        <span class="token operator">&lt;</span>h<span class="token operator"><span class="token file-descriptor important">4</span>&gt;</span><span class="token operator">&lt;</span>a <span class="token assign-left variable">href</span><span class="token operator">=</span><span class="token string">&quot;/docs/RELEASE-NOTES.txt&quot;</span><span class="token operator">&gt;</span>Release Notes<span class="token operator">&lt;</span>/a<span class="token operator">&gt;</span><span class="token operator">&lt;</span>/h<span class="token operator"><span class="token file-descriptor important">4</span>&gt;</span>
+                        <span class="token operator">&lt;</span>h<span class="token operator"><span class="token file-descriptor important">4</span>&gt;</span><span class="token operator">&lt;</span>a <span class="token assign-left variable">href</span><span class="token operator">=</span><span class="token string">&quot;/docs/changelog.html&quot;</span><span class="token operator">&gt;</span>Changelog<span class="token operator">&lt;</span>/a<span class="token operator">&gt;</span><span class="token operator">&lt;</span>/h<span class="token operator"><span class="token file-descriptor important">4</span>&gt;</span>
+                        <span class="token operator">&lt;</span>h<span class="token operator"><span class="token file-descriptor important">4</span>&gt;</span><span class="token operator">&lt;</span>a <span class="token assign-left variable">href</span><span class="token operator">=</span><span class="token string">&quot;https://tomcat.apache.org/migration.html&quot;</span><span class="token operator">&gt;</span>Migration Guide<span class="token operator">&lt;</span>/a<span class="token operator">&gt;</span><span class="token operator">&lt;</span>/h<span class="token operator"><span class="token file-descriptor important">4</span>&gt;</span>
+                        <span class="token operator">&lt;</span>h<span class="token operator"><span class="token file-descriptor important">4</span>&gt;</span><span class="token operator">&lt;</span>a <span class="token assign-left variable">href</span><span class="token operator">=</span><span class="token string">&quot;https://tomcat.apache.org/security.html&quot;</span><span class="token operator">&gt;</span>Security Notices<span class="token operator">&lt;</span>/a<span class="token operator">&gt;</span><span class="token operator">&lt;</span>/h<span class="token operator"><span class="token file-descriptor important">4</span>&gt;</span>
+                    <span class="token operator">&lt;</span>/div<span class="token operator">&gt;</span>
+                <span class="token operator">&lt;</span>/div<span class="token operator">&gt;</span>
+                <span class="token operator">&lt;</span>div <span class="token assign-left variable">id</span><span class="token operator">=</span><span class="token string">&quot;low-docs&quot;</span> <span class="token assign-left variable">class</span><span class="token operator">=</span><span class="token string">&quot;&quot;</span><span class="token operator">&gt;</span>
+                    <span class="token operator">&lt;</span>div <span class="token assign-left variable">class</span><span class="token operator">=</span><span class="token string">&quot;curved container&quot;</span><span class="token operator">&gt;</span>
+                        <span class="token operator">&lt;</span>h<span class="token operator"><span class="token file-descriptor important">3</span>&gt;</span>Documentation<span class="token operator">&lt;</span>/h<span class="token operator"><span class="token file-descriptor important">3</span>&gt;</span>
+                        <span class="token operator">&lt;</span>h<span class="token operator"><span class="token file-descriptor important">4</span>&gt;</span><span class="token operator">&lt;</span>a <span class="token assign-left variable">href</span><span class="token operator">=</span><span class="token string">&quot;/docs/&quot;</span><span class="token operator">&gt;</span>Tomcat <span class="token number">8.5</span> Documentation<span class="token operator">&lt;</span>/a<span class="token operator">&gt;</span><span class="token operator">&lt;</span>/h<span class="token operator"><span class="token file-descriptor important">4</span>&gt;</span>
+                        <span class="token operator">&lt;</span>h<span class="token operator"><span class="token file-descriptor important">4</span>&gt;</span><span class="token operator">&lt;</span>a <span class="token assign-left variable">href</span><span class="token operator">=</span><span class="token string">&quot;/docs/config/&quot;</span><span class="token operator">&gt;</span>Tomcat <span class="token number">8.5</span> Configuration<span class="token operator">&lt;</span>/a<span class="token operator">&gt;</span><span class="token operator">&lt;</span>/h<span class="token operator"><span class="token file-descriptor important">4</span>&gt;</span>
+                        <span class="token operator">&lt;</span>h<span class="token operator"><span class="token file-descriptor important">4</span>&gt;</span><span class="token operator">&lt;</span>a <span class="token assign-left variable">href</span><span class="token operator">=</span><span class="token string">&quot;https://wiki.apache.org/tomcat/FrontPage&quot;</span><span class="token operator">&gt;</span>Tomcat Wiki<span class="token operator">&lt;</span>/a<span class="token operator">&gt;</span><span class="token operator">&lt;</span>/h<span class="token operator"><span class="token file-descriptor important">4</span>&gt;</span>
+                        <span class="token operator">&lt;</span>p<span class="token operator">&gt;</span>Find additional important configuration information in:<span class="token operator">&lt;</span>/p<span class="token operator">&gt;</span>
+                        <span class="token operator">&lt;</span>pre<span class="token operator">&gt;</span><span class="token variable">$CATALINA_HOME</span>/RUNNING.txt<span class="token operator">&lt;</span>/pre<span class="token operator">&gt;</span>
+                        <span class="token operator">&lt;</span>p<span class="token operator">&gt;</span>Developers may be interested in:<span class="token operator">&lt;</span>/p<span class="token operator">&gt;</span>
+                        <span class="token operator">&lt;</span>ul<span class="token operator">&gt;</span>
+                            <span class="token operator">&lt;</span>li<span class="token operator">&gt;</span><span class="token operator">&lt;</span>a <span class="token assign-left variable">href</span><span class="token operator">=</span><span class="token string">&quot;https://tomcat.apache.org/bugreport.html&quot;</span><span class="token operator">&gt;</span>Tomcat <span class="token number">8.5</span> Bug Database<span class="token operator">&lt;</span>/a<span class="token operator">&gt;</span><span class="token operator">&lt;</span>/li<span class="token operator">&gt;</span>
+                            <span class="token operator">&lt;</span>li<span class="token operator">&gt;</span><span class="token operator">&lt;</span>a <span class="token assign-left variable">href</span><span class="token operator">=</span><span class="token string">&quot;/docs/api/index.html&quot;</span><span class="token operator">&gt;</span>Tomcat <span class="token number">8.5</span> JavaDocs<span class="token operator">&lt;</span>/a<span class="token operator">&gt;</span><span class="token operator">&lt;</span>/li<span class="token operator">&gt;</span>
+                            <span class="token operator">&lt;</span>li<span class="token operator">&gt;</span><span class="token operator">&lt;</span>a <span class="token assign-left variable">href</span><span class="token operator">=</span><span class="token string">&quot;https://github.com/apache/tomcat/tree/8.5.x&quot;</span><span class="token operator">&gt;</span>Tomcat <span class="token number">8.5</span> Git Repository at GitHub<span class="token operator">&lt;</span>/a<span class="token operator">&gt;</span><span class="token operator">&lt;</span>/li<span class="token operator">&gt;</span>
+                        <span class="token operator">&lt;</span>/ul<span class="token operator">&gt;</span>
+                    <span class="token operator">&lt;</span>/div<span class="token operator">&gt;</span>
+                <span class="token operator">&lt;</span>/div<span class="token operator">&gt;</span>
+                <span class="token operator">&lt;</span>div <span class="token assign-left variable">id</span><span class="token operator">=</span><span class="token string">&quot;low-help&quot;</span> <span class="token assign-left variable">class</span><span class="token operator">=</span><span class="token string">&quot;&quot;</span><span class="token operator">&gt;</span>
+                    <span class="token operator">&lt;</span>div <span class="token assign-left variable">class</span><span class="token operator">=</span><span class="token string">&quot;curved container&quot;</span><span class="token operator">&gt;</span>
+                        <span class="token operator">&lt;</span>h<span class="token operator"><span class="token file-descriptor important">3</span>&gt;</span>Getting Help<span class="token operator">&lt;</span>/h<span class="token operator"><span class="token file-descriptor important">3</span>&gt;</span>
+                        <span class="token operator">&lt;</span>h<span class="token operator"><span class="token file-descriptor important">4</span>&gt;</span><span class="token operator">&lt;</span>a <span class="token assign-left variable">href</span><span class="token operator">=</span><span class="token string">&quot;https://tomcat.apache.org/faq/&quot;</span><span class="token operator">&gt;</span>FAQ<span class="token operator">&lt;</span>/a<span class="token operator">&gt;</span> and <span class="token operator">&lt;</span>a <span class="token assign-left variable">href</span><span class="token operator">=</span><span class="token string">&quot;https://tomcat.apache.org/lists.html&quot;</span><span class="token operator">&gt;</span>Mailing Lists<span class="token operator">&lt;</span>/a<span class="token operator">&gt;</span><span class="token operator">&lt;</span>/h<span class="token operator"><span class="token file-descriptor important">4</span>&gt;</span>
+                        <span class="token operator">&lt;</span>p<span class="token operator">&gt;</span>The following mailing lists are available:<span class="token operator">&lt;</span>/p<span class="token operator">&gt;</span>
+                        <span class="token operator">&lt;</span>ul<span class="token operator">&gt;</span>
+                            <span class="token operator">&lt;</span>li <span class="token assign-left variable">id</span><span class="token operator">=</span><span class="token string">&quot;list-announce&quot;</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span>strong<span class="token operator">&gt;</span><span class="token operator">&lt;</span>a <span class="token assign-left variable">href</span><span class="token operator">=</span><span class="token string">&quot;https://tomcat.apache.org/lists.html#tomcat-announce&quot;</span><span class="token operator">&gt;</span>tomcat-announce<span class="token operator">&lt;</span>/a<span class="token operator">&gt;</span><span class="token operator">&lt;</span>br /<span class="token operator">&gt;</span>
+                                Important announcements, releases, security vulnerability notifications. <span class="token punctuation">(</span>Low volume<span class="token punctuation">)</span>.<span class="token operator">&lt;</span>/strong<span class="token operator">&gt;</span>
+                            <span class="token operator">&lt;</span>/li<span class="token operator">&gt;</span>
+                            <span class="token operator">&lt;</span>li<span class="token operator">&gt;</span><span class="token operator">&lt;</span>a <span class="token assign-left variable">href</span><span class="token operator">=</span><span class="token string">&quot;https://tomcat.apache.org/lists.html#tomcat-users&quot;</span><span class="token operator">&gt;</span>tomcat-users<span class="token operator">&lt;</span>/a<span class="token operator">&gt;</span><span class="token operator">&lt;</span>br /<span class="token operator">&gt;</span>
+                                User support and discussion
+                            <span class="token operator">&lt;</span>/li<span class="token operator">&gt;</span>
+                            <span class="token operator">&lt;</span>li<span class="token operator">&gt;</span><span class="token operator">&lt;</span>a <span class="token assign-left variable">href</span><span class="token operator">=</span><span class="token string">&quot;https://tomcat.apache.org/lists.html#taglibs-user&quot;</span><span class="token operator">&gt;</span>taglibs-user<span class="token operator">&lt;</span>/a<span class="token operator">&gt;</span><span class="token operator">&lt;</span>br /<span class="token operator">&gt;</span>
+                                User support and discussion <span class="token keyword">for</span> <span class="token operator">&lt;</span>a <span class="token assign-left variable">href</span><span class="token operator">=</span><span class="token string">&quot;https://tomcat.apache.org/taglibs/&quot;</span><span class="token operator">&gt;</span>Apache Taglibs<span class="token operator">&lt;</span>/a<span class="token operator">&gt;</span>
+                            <span class="token operator">&lt;</span>/li<span class="token operator">&gt;</span>
+                            <span class="token operator">&lt;</span>li<span class="token operator">&gt;</span><span class="token operator">&lt;</span>a <span class="token assign-left variable">href</span><span class="token operator">=</span><span class="token string">&quot;https://tomcat.apache.org/lists.html#tomcat-dev&quot;</span><span class="token operator">&gt;</span>tomcat-dev<span class="token operator">&lt;</span>/a<span class="token operator">&gt;</span><span class="token operator">&lt;</span>br /<span class="token operator">&gt;</span>
+                                Development mailing list, including commit messages
+                            <span class="token operator">&lt;</span>/li<span class="token operator">&gt;</span>
+                        <span class="token operator">&lt;</span>/ul<span class="token operator">&gt;</span>
+                    <span class="token operator">&lt;</span>/div<span class="token operator">&gt;</span>
+                <span class="token operator">&lt;</span>/div<span class="token operator">&gt;</span>
+                <span class="token operator">&lt;</span>br <span class="token assign-left variable">class</span><span class="token operator">=</span><span class="token string">&quot;separator&quot;</span> /<span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span>/div<span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span>div <span class="token assign-left variable">id</span><span class="token operator">=</span><span class="token string">&quot;footer&quot;</span> <span class="token assign-left variable">class</span><span class="token operator">=</span><span class="token string">&quot;curved container&quot;</span><span class="token operator">&gt;</span>
+                <span class="token operator">&lt;</span>div <span class="token assign-left variable">class</span><span class="token operator">=</span><span class="token string">&quot;col20&quot;</span><span class="token operator">&gt;</span>
+                    <span class="token operator">&lt;</span>div <span class="token assign-left variable">class</span><span class="token operator">=</span><span class="token string">&quot;container&quot;</span><span class="token operator">&gt;</span>
+                        <span class="token operator">&lt;</span>h<span class="token operator"><span class="token file-descriptor important">4</span>&gt;</span>Other Downloads<span class="token operator">&lt;</span>/h<span class="token operator"><span class="token file-descriptor important">4</span>&gt;</span>
+                        <span class="token operator">&lt;</span>ul<span class="token operator">&gt;</span>
+                            <span class="token operator">&lt;</span>li<span class="token operator">&gt;</span><span class="token operator">&lt;</span>a <span class="token assign-left variable">href</span><span class="token operator">=</span><span class="token string">&quot;https://tomcat.apache.org/download-connectors.cgi&quot;</span><span class="token operator">&gt;</span>Tomcat Connectors<span class="token operator">&lt;</span>/a<span class="token operator">&gt;</span><span class="token operator">&lt;</span>/li<span class="token operator">&gt;</span>
+                            <span class="token operator">&lt;</span>li<span class="token operator">&gt;</span><span class="token operator">&lt;</span>a <span class="token assign-left variable">href</span><span class="token operator">=</span><span class="token string">&quot;https://tomcat.apache.org/download-native.cgi&quot;</span><span class="token operator">&gt;</span>Tomcat Native<span class="token operator">&lt;</span>/a<span class="token operator">&gt;</span><span class="token operator">&lt;</span>/li<span class="token operator">&gt;</span>
+                            <span class="token operator">&lt;</span>li<span class="token operator">&gt;</span><span class="token operator">&lt;</span>a <span class="token assign-left variable">href</span><span class="token operator">=</span><span class="token string">&quot;https://tomcat.apache.org/taglibs/&quot;</span><span class="token operator">&gt;</span>Taglibs<span class="token operator">&lt;</span>/a<span class="token operator">&gt;</span><span class="token operator">&lt;</span>/li<span class="token operator">&gt;</span>
+                            <span class="token operator">&lt;</span>li<span class="token operator">&gt;</span><span class="token operator">&lt;</span>a <span class="token assign-left variable">href</span><span class="token operator">=</span><span class="token string">&quot;/docs/deployer-howto.html&quot;</span><span class="token operator">&gt;</span>Deployer<span class="token operator">&lt;</span>/a<span class="token operator">&gt;</span><span class="token operator">&lt;</span>/li<span class="token operator">&gt;</span>
+                        <span class="token operator">&lt;</span>/ul<span class="token operator">&gt;</span>
+                    <span class="token operator">&lt;</span>/div<span class="token operator">&gt;</span>
+                <span class="token operator">&lt;</span>/div<span class="token operator">&gt;</span>
+                <span class="token operator">&lt;</span>div <span class="token assign-left variable">class</span><span class="token operator">=</span><span class="token string">&quot;col20&quot;</span><span class="token operator">&gt;</span>
+                    <span class="token operator">&lt;</span>div <span class="token assign-left variable">class</span><span class="token operator">=</span><span class="token string">&quot;container&quot;</span><span class="token operator">&gt;</span>
+                        <span class="token operator">&lt;</span>h<span class="token operator"><span class="token file-descriptor important">4</span>&gt;</span>Other Documentation<span class="token operator">&lt;</span>/h<span class="token operator"><span class="token file-descriptor important">4</span>&gt;</span>
+                        <span class="token operator">&lt;</span>ul<span class="token operator">&gt;</span>
+                            <span class="token operator">&lt;</span>li<span class="token operator">&gt;</span><span class="token operator">&lt;</span>a <span class="token assign-left variable">href</span><span class="token operator">=</span><span class="token string">&quot;https://tomcat.apache.org/connectors-doc/&quot;</span><span class="token operator">&gt;</span>Tomcat Connectors<span class="token operator">&lt;</span>/a<span class="token operator">&gt;</span><span class="token operator">&lt;</span>/li<span class="token operator">&gt;</span>
+                            <span class="token operator">&lt;</span>li<span class="token operator">&gt;</span><span class="token operator">&lt;</span>a <span class="token assign-left variable">href</span><span class="token operator">=</span><span class="token string">&quot;https://tomcat.apache.org/connectors-doc/&quot;</span><span class="token operator">&gt;</span>mod_jk Documentation<span class="token operator">&lt;</span>/a<span class="token operator">&gt;</span><span class="token operator">&lt;</span>/li<span class="token operator">&gt;</span>
+                            <span class="token operator">&lt;</span>li<span class="token operator">&gt;</span><span class="token operator">&lt;</span>a <span class="token assign-left variable">href</span><span class="token operator">=</span><span class="token string">&quot;https://tomcat.apache.org/native-doc/&quot;</span><span class="token operator">&gt;</span>Tomcat Native<span class="token operator">&lt;</span>/a<span class="token operator">&gt;</span><span class="token operator">&lt;</span>/li<span class="token operator">&gt;</span>
+                            <span class="token operator">&lt;</span>li<span class="token operator">&gt;</span><span class="token operator">&lt;</span>a <span class="token assign-left variable">href</span><span class="token operator">=</span><span class="token string">&quot;/docs/deployer-howto.html&quot;</span><span class="token operator">&gt;</span>Deployer<span class="token operator">&lt;</span>/a<span class="token operator">&gt;</span><span class="token operator">&lt;</span>/li<span class="token operator">&gt;</span>
+                        <span class="token operator">&lt;</span>/ul<span class="token operator">&gt;</span>
+                    <span class="token operator">&lt;</span>/div<span class="token operator">&gt;</span>
+                <span class="token operator">&lt;</span>/div<span class="token operator">&gt;</span>
+                <span class="token operator">&lt;</span>div <span class="token assign-left variable">class</span><span class="token operator">=</span><span class="token string">&quot;col20&quot;</span><span class="token operator">&gt;</span>
+                    <span class="token operator">&lt;</span>div <span class="token assign-left variable">class</span><span class="token operator">=</span><span class="token string">&quot;container&quot;</span><span class="token operator">&gt;</span>
+                        <span class="token operator">&lt;</span>h<span class="token operator"><span class="token file-descriptor important">4</span>&gt;</span>Get Involved<span class="token operator">&lt;</span>/h<span class="token operator"><span class="token file-descriptor important">4</span>&gt;</span>
+                        <span class="token operator">&lt;</span>ul<span class="token operator">&gt;</span>
+                            <span class="token operator">&lt;</span>li<span class="token operator">&gt;</span><span class="token operator">&lt;</span>a <span class="token assign-left variable">href</span><span class="token operator">=</span><span class="token string">&quot;https://tomcat.apache.org/getinvolved.html&quot;</span><span class="token operator">&gt;</span>Overview<span class="token operator">&lt;</span>/a<span class="token operator">&gt;</span><span class="token operator">&lt;</span>/li<span class="token operator">&gt;</span>
+                            <span class="token operator">&lt;</span>li<span class="token operator">&gt;</span><span class="token operator">&lt;</span>a <span class="token assign-left variable">href</span><span class="token operator">=</span><span class="token string">&quot;https://tomcat.apache.org/source.html&quot;</span><span class="token operator">&gt;</span>Source Repositories<span class="token operator">&lt;</span>/a<span class="token operator">&gt;</span><span class="token operator">&lt;</span>/li<span class="token operator">&gt;</span>
+                            <span class="token operator">&lt;</span>li<span class="token operator">&gt;</span><span class="token operator">&lt;</span>a <span class="token assign-left variable">href</span><span class="token operator">=</span><span class="token string">&quot;https://tomcat.apache.org/lists.html&quot;</span><span class="token operator">&gt;</span>Mailing Lists<span class="token operator">&lt;</span>/a<span class="token operator">&gt;</span><span class="token operator">&lt;</span>/li<span class="token operator">&gt;</span>
+                            <span class="token operator">&lt;</span>li<span class="token operator">&gt;</span><span class="token operator">&lt;</span>a <span class="token assign-left variable">href</span><span class="token operator">=</span><span class="token string">&quot;https://wiki.apache.org/tomcat/FrontPage&quot;</span><span class="token operator">&gt;</span>Wiki<span class="token operator">&lt;</span>/a<span class="token operator">&gt;</span><span class="token operator">&lt;</span>/li<span class="token operator">&gt;</span>
+                        <span class="token operator">&lt;</span>/ul<span class="token operator">&gt;</span>
+                    <span class="token operator">&lt;</span>/div<span class="token operator">&gt;</span>
+                <span class="token operator">&lt;</span>/div<span class="token operator">&gt;</span>
+                <span class="token operator">&lt;</span>div <span class="token assign-left variable">class</span><span class="token operator">=</span><span class="token string">&quot;col20&quot;</span><span class="token operator">&gt;</span>
+                    <span class="token operator">&lt;</span>div <span class="token assign-left variable">class</span><span class="token operator">=</span><span class="token string">&quot;container&quot;</span><span class="token operator">&gt;</span>
+                        <span class="token operator">&lt;</span>h<span class="token operator"><span class="token file-descriptor important">4</span>&gt;</span>Miscellaneous<span class="token operator">&lt;</span>/h<span class="token operator"><span class="token file-descriptor important">4</span>&gt;</span>
+                        <span class="token operator">&lt;</span>ul<span class="token operator">&gt;</span>
+                            <span class="token operator">&lt;</span>li<span class="token operator">&gt;</span><span class="token operator">&lt;</span>a <span class="token assign-left variable">href</span><span class="token operator">=</span><span class="token string">&quot;https://tomcat.apache.org/contact.html&quot;</span><span class="token operator">&gt;</span>Contact<span class="token operator">&lt;</span>/a<span class="token operator">&gt;</span><span class="token operator">&lt;</span>/li<span class="token operator">&gt;</span>
+                            <span class="token operator">&lt;</span>li<span class="token operator">&gt;</span><span class="token operator">&lt;</span>a <span class="token assign-left variable">href</span><span class="token operator">=</span><span class="token string">&quot;https://tomcat.apache.org/legal.html&quot;</span><span class="token operator">&gt;</span>Legal<span class="token operator">&lt;</span>/a<span class="token operator">&gt;</span><span class="token operator">&lt;</span>/li<span class="token operator">&gt;</span>
+                            <span class="token operator">&lt;</span>li<span class="token operator">&gt;</span><span class="token operator">&lt;</span>a <span class="token assign-left variable">href</span><span class="token operator">=</span><span class="token string">&quot;https://www.apache.org/foundation/sponsorship.html&quot;</span><span class="token operator">&gt;</span>Sponsorship<span class="token operator">&lt;</span>/a<span class="token operator">&gt;</span><span class="token operator">&lt;</span>/li<span class="token operator">&gt;</span>
+                            <span class="token operator">&lt;</span>li<span class="token operator">&gt;</span><span class="token operator">&lt;</span>a <span class="token assign-left variable">href</span><span class="token operator">=</span><span class="token string">&quot;https://www.apache.org/foundation/thanks.html&quot;</span><span class="token operator">&gt;</span>Thanks<span class="token operator">&lt;</span>/a<span class="token operator">&gt;</span><span class="token operator">&lt;</span>/li<span class="token operator">&gt;</span>
+                        <span class="token operator">&lt;</span>/ul<span class="token operator">&gt;</span>
+                    <span class="token operator">&lt;</span>/div<span class="token operator">&gt;</span>
+                <span class="token operator">&lt;</span>/div<span class="token operator">&gt;</span>
+                <span class="token operator">&lt;</span>div <span class="token assign-left variable">class</span><span class="token operator">=</span><span class="token string">&quot;col20&quot;</span><span class="token operator">&gt;</span>
+                    <span class="token operator">&lt;</span>div <span class="token assign-left variable">class</span><span class="token operator">=</span><span class="token string">&quot;container&quot;</span><span class="token operator">&gt;</span>
+                        <span class="token operator">&lt;</span>h<span class="token operator"><span class="token file-descriptor important">4</span>&gt;</span>Apache Software Foundation<span class="token operator">&lt;</span>/h<span class="token operator"><span class="token file-descriptor important">4</span>&gt;</span>
+                        <span class="token operator">&lt;</span>ul<span class="token operator">&gt;</span>
+                            <span class="token operator">&lt;</span>li<span class="token operator">&gt;</span><span class="token operator">&lt;</span>a <span class="token assign-left variable">href</span><span class="token operator">=</span><span class="token string">&quot;https://tomcat.apache.org/whoweare.html&quot;</span><span class="token operator">&gt;</span>Who We Are<span class="token operator">&lt;</span>/a<span class="token operator">&gt;</span><span class="token operator">&lt;</span>/li<span class="token operator">&gt;</span>
+                            <span class="token operator">&lt;</span>li<span class="token operator">&gt;</span><span class="token operator">&lt;</span>a <span class="token assign-left variable">href</span><span class="token operator">=</span><span class="token string">&quot;https://tomcat.apache.org/heritage.html&quot;</span><span class="token operator">&gt;</span>Heritage<span class="token operator">&lt;</span>/a<span class="token operator">&gt;</span><span class="token operator">&lt;</span>/li<span class="token operator">&gt;</span>
+                            <span class="token operator">&lt;</span>li<span class="token operator">&gt;</span><span class="token operator">&lt;</span>a <span class="token assign-left variable">href</span><span class="token operator">=</span><span class="token string">&quot;https://www.apache.org&quot;</span><span class="token operator">&gt;</span>Apache Home<span class="token operator">&lt;</span>/a<span class="token operator">&gt;</span><span class="token operator">&lt;</span>/li<span class="token operator">&gt;</span>
+                            <span class="token operator">&lt;</span>li<span class="token operator">&gt;</span><span class="token operator">&lt;</span>a <span class="token assign-left variable">href</span><span class="token operator">=</span><span class="token string">&quot;https://tomcat.apache.org/resources.html&quot;</span><span class="token operator">&gt;</span>Resources<span class="token operator">&lt;</span>/a<span class="token operator">&gt;</span><span class="token operator">&lt;</span>/li<span class="token operator">&gt;</span>
+                        <span class="token operator">&lt;</span>/ul<span class="token operator">&gt;</span>
+                    <span class="token operator">&lt;</span>/div<span class="token operator">&gt;</span>
+                <span class="token operator">&lt;</span>/div<span class="token operator">&gt;</span>
+                <span class="token operator">&lt;</span>br <span class="token assign-left variable">class</span><span class="token operator">=</span><span class="token string">&quot;separator&quot;</span> /<span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span>/div<span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span>p <span class="token assign-left variable">class</span><span class="token operator">=</span><span class="token string">&quot;copyright&quot;</span><span class="token operator">&gt;</span>Copyright <span class="token operator">&amp;</span>copy<span class="token punctuation">;</span><span class="token number">1999</span>-2022 Apache Software Foundation.  All Rights Reserved<span class="token operator">&lt;</span>/p<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>/div<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>/body<span class="token operator">&gt;</span>
+
+<span class="token operator">&lt;</span>/html<span class="token operator">&gt;</span>
+</code></pre></div><p><img src="/blog/docker/image-20220823155529000.png" alt="image-20220823155529000"></p> <p><strong>发布项目</strong>（由于做了卷挂载，直接在本地编写项目）</p> <h3 id="发布镜像到dockerhub"><a href="#发布镜像到dockerhub" class="header-anchor">#</a> 发布镜像到DockerHub</h3> <p>1.登录https://hub.docker.com/ DockerHub官网进行注册</p> <p>2.进行登录，docker login -u 用户名</p> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token punctuation">[</span>root@Docker ~<span class="token punctuation">]</span><span class="token comment"># docker login -u liangwill </span>
+Password: 
+WARNING<span class="token operator">!</span> Your password will be stored unencrypted <span class="token keyword">in</span> /root/.docker/config.json.
+Configure a credential helper to remove this warning. See
+https://docs.docker.com/engine/reference/commandline/login/<span class="token comment">#credentials-store</span>
+
+Login Succeeded
+</code></pre></div><p>3.使用<code>docker push</code>命令推送镜像到DockerHub上的仓库</p> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token punctuation">[</span>root@Docker ~<span class="token punctuation">]</span><span class="token comment"># docker tag 0a4664c025c9 liangwill/diytomcat:1.0</span>
+<span class="token punctuation">[</span>root@Docker ~<span class="token punctuation">]</span><span class="token comment"># docker images</span>
+REPOSITORY            TAG       IMAGE ID       CREATED         SIZE
+liangwill/diytomcat   <span class="token number">1.0</span>       0a4664c025c9   <span class="token number">20</span> hours ago    862MB
+diytomcat             latest    0a4664c025c9   <span class="token number">20</span> hours ago    862MB
+entrypoint-test       latest    0fe895df8b53   <span class="token number">20</span> hours ago    231MB
+cmdtest               latest    aeed102d492f   <span class="token number">20</span> hours ago    231MB
+mycentos              <span class="token number">0.1</span>       f438f070a046   <span class="token number">20</span> hours ago    623MB
+lzw/centos            <span class="token number">1.0</span>       8878616edc11   <span class="token number">24</span> hours ago    231MB
+mysql                 <span class="token number">5.7</span>       c20987f18b13   <span class="token number">8</span> months ago    448MB
+centos                <span class="token number">7</span>         eeb6ee3f44bd   <span class="token number">11</span> months ago   204MB
+centos                latest    5d0da3dc9764   <span class="token number">11</span> months ago   231MB
+<span class="token punctuation">[</span>root@Docker ~<span class="token punctuation">]</span><span class="token comment"># docker push liangwill/diytomcat:1.0</span>
+The push refers to repository <span class="token punctuation">[</span>docker.io/liangwill/diytomcat<span class="token punctuation">]</span>
+7194682377ea: Pushed 
+1bb8d59f6980: Pushed 
+e8600e69fa52: Pushed 
+4acf1c4d7e52: Pushed 
+174f56854903: Pushed 
+<span class="token number">1.0</span>: digest: sha256:9655375069593bc4cecb72d4943fd63fc344594fc8f0507b398d9c483e47fe46 size: <span class="token number">1373</span>
+</code></pre></div><p>因为push的时候，镜像名前面需要加上用户名（liangwill是我的用户名。如果用户名不是当前登录用户则会拒绝push请求），所以需要使用命令docker tag 镜像名 新的镜像名复制出一份镜像重新打个Tag。</p> <h3 id="发布镜像到阿里云容器服务"><a href="#发布镜像到阿里云容器服务" class="header-anchor">#</a> 发布镜像到阿里云容器服务</h3> <p>1.登录阿里云，找到容器镜像服务</p> <p>2.创建命名空间</p> <p><img src="/blog/docker/image-20220824113417752.png" alt="image-20220824113417752"></p> <p>3.创建镜像仓库</p> <p><img src="/blog/docker/image-20220824113523828.png" alt="image-20220824113523828"></p> <p><img src="/blog/docker/image-20220824113551812-16613121523041.png" alt="image-20220824113551812"></p> <p>5.根据操作指南操作</p> <p><img src="/blog/docker/image-20220824113712652.png" alt="image-20220824113712652"></p> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token punctuation">[</span>root@Docker ~<span class="token punctuation">]</span><span class="token comment"># docker login --username=aliyun1503091426 registry.cn-hangzhou.aliyuncs.com</span>
+Password: 
+WARNING<span class="token operator">!</span> Your password will be stored unencrypted <span class="token keyword">in</span> /root/.docker/config.json.
+Configure a credential helper to remove this warning. See
+https://docs.docker.com/engine/reference/commandline/login/<span class="token comment">#credentials-store</span>
+
+<span class="token punctuation">[</span>root@Docker ~<span class="token punctuation">]</span><span class="token comment"># docker images</span>
+REPOSITORY            TAG       IMAGE ID       CREATED         SIZE
+liangwill/diytomcat   <span class="token number">1.0</span>       0a4664c025c9   <span class="token number">20</span> hours ago    862MB
+diytomcat             latest    0a4664c025c9   <span class="token number">20</span> hours ago    862MB
+entrypoint-test       latest    0fe895df8b53   <span class="token number">20</span> hours ago    231MB
+cmdtest               latest    aeed102d492f   <span class="token number">21</span> hours ago    231MB
+mycentos              <span class="token number">0.1</span>       f438f070a046   <span class="token number">21</span> hours ago    623MB
+lzw/centos            <span class="token number">1.0</span>       8878616edc11   <span class="token number">25</span> hours ago    231MB
+mysql                 <span class="token number">5.7</span>       c20987f18b13   <span class="token number">8</span> months ago    448MB
+centos                <span class="token number">7</span>         eeb6ee3f44bd   <span class="token number">11</span> months ago   204MB
+centos                latest    5d0da3dc9764   <span class="token number">11</span> months ago   231MB
+<span class="token punctuation">[</span>root@Docker ~<span class="token punctuation">]</span><span class="token comment"># docker tag 0a4664c025c9 registry.cn-hangzhou.aliyuncs.com/lzwny/liangtest-diycentos:1.1</span>
+<span class="token punctuation">[</span>root@Docker ~<span class="token punctuation">]</span><span class="token comment"># docker images</span>
+REPOSITORY                                                    TAG       IMAGE ID       CREATED         SIZE
+liangwill/diytomcat                                           <span class="token number">1.0</span>       0a4664c025c9   <span class="token number">20</span> hours ago    862MB
+diytomcat                                                     latest    0a4664c025c9   <span class="token number">20</span> hours ago    862MB
+registry.cn-hangzhou.aliyuncs.com/lzwny/liangtest-diycentos   <span class="token number">1.1</span>       0a4664c025c9   <span class="token number">20</span> hours ago    862MB
+entrypoint-test                                               latest    0fe895df8b53   <span class="token number">20</span> hours ago    231MB
+cmdtest                                                       latest    aeed102d492f   <span class="token number">21</span> hours ago    231MB
+mycentos                                                      <span class="token number">0.1</span>       f438f070a046   <span class="token number">21</span> hours ago    623MB
+lzw/centos                                                    <span class="token number">1.0</span>       8878616edc11   <span class="token number">25</span> hours ago    231MB
+mysql                                                         <span class="token number">5.7</span>       c20987f18b13   <span class="token number">8</span> months ago    448MB
+centos                                                        <span class="token number">7</span>         eeb6ee3f44bd   <span class="token number">11</span> months ago   204MB
+centos                                                        latest    5d0da3dc9764   <span class="token number">11</span> months ago   231MB
+<span class="token punctuation">[</span>root@Docker ~<span class="token punctuation">]</span><span class="token comment"># docker push registry.cn-hangzhou.aliyuncs.com/lzwny/liangtest-diycentos:1.1</span>
+The push refers to repository <span class="token punctuation">[</span>registry.cn-hangzhou.aliyuncs.com/lzwny/liangtest-diycentos<span class="token punctuation">]</span>
+7194682377ea: Mounted from lzwny/linagtest-diycentos 
+1bb8d59f6980: Mounted from lzwny/linagtest-diycentos 
+e8600e69fa52: Mounted from lzwny/linagtest-diycentos 
+4acf1c4d7e52: Mounted from lzwny/linagtest-diycentos 
+174f56854903: Mounted from lzwny/linagtest-diycentos 
+<span class="token number">1.1</span>: digest: sha256:9655375069593bc4cecb72d4943fd63fc344594fc8f0507b398d9c483e47fe46 size: <span class="token number">1373</span>
+</code></pre></div><p><img src="/blog/docker/image-20220824115015818.png" alt="image-20220824115015818"></p> <h3 id="小结"><a href="#小结" class="header-anchor">#</a> 小结</h3> <p><img src="/blog/docker/image-20220824115624519.png" alt="image-20220824115624519"></p> <h2 id="docker网络"><a href="#docker网络" class="header-anchor">#</a> Docker网络</h2> <p>清空所有环境，再学习</p> <p><img src="/blog/docker/image-20220824145005122.png" alt="image-20220824145005122"></p> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token comment"># 运行容器</span>
+<span class="token punctuation">[</span>root@Docker ~<span class="token punctuation">]</span><span class="token comment"># docker run -d -P --name tomcat01 tomcat:7.0</span>
+
+<span class="token comment"># 发现容器启动的时候会得到一个 eth0@if79 ip地址，docker分配的</span>
+<span class="token punctuation">[</span>root@Docker ~<span class="token punctuation">]</span><span class="token comment"># docker exec -it tomcat01 ip addr</span>
+<span class="token number">1</span>: lo: <span class="token operator">&lt;</span>LOOPBACK,UP,LOWER_UP<span class="token operator">&gt;</span> mtu <span class="token number">65536</span> qdisc noqueue state UNKNOWN group default qlen <span class="token number">1000</span>
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet <span class="token number">127.0</span>.0.1/8 scope <span class="token function">host</span> lo
+       valid_lft forever preferred_lft forever
+<span class="token number">261</span>: eth0@if262: <span class="token operator">&lt;</span>BROADCAST,MULTICAST,UP,LOWER_UP<span class="token operator">&gt;</span> mtu <span class="token number">1500</span> qdisc noqueue state UP group default 
+    link/ether 02:42:ac:11:00:02 brd ff:ff:ff:ff:ff:ff link-netnsid <span class="token number">0</span>
+    inet <span class="token number">172.17</span>.0.2/16 brd <span class="token number">172.17</span>.255.255 scope global eth0
+       valid_lft forever preferred_lft forever
+
+<span class="token comment"># linux可以ping通 docker 容器内部</span>
+<span class="token punctuation">[</span>root@Docker ~<span class="token punctuation">]</span><span class="token comment"># ping 172.17.0.2</span>
+PING <span class="token number">172.17</span>.0.2 <span class="token punctuation">(</span><span class="token number">172.17</span>.0.2<span class="token punctuation">)</span> <span class="token number">56</span><span class="token punctuation">(</span><span class="token number">84</span><span class="token punctuation">)</span> bytes of data.
+<span class="token number">64</span> bytes from <span class="token number">172.17</span>.0.2: <span class="token assign-left variable">icmp_seq</span><span class="token operator">=</span><span class="token number">1</span> <span class="token assign-left variable">ttl</span><span class="token operator">=</span><span class="token number">64</span> <span class="token assign-left variable">time</span><span class="token operator">=</span><span class="token number">0.150</span> ms
+<span class="token number">64</span> bytes from <span class="token number">172.17</span>.0.2: <span class="token assign-left variable">icmp_seq</span><span class="token operator">=</span><span class="token number">2</span> <span class="token assign-left variable">ttl</span><span class="token operator">=</span><span class="token number">64</span> <span class="token assign-left variable">time</span><span class="token operator">=</span><span class="token number">0.079</span> ms
+<span class="token number">64</span> bytes from <span class="token number">172.17</span>.0.2: <span class="token assign-left variable">icmp_seq</span><span class="token operator">=</span><span class="token number">3</span> <span class="token assign-left variable">ttl</span><span class="token operator">=</span><span class="token number">64</span> <span class="token assign-left variable">time</span><span class="token operator">=</span><span class="token number">0.196</span> ms
+<span class="token number">64</span> bytes from <span class="token number">172.17</span>.0.2: <span class="token assign-left variable">icmp_seq</span><span class="token operator">=</span><span class="token number">4</span> <span class="token assign-left variable">ttl</span><span class="token operator">=</span><span class="token number">64</span> <span class="token assign-left variable">time</span><span class="token operator">=</span><span class="token number">0.189</span> ms
+^C
+--- <span class="token number">172.17</span>.0.2 <span class="token function">ping</span> statistics ---
+<span class="token number">4</span> packets transmitted, <span class="token number">4</span> received, <span class="token number">0</span>% packet loss, <span class="token function">time</span> 2999ms
+rtt min/avg/max/mdev <span class="token operator">=</span> <span class="token number">0.079</span>/0.153/0.196/0.048 ms
+
+
+</code></pre></div><h3 id="原理"><a href="#原理" class="header-anchor">#</a> 原理</h3> <p>我们每启动一个docker容器，docker就会给容器分配一个默认的可用ip，我们只要安装了docker，就会有一个网卡docker0(bridge)。网卡采用桥接模式，并使用veth-pair技术（veth-pair就是一堆虚拟设备接口，成对出现，一段连着协议，一段彼此相连，充当一个桥梁。）。</p> <p>这时我们退出容器，回到主机再次观察主机的ip地址，发现多了一对网卡</p> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token punctuation">[</span>root@Docker ~<span class="token punctuation">]</span><span class="token comment"># ip addr</span>
+<span class="token number">1</span>: lo: <span class="token operator">&lt;</span>LOOPBACK,UP,LOWER_UP<span class="token operator">&gt;</span> mtu <span class="token number">65536</span> qdisc noqueue state UNKNOWN group default qlen <span class="token number">1000</span>
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet <span class="token number">127.0</span>.0.1/8 scope <span class="token function">host</span> lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope <span class="token function">host</span> 
+       valid_lft forever preferred_lft forever
+<span class="token number">2</span>: ens33: <span class="token operator">&lt;</span>BROADCAST,MULTICAST,UP,LOWER_UP<span class="token operator">&gt;</span> mtu <span class="token number">1500</span> qdisc pfifo_fast state UP group default qlen <span class="token number">1000</span>
+    link/ether 00:0c:29:02:41:77 brd ff:ff:ff:ff:ff:ff
+    inet <span class="token number">192.168</span>.10.111/24 brd <span class="token number">192.168</span>.10.255 scope global noprefixroute ens33
+       valid_lft forever preferred_lft forever
+    inet6 fe80::d35d:aeb9:93eb:be87/64 scope <span class="token function">link</span> noprefixroute 
+       valid_lft forever preferred_lft forever
+<span class="token number">3</span>: virbr0: <span class="token operator">&lt;</span>NO-CARRIER,BROADCAST,MULTICAST,UP<span class="token operator">&gt;</span> mtu <span class="token number">1500</span> qdisc noqueue state DOWN group default qlen <span class="token number">1000</span>
+    link/ether <span class="token number">52</span>:54:00:55:1d:47 brd ff:ff:ff:ff:ff:ff
+    inet <span class="token number">192.168</span>.122.1/24 brd <span class="token number">192.168</span>.122.255 scope global virbr0
+       valid_lft forever preferred_lft forever
+<span class="token number">4</span>: virbr0-nic: <span class="token operator">&lt;</span>BROADCAST,MULTICAST<span class="token operator">&gt;</span> mtu <span class="token number">1500</span> qdisc pfifo_fast master virbr0 state DOWN group default qlen <span class="token number">1000</span>
+    link/ether <span class="token number">52</span>:54:00:55:1d:47 brd ff:ff:ff:ff:ff:ff
+<span class="token number">5</span>: docker0: <span class="token operator">&lt;</span>BROADCAST,MULTICAST,UP,LOWER_UP<span class="token operator">&gt;</span> mtu <span class="token number">1500</span> qdisc noqueue state UP group default 
+    link/ether 02:42:0e:dc:53:1e brd ff:ff:ff:ff:ff:ff
+    inet <span class="token number">172.17</span>.0.1/16 brd <span class="token number">172.17</span>.255.255 scope global docker0
+       valid_lft forever preferred_lft forever
+    inet6 fe80::42:eff:fedc:531e/64 scope <span class="token function">link</span> 
+       valid_lft forever preferred_lft forever
+<span class="token number">262</span>: veth2f258a6@if261: <span class="token operator">&lt;</span>BROADCAST,MULTICAST,UP,LOWER_UP<span class="token operator">&gt;</span> mtu <span class="token number">1500</span> qdisc noqueue master docker0 state UP group default 
+    link/ether f2:86:cc:54:d3:18 brd ff:ff:ff:ff:ff:ff link-netnsid <span class="token number">0</span>
+    inet6 fe80::f086:ccff:fe54:d318/64 scope <span class="token function">link</span> 
+       valid_lft forever preferred_lft forever
+</code></pre></div><p>再次启动一个容器</p> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token punctuation">[</span>root@Docker ~<span class="token punctuation">]</span><span class="token comment"># docker run -d -P --name tomcat02 tomcat:7.0</span>
+638f9b384e8a685239a1f312bebed1e4f1e0eb1416bca49681e52bde76f7852b
+
+<span class="token punctuation">[</span>root@Docker ~<span class="token punctuation">]</span><span class="token comment"># docker exec -it tomcat02 ip addr</span>
+<span class="token number">1</span>: lo: <span class="token operator">&lt;</span>LOOPBACK,UP,LOWER_UP<span class="token operator">&gt;</span> mtu <span class="token number">65536</span> qdisc noqueue state UNKNOWN group default qlen <span class="token number">1000</span>
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet <span class="token number">127.0</span>.0.1/8 scope <span class="token function">host</span> lo
+       valid_lft forever preferred_lft forever
+<span class="token number">263</span>: eth0@if264: <span class="token operator">&lt;</span>BROADCAST,MULTICAST,UP,LOWER_UP<span class="token operator">&gt;</span> mtu <span class="token number">1500</span> qdisc noqueue state UP group default 
+    link/ether 02:42:ac:11:00:03 brd ff:ff:ff:ff:ff:ff link-netnsid <span class="token number">0</span>
+    inet <span class="token number">172.17</span>.0.3/16 brd <span class="token number">172.17</span>.255.255 scope global eth0
+       valid_lft forever preferred_lft forever
+
+
+<span class="token comment"># 又多了一对网卡</span>
+<span class="token punctuation">[</span>root@Docker ~<span class="token punctuation">]</span><span class="token comment"># ip addr</span>
+<span class="token number">1</span>: lo: <span class="token operator">&lt;</span>LOOPBACK,UP,LOWER_UP<span class="token operator">&gt;</span> mtu <span class="token number">65536</span> qdisc noqueue state UNKNOWN group default qlen <span class="token number">1000</span>
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet <span class="token number">127.0</span>.0.1/8 scope <span class="token function">host</span> lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope <span class="token function">host</span> 
+       valid_lft forever preferred_lft forever
+<span class="token number">2</span>: ens33: <span class="token operator">&lt;</span>BROADCAST,MULTICAST,UP,LOWER_UP<span class="token operator">&gt;</span> mtu <span class="token number">1500</span> qdisc pfifo_fast state UP group default qlen <span class="token number">1000</span>
+    link/ether 00:0c:29:02:41:77 brd ff:ff:ff:ff:ff:ff
+    inet <span class="token number">192.168</span>.10.111/24 brd <span class="token number">192.168</span>.10.255 scope global noprefixroute ens33
+       valid_lft forever preferred_lft forever
+    inet6 fe80::d35d:aeb9:93eb:be87/64 scope <span class="token function">link</span> noprefixroute 
+       valid_lft forever preferred_lft forever
+<span class="token number">3</span>: virbr0: <span class="token operator">&lt;</span>NO-CARRIER,BROADCAST,MULTICAST,UP<span class="token operator">&gt;</span> mtu <span class="token number">1500</span> qdisc noqueue state DOWN group default qlen <span class="token number">1000</span>
+    link/ether <span class="token number">52</span>:54:00:55:1d:47 brd ff:ff:ff:ff:ff:ff
+    inet <span class="token number">192.168</span>.122.1/24 brd <span class="token number">192.168</span>.122.255 scope global virbr0
+       valid_lft forever preferred_lft forever
+<span class="token number">4</span>: virbr0-nic: <span class="token operator">&lt;</span>BROADCAST,MULTICAST<span class="token operator">&gt;</span> mtu <span class="token number">1500</span> qdisc pfifo_fast master virbr0 state DOWN group default qlen <span class="token number">1000</span>
+    link/ether <span class="token number">52</span>:54:00:55:1d:47 brd ff:ff:ff:ff:ff:ff
+<span class="token number">5</span>: docker0: <span class="token operator">&lt;</span>BROADCAST,MULTICAST,UP,LOWER_UP<span class="token operator">&gt;</span> mtu <span class="token number">1500</span> qdisc noqueue state UP group default 
+    link/ether 02:42:0e:dc:53:1e brd ff:ff:ff:ff:ff:ff
+    inet <span class="token number">172.17</span>.0.1/16 brd <span class="token number">172.17</span>.255.255 scope global docker0
+       valid_lft forever preferred_lft forever
+    inet6 fe80::42:eff:fedc:531e/64 scope <span class="token function">link</span> 
+       valid_lft forever preferred_lft forever
+<span class="token number">262</span>: veth2f258a6@if261: <span class="token operator">&lt;</span>BROADCAST,MULTICAST,UP,LOWER_UP<span class="token operator">&gt;</span> mtu <span class="token number">1500</span> qdisc noqueue master docker0 state UP group default 
+    link/ether f2:86:cc:54:d3:18 brd ff:ff:ff:ff:ff:ff link-netnsid <span class="token number">0</span>
+    inet6 fe80::f086:ccff:fe54:d318/64 scope <span class="token function">link</span> 
+       valid_lft forever preferred_lft forever
+<span class="token number">264</span>: veth7abc6dc@if263: <span class="token operator">&lt;</span>BROADCAST,MULTICAST,UP,LOWER_UP<span class="token operator">&gt;</span> mtu <span class="token number">1500</span> qdisc noqueue master docker0 state UP group default 
+    link/ether 9a:3c:e0:a2:a4:d0 brd ff:ff:ff:ff:ff:ff link-netnsid <span class="token number">1</span>
+    inet6 fe80::983c:e0ff:fea2:a4d0/64 scope <span class="token function">link</span> 
+       valid_lft forever preferred_lft forever
+</code></pre></div><p>测试 tomcat01 和 tomcat02 是否可以ping通</p> <div class="language-shell extra-class"><pre class="language-shell"><code>
+<span class="token punctuation">[</span>root@Docker ~<span class="token punctuation">]</span><span class="token comment"># docker exec -it tomcat02 ping 172.17.0.2</span>
+PING <span class="token number">172.17</span>.0.2 <span class="token punctuation">(</span><span class="token number">172.17</span>.0.2<span class="token punctuation">)</span> <span class="token number">56</span><span class="token punctuation">(</span><span class="token number">84</span><span class="token punctuation">)</span> bytes of data.
+<span class="token number">64</span> bytes from <span class="token number">172.17</span>.0.2: <span class="token assign-left variable">icmp_seq</span><span class="token operator">=</span><span class="token number">1</span> <span class="token assign-left variable">ttl</span><span class="token operator">=</span><span class="token number">64</span> <span class="token assign-left variable">time</span><span class="token operator">=</span><span class="token number">0.138</span> ms
+<span class="token number">64</span> bytes from <span class="token number">172.17</span>.0.2: <span class="token assign-left variable">icmp_seq</span><span class="token operator">=</span><span class="token number">2</span> <span class="token assign-left variable">ttl</span><span class="token operator">=</span><span class="token number">64</span> <span class="token assign-left variable">time</span><span class="token operator">=</span><span class="token number">0.072</span> ms
+<span class="token number">64</span> bytes from <span class="token number">172.17</span>.0.2: <span class="token assign-left variable">icmp_seq</span><span class="token operator">=</span><span class="token number">3</span> <span class="token assign-left variable">ttl</span><span class="token operator">=</span><span class="token number">64</span> <span class="token assign-left variable">time</span><span class="token operator">=</span><span class="token number">0.082</span> ms
+<span class="token number">64</span> bytes from <span class="token number">172.17</span>.0.2: <span class="token assign-left variable">icmp_seq</span><span class="token operator">=</span><span class="token number">4</span> <span class="token assign-left variable">ttl</span><span class="token operator">=</span><span class="token number">64</span> <span class="token assign-left variable">time</span><span class="token operator">=</span><span class="token number">0.083</span> ms
+^C
+--- <span class="token number">172.17</span>.0.2 <span class="token function">ping</span> statistics ---
+<span class="token number">4</span> packets transmitted, <span class="token number">4</span> received, <span class="token number">0</span>% packet loss, <span class="token function">time</span> 1002ms
+rtt min/avg/max/mdev <span class="token operator">=</span> <span class="token number">0.072</span>/0.093/0.138/0.028 ms
+</code></pre></div><p>容器和容器之间可以互相ping通的</p> <p><img src="/blog/docker/image-20220824153308849.png" alt="image-20220824153308849"></p> <p>Tomcat01和Tomcat02都使用公用的路由器docker0。所有的容器不指定网络下，都是由docker0路由的，Docker会给我们容器默认分配一个随机的可用IP地址。</p> <h3 id="小结-2"><a href="#小结-2" class="header-anchor">#</a> 小结</h3> <p>Docker 使用的是 Linux 的桥接，宿主机中是一个Docker容器的网桥 docker0。</p> <p><img src="/blog/docker/image-20220824153805690.png" alt="image-20220824153805690"></p> <p>Docker中的所有的网络接口都是虚拟的。只要容器删除，容器对应的网桥也会删除。</p></div></section> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev"><a href="/blog/docker/docker入门.html" class="prev">
+          Docker入门
+        </a></span> <!----></p></div> <div class="comments-wrapper"><!----></div> <ul class="side-bar sub-sidebar-wrapper" style="width:12rem;" data-v-ac050c62><li class="level-2" data-v-ac050c62><a href="/blog/docker/docker%E8%BF%9B%E9%98%B6.html#容器数据卷" class="sidebar-link reco-side-容器数据卷" data-v-ac050c62>容器数据卷</a></li><li class="level-3" data-v-ac050c62><a href="/blog/docker/docker%E8%BF%9B%E9%98%B6.html#介绍" class="sidebar-link reco-side-介绍" data-v-ac050c62>介绍</a></li><li class="level-3" data-v-ac050c62><a href="/blog/docker/docker%E8%BF%9B%E9%98%B6.html#简单使用" class="sidebar-link reco-side-简单使用" data-v-ac050c62>简单使用</a></li><li class="level-3" data-v-ac050c62><a href="/blog/docker/docker%E8%BF%9B%E9%98%B6.html#mysql容器建立数据卷同步数据" class="sidebar-link reco-side-mysql容器建立数据卷同步数据" data-v-ac050c62>MySQL容器建立数据卷同步数据</a></li><li class="level-3" data-v-ac050c62><a href="/blog/docker/docker%E8%BF%9B%E9%98%B6.html#常用命令" class="sidebar-link reco-side-常用命令" data-v-ac050c62>常用命令</a></li><li class="level-3" data-v-ac050c62><a href="/blog/docker/docker%E8%BF%9B%E9%98%B6.html#具名和匿名挂载" class="sidebar-link reco-side-具名和匿名挂载" data-v-ac050c62>具名和匿名挂载</a></li><li class="level-3" data-v-ac050c62><a href="/blog/docker/docker%E8%BF%9B%E9%98%B6.html#初识dockerfile" class="sidebar-link reco-side-初识dockerfile" data-v-ac050c62>初识DockerFile</a></li><li class="level-3" data-v-ac050c62><a href="/blog/docker/docker%E8%BF%9B%E9%98%B6.html#数据卷容器" class="sidebar-link reco-side-数据卷容器" data-v-ac050c62>数据卷容器</a></li><li class="level-2" data-v-ac050c62><a href="/blog/docker/docker%E8%BF%9B%E9%98%B6.html#dockerfile" class="sidebar-link reco-side-dockerfile" data-v-ac050c62>DockerFile</a></li><li class="level-3" data-v-ac050c62><a href="/blog/docker/docker%E8%BF%9B%E9%98%B6.html#介绍-2" class="sidebar-link reco-side-介绍-2" data-v-ac050c62>介绍</a></li><li class="level-3" data-v-ac050c62><a href="/blog/docker/docker%E8%BF%9B%E9%98%B6.html#dockerfile指令" class="sidebar-link reco-side-dockerfile指令" data-v-ac050c62>DockerFile指令</a></li><li class="level-3" data-v-ac050c62><a href="/blog/docker/docker%E8%BF%9B%E9%98%B6.html#dockerfile构建过程" class="sidebar-link reco-side-dockerfile构建过程" data-v-ac050c62>DockerFile构建过程</a></li><li class="level-3" data-v-ac050c62><a href="/blog/docker/docker%E8%BF%9B%E9%98%B6.html#构建自己的centos" class="sidebar-link reco-side-构建自己的centos" data-v-ac050c62>构建自己的centos</a></li><li class="level-3" data-v-ac050c62><a href="/blog/docker/docker%E8%BF%9B%E9%98%B6.html#run-cmd和entrypoint的区别" class="sidebar-link reco-side-run-cmd和entrypoint的区别" data-v-ac050c62>RUN，CMD和ENTRYPOINT的区别</a></li><li class="level-3" data-v-ac050c62><a href="/blog/docker/docker%E8%BF%9B%E9%98%B6.html#制作tomcat镜像" class="sidebar-link reco-side-制作tomcat镜像" data-v-ac050c62>制作tomcat镜像</a></li><li class="level-3" data-v-ac050c62><a href="/blog/docker/docker%E8%BF%9B%E9%98%B6.html#发布镜像到dockerhub" class="sidebar-link reco-side-发布镜像到dockerhub" data-v-ac050c62>发布镜像到DockerHub</a></li><li class="level-3" data-v-ac050c62><a href="/blog/docker/docker%E8%BF%9B%E9%98%B6.html#发布镜像到阿里云容器服务" class="sidebar-link reco-side-发布镜像到阿里云容器服务" data-v-ac050c62>发布镜像到阿里云容器服务</a></li><li class="level-3" data-v-ac050c62><a href="/blog/docker/docker%E8%BF%9B%E9%98%B6.html#小结" class="sidebar-link reco-side-小结" data-v-ac050c62>小结</a></li><li class="level-2" data-v-ac050c62><a href="/blog/docker/docker%E8%BF%9B%E9%98%B6.html#docker网络" class="sidebar-link reco-side-docker网络" data-v-ac050c62>Docker网络</a></li><li class="level-3" data-v-ac050c62><a href="/blog/docker/docker%E8%BF%9B%E9%98%B6.html#原理" class="sidebar-link reco-side-原理" data-v-ac050c62>原理</a></li><li class="level-3" data-v-ac050c62><a href="/blog/docker/docker%E8%BF%9B%E9%98%B6.html#小结-2" class="sidebar-link reco-side-小结-2" data-v-ac050c62>小结</a></li></ul></main></div> <!----></div></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-c6073ba8 data-v-c6073ba8><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-c6073ba8><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-c6073ba8></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-c6073ba8></path></svg></div></div></div>
+    <script src="/blog/assets/js/app.3330eed2.js" defer></script><script src="/blog/assets/js/3.6c5b35bb.js" defer></script><script src="/blog/assets/js/1.504525ea.js" defer></script><script src="/blog/assets/js/12.c28da1fe.js" defer></script>
+  </body>
+</html>

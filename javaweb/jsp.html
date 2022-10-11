@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>服务器渲染技术-JSP | LiAng的博客</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <link rel="icon" href="logo.png">
+    <meta name="description" content="使用VuePress搭建的个人博客">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    
+    <link rel="preload" href="/blog/assets/css/0.styles.20774dd8.css" as="style"><link rel="preload" href="/blog/assets/js/app.3330eed2.js" as="script"><link rel="preload" href="/blog/assets/js/3.6c5b35bb.js" as="script"><link rel="preload" href="/blog/assets/js/1.504525ea.js" as="script"><link rel="preload" href="/blog/assets/js/35.5257f9cf.js" as="script"><link rel="prefetch" href="/blog/assets/js/10.ae134eec.js"><link rel="prefetch" href="/blog/assets/js/100.f494bb12.js"><link rel="prefetch" href="/blog/assets/js/101.1abed729.js"><link rel="prefetch" href="/blog/assets/js/102.3dae5b73.js"><link rel="prefetch" href="/blog/assets/js/103.d4c1df48.js"><link rel="prefetch" href="/blog/assets/js/104.97769664.js"><link rel="prefetch" href="/blog/assets/js/105.e1d4b509.js"><link rel="prefetch" href="/blog/assets/js/106.d2de4d87.js"><link rel="prefetch" href="/blog/assets/js/107.32eb9a4b.js"><link rel="prefetch" href="/blog/assets/js/108.6176ba6f.js"><link rel="prefetch" href="/blog/assets/js/109.c2517b07.js"><link rel="prefetch" href="/blog/assets/js/11.3ad7e7ee.js"><link rel="prefetch" href="/blog/assets/js/110.5473f89e.js"><link rel="prefetch" href="/blog/assets/js/111.e5313fb6.js"><link rel="prefetch" href="/blog/assets/js/112.45abac2a.js"><link rel="prefetch" href="/blog/assets/js/113.2529321a.js"><link rel="prefetch" href="/blog/assets/js/114.aecf45e8.js"><link rel="prefetch" href="/blog/assets/js/115.7bfd8d11.js"><link rel="prefetch" href="/blog/assets/js/116.a8923bc8.js"><link rel="prefetch" href="/blog/assets/js/117.eb510836.js"><link rel="prefetch" href="/blog/assets/js/118.2d9e2dde.js"><link rel="prefetch" href="/blog/assets/js/119.fbd3d7d8.js"><link rel="prefetch" href="/blog/assets/js/12.c28da1fe.js"><link rel="prefetch" href="/blog/assets/js/120.44e6da3c.js"><link rel="prefetch" href="/blog/assets/js/121.fe8b1fbf.js"><link rel="prefetch" href="/blog/assets/js/122.77d14a10.js"><link rel="prefetch" href="/blog/assets/js/123.9e4f36b3.js"><link rel="prefetch" href="/blog/assets/js/124.e32c3fbc.js"><link rel="prefetch" href="/blog/assets/js/125.40820a9c.js"><link rel="prefetch" href="/blog/assets/js/13.3bfcea68.js"><link rel="prefetch" href="/blog/assets/js/14.5e91563f.js"><link rel="prefetch" href="/blog/assets/js/15.bbe624ea.js"><link rel="prefetch" href="/blog/assets/js/16.e3f08a8c.js"><link rel="prefetch" href="/blog/assets/js/17.266026b8.js"><link rel="prefetch" href="/blog/assets/js/18.98c4e036.js"><link rel="prefetch" href="/blog/assets/js/19.af649a7d.js"><link rel="prefetch" href="/blog/assets/js/20.c8f3d118.js"><link rel="prefetch" href="/blog/assets/js/21.0b934d92.js"><link rel="prefetch" href="/blog/assets/js/22.80702221.js"><link rel="prefetch" href="/blog/assets/js/23.5b00e6a3.js"><link rel="prefetch" href="/blog/assets/js/24.93187db2.js"><link rel="prefetch" href="/blog/assets/js/25.a3c37d42.js"><link rel="prefetch" href="/blog/assets/js/26.bf8dd5ea.js"><link rel="prefetch" href="/blog/assets/js/27.2af582fb.js"><link rel="prefetch" href="/blog/assets/js/28.8b9db5a9.js"><link rel="prefetch" href="/blog/assets/js/29.f707832d.js"><link rel="prefetch" href="/blog/assets/js/30.f8893186.js"><link rel="prefetch" href="/blog/assets/js/31.b38a6988.js"><link rel="prefetch" href="/blog/assets/js/32.a64f03d4.js"><link rel="prefetch" href="/blog/assets/js/33.3efca3c8.js"><link rel="prefetch" href="/blog/assets/js/34.0efe9205.js"><link rel="prefetch" href="/blog/assets/js/36.29894302.js"><link rel="prefetch" href="/blog/assets/js/37.835dd643.js"><link rel="prefetch" href="/blog/assets/js/38.a56eba01.js"><link rel="prefetch" href="/blog/assets/js/39.8373e53f.js"><link rel="prefetch" href="/blog/assets/js/4.f2ad145d.js"><link rel="prefetch" href="/blog/assets/js/40.cc877510.js"><link rel="prefetch" href="/blog/assets/js/41.64bff9da.js"><link rel="prefetch" href="/blog/assets/js/42.6c7528bd.js"><link rel="prefetch" href="/blog/assets/js/43.a2838eac.js"><link rel="prefetch" href="/blog/assets/js/44.f13486cd.js"><link rel="prefetch" href="/blog/assets/js/45.93f5b70b.js"><link rel="prefetch" href="/blog/assets/js/46.6f1eb6fb.js"><link rel="prefetch" href="/blog/assets/js/47.aca3e06b.js"><link rel="prefetch" href="/blog/assets/js/48.a386cbe0.js"><link rel="prefetch" href="/blog/assets/js/49.d845e320.js"><link rel="prefetch" href="/blog/assets/js/5.acb9c427.js"><link rel="prefetch" href="/blog/assets/js/50.0db2f824.js"><link rel="prefetch" href="/blog/assets/js/51.e9ed29e0.js"><link rel="prefetch" href="/blog/assets/js/52.ed09b025.js"><link rel="prefetch" href="/blog/assets/js/53.2793a02e.js"><link rel="prefetch" href="/blog/assets/js/54.98d281cf.js"><link rel="prefetch" href="/blog/assets/js/55.4a63e32d.js"><link rel="prefetch" href="/blog/assets/js/56.8c087e30.js"><link rel="prefetch" href="/blog/assets/js/57.20cb7cfb.js"><link rel="prefetch" href="/blog/assets/js/58.6250e7c1.js"><link rel="prefetch" href="/blog/assets/js/59.96395c59.js"><link rel="prefetch" href="/blog/assets/js/6.bf0398c6.js"><link rel="prefetch" href="/blog/assets/js/60.6bcb3992.js"><link rel="prefetch" href="/blog/assets/js/61.734a9217.js"><link rel="prefetch" href="/blog/assets/js/62.95dd7db0.js"><link rel="prefetch" href="/blog/assets/js/63.0c874190.js"><link rel="prefetch" href="/blog/assets/js/64.e0839af9.js"><link rel="prefetch" href="/blog/assets/js/65.dd798114.js"><link rel="prefetch" href="/blog/assets/js/66.8f5b96ca.js"><link rel="prefetch" href="/blog/assets/js/67.dfaee60f.js"><link rel="prefetch" href="/blog/assets/js/68.c9ee3fc9.js"><link rel="prefetch" href="/blog/assets/js/69.b001fe83.js"><link rel="prefetch" href="/blog/assets/js/7.36bc8eb5.js"><link rel="prefetch" href="/blog/assets/js/70.3a3581f4.js"><link rel="prefetch" href="/blog/assets/js/71.04b6be3b.js"><link rel="prefetch" href="/blog/assets/js/72.641865c3.js"><link rel="prefetch" href="/blog/assets/js/73.ac89690d.js"><link rel="prefetch" href="/blog/assets/js/74.c479d3a1.js"><link rel="prefetch" href="/blog/assets/js/75.b34e72e6.js"><link rel="prefetch" href="/blog/assets/js/76.c71b8c70.js"><link rel="prefetch" href="/blog/assets/js/77.8a3be04d.js"><link rel="prefetch" href="/blog/assets/js/78.96d54f80.js"><link rel="prefetch" href="/blog/assets/js/79.6da440db.js"><link rel="prefetch" href="/blog/assets/js/8.43b324b6.js"><link rel="prefetch" href="/blog/assets/js/80.447c0acc.js"><link rel="prefetch" href="/blog/assets/js/81.b9419c6a.js"><link rel="prefetch" href="/blog/assets/js/82.6dd18e6e.js"><link rel="prefetch" href="/blog/assets/js/83.17c3a465.js"><link rel="prefetch" href="/blog/assets/js/84.8495d717.js"><link rel="prefetch" href="/blog/assets/js/85.fbb83329.js"><link rel="prefetch" href="/blog/assets/js/86.fca7db54.js"><link rel="prefetch" href="/blog/assets/js/87.8bd35813.js"><link rel="prefetch" href="/blog/assets/js/88.bdc74531.js"><link rel="prefetch" href="/blog/assets/js/89.84f1ff99.js"><link rel="prefetch" href="/blog/assets/js/9.19cd0a47.js"><link rel="prefetch" href="/blog/assets/js/90.31a729c2.js"><link rel="prefetch" href="/blog/assets/js/91.b7f04c1a.js"><link rel="prefetch" href="/blog/assets/js/92.849d7d72.js"><link rel="prefetch" href="/blog/assets/js/93.2927031e.js"><link rel="prefetch" href="/blog/assets/js/94.96ea5dac.js"><link rel="prefetch" href="/blog/assets/js/95.f7b253d0.js"><link rel="prefetch" href="/blog/assets/js/96.79b1e320.js"><link rel="prefetch" href="/blog/assets/js/97.4630fde6.js"><link rel="prefetch" href="/blog/assets/js/98.0f7731f3.js"><link rel="prefetch" href="/blog/assets/js/99.cc7e1c06.js">
+    <link rel="stylesheet" href="/blog/assets/css/0.styles.20774dd8.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container" data-v-5bb33761><div data-v-5bb33761><div class="password-shadow password-wrapper-out" style="display:none;" data-v-59e6cb88 data-v-5bb33761 data-v-5bb33761><h3 class="title" data-v-59e6cb88>LiAng的博客</h3> <p class="description" data-v-59e6cb88>使用VuePress搭建的个人博客</p> <label id="box" class="inputBox" data-v-59e6cb88><input type="password" value="" data-v-59e6cb88> <span data-v-59e6cb88>Konck! Knock!</span> <button data-v-59e6cb88>OK</button></label> <div class="footer" data-v-59e6cb88><span data-v-59e6cb88><i class="iconfont reco-theme" data-v-59e6cb88></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-59e6cb88>vuePress-theme-reco</a></span> <span data-v-59e6cb88><i class="iconfont reco-copyright" data-v-59e6cb88></i> <a data-v-59e6cb88><span data-v-59e6cb88>LiAng</span>
+          
+        <!---->
+        2022
+      </a></span></div></div> <div class="hide" data-v-5bb33761><header class="navbar" data-v-5bb33761><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog/" class="home-link router-link-active"><!----> <span class="site-name">LiAng的博客</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/blog/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  TimeLine
+</a></div><div class="nav-item"><a href="/blog/websites/websites.html" class="nav-link"><i class="undefined"></i>
+  网站集合
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      Java
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/java/java.html" class="nav-link"><i class="undefined"></i>
+  Java
+</a></li><li class="dropdown-item"><!----> <a href="/blog/javaweb/javaweb.html" class="nav-link"><i class="undefined"></i>
+  JavaWeb
+</a></li><li class="dropdown-item"><!----> <a href="/blog/spring/spring.html" class="nav-link"><i class="undefined"></i>
+  Spring
+</a></li><li class="dropdown-item"><!----> <a href="/blog/springmvc/springmvc.html" class="nav-link"><i class="undefined"></i>
+  SpringMVC
+</a></li><li class="dropdown-item"><!----> <a href="/blog/mybatis/mybatis.html" class="nav-link"><i class="undefined"></i>
+  MyBatis
+</a></li><li class="dropdown-item"><!----> <a href="/blog/springboot/springboot.html" class="nav-link"><i class="undefined"></i>
+  SpringBoot
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      Spider
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/spider/说明.html" class="nav-link"><i class="undefined"></i>
+  爬虫基础
+</a></li><li class="dropdown-item"><!----> <a href="https://note.youdao.com/s/7PwmeCSn" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  Scrapy框架
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      大数据
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://www.yuque.com/liang-znkb8/wqs8e6/wz3m1g" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  环境部署
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      数据库
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/mongodb/MongoDB 介绍.html" class="nav-link"><i class="undefined"></i>
+  MongoDB
+</a></li><li class="dropdown-item"><!----> <a href="/blog/redis/五大常用数据类型.html" class="nav-link"><i class="undefined"></i>
+  Redis
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      Docker
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/docker/docker入门.html" class="nav-link"><i class="undefined"></i>
+  Docker入门
+</a></li><li class="dropdown-item"><!----> <a href="/blog/docker/docker进阶.html" class="nav-link"><i class="undefined"></i>
+  Docker进阶
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      LiAng 的博客
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/Will-Liang" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-5bb33761></div> <aside class="sidebar" data-v-5bb33761><div class="personal-info-wrapper" data-v-1fad0c41 data-v-5bb33761><!----> <h3 class="name" data-v-1fad0c41>
+    LiAng
+  </h3> <div class="num" data-v-1fad0c41><div data-v-1fad0c41><h3 data-v-1fad0c41>114</h3> <h6 data-v-1fad0c41>文章</h6></div> <div data-v-1fad0c41><h3 data-v-1fad0c41>0</h3> <h6 data-v-1fad0c41>标签</h6></div></div> <ul class="social-links" data-v-1fad0c41></ul> <hr data-v-1fad0c41></div> <nav class="nav-links"><div class="nav-item"><a href="/blog/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  TimeLine
+</a></div><div class="nav-item"><a href="/blog/websites/websites.html" class="nav-link"><i class="undefined"></i>
+  网站集合
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      Java
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/java/java.html" class="nav-link"><i class="undefined"></i>
+  Java
+</a></li><li class="dropdown-item"><!----> <a href="/blog/javaweb/javaweb.html" class="nav-link"><i class="undefined"></i>
+  JavaWeb
+</a></li><li class="dropdown-item"><!----> <a href="/blog/spring/spring.html" class="nav-link"><i class="undefined"></i>
+  Spring
+</a></li><li class="dropdown-item"><!----> <a href="/blog/springmvc/springmvc.html" class="nav-link"><i class="undefined"></i>
+  SpringMVC
+</a></li><li class="dropdown-item"><!----> <a href="/blog/mybatis/mybatis.html" class="nav-link"><i class="undefined"></i>
+  MyBatis
+</a></li><li class="dropdown-item"><!----> <a href="/blog/springboot/springboot.html" class="nav-link"><i class="undefined"></i>
+  SpringBoot
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      Spider
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/spider/说明.html" class="nav-link"><i class="undefined"></i>
+  爬虫基础
+</a></li><li class="dropdown-item"><!----> <a href="https://note.youdao.com/s/7PwmeCSn" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  Scrapy框架
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      大数据
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://www.yuque.com/liang-znkb8/wqs8e6/wz3m1g" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  环境部署
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      数据库
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/mongodb/MongoDB 介绍.html" class="nav-link"><i class="undefined"></i>
+  MongoDB
+</a></li><li class="dropdown-item"><!----> <a href="/blog/redis/五大常用数据类型.html" class="nav-link"><i class="undefined"></i>
+  Redis
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      Docker
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/docker/docker入门.html" class="nav-link"><i class="undefined"></i>
+  Docker入门
+</a></li><li class="dropdown-item"><!----> <a href="/blog/docker/docker进阶.html" class="nav-link"><i class="undefined"></i>
+  Docker进阶
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      LiAng 的博客
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/Will-Liang" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav> <ul class="sidebar-links"><li><a href="/blog/websites/websites.html" class="sidebar-link">网站集合</a></li><li><section class="sidebar-group collapsable depth-0"><a href="/blog/java/java" class="sidebar-heading clickable"><span>Java</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/blog/javaweb/javaweb" class="sidebar-heading clickable open"><span>JavaWeb</span> <span class="arrow down"></span></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/javaweb/javaweb.html" class="sidebar-link">JavaWeb</a></li><li><a href="/blog/javaweb/xml.html" class="sidebar-link">XML</a></li><li><a href="/blog/javaweb/tomcat.html" class="sidebar-link">Tomcat</a></li><li><a href="/blog/javaweb/servlet.html" class="sidebar-link">三大组件-Servlet</a></li><li><a href="/blog/javaweb/httpservletrequest.html" class="sidebar-link">HttpServletRequest</a></li><li><a href="/blog/javaweb/httpservletresponse.html" class="sidebar-link">HttpServletResponse</a></li><li><a href="/blog/javaweb/http.html" class="sidebar-link">Http协议</a></li><li><a href="/blog/javaweb/WEB工程路径.html" class="sidebar-link">WEB工程路径</a></li><li><a href="/blog/javaweb/会话技术.html" class="sidebar-link">会话技术</a></li><li><a href="/blog/javaweb/jsp.html" aria-current="page" class="active sidebar-link">服务器渲染技术-JSP</a></li><li><a href="/blog/javaweb/el.html" class="sidebar-link">EL表达式</a></li><li><a href="/blog/javaweb/jstl.html" class="sidebar-link">JSTL</a></li><li><a href="/blog/javaweb/listener.html" class="sidebar-link">三大组件-Listener</a></li><li><a href="/blog/javaweb/filter.html" class="sidebar-link">三大组件-Filter</a></li><li><a href="/blog/javaweb/json.html" class="sidebar-link">Json</a></li><li><a href="/blog/javaweb/ajax.html" class="sidebar-link">Ajax</a></li><li><a href="/blog/javaweb/threadLocal.html" class="sidebar-link">线程数据共享和安全-ThreadLocal</a></li><li><a href="/blog/javaweb/文件上传下载.html" class="sidebar-link">文件上传下载</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/blog/spring/spring" class="sidebar-heading clickable"><span>Spring</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/blog/springmvc/springmvc" class="sidebar-heading clickable"><span>SpringMVC</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/blog/mybatis/mybatis" class="sidebar-heading clickable"><span>MyBatis</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/blog/springboot/springboot" class="sidebar-heading clickable"><span>SpringBoot</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/blog/mongodb/MongoDB 介绍" class="sidebar-heading clickable"><span>MongoDB</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/blog/redis/五大常用数据类型" class="sidebar-heading clickable"><span>Redis</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/blog/spider/说明" class="sidebar-heading clickable"><span>Spider</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/blog/docker/docker入门" class="sidebar-heading clickable"><span>Docker</span> <span class="arrow right"></span></a> <!----></section></li></ul> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-59e6cb88 data-v-5bb33761><h3 class="title" data-v-59e6cb88>服务器渲染技术-JSP</h3> <!----> <label id="box" class="inputBox" data-v-59e6cb88><input type="password" value="" data-v-59e6cb88> <span data-v-59e6cb88>Konck! Knock!</span> <button data-v-59e6cb88>OK</button></label> <div class="footer" data-v-59e6cb88><span data-v-59e6cb88><i class="iconfont reco-theme" data-v-59e6cb88></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-59e6cb88>vuePress-theme-reco</a></span> <span data-v-59e6cb88><i class="iconfont reco-copyright" data-v-59e6cb88></i> <a data-v-59e6cb88><span data-v-59e6cb88>LiAng</span>
+          
+        <!---->
+        2022
+      </a></span></div></div> <div data-v-5bb33761><div data-v-5bb33761><main class="page"><section style="display:;"><div class="page-title"><h1 class="title">服务器渲染技术-JSP</h1> <div data-v-8a445198><i class="iconfont reco-account" data-v-8a445198><span data-v-8a445198>LiAng</span></i> <i class="iconfont reco-date" data-v-8a445198><span data-v-8a445198>2022/8/16</span></i> <!----> <!----></div></div> <div class="theme-reco-content content__default"><h2 id="介绍"><a href="#介绍" class="header-anchor">#</a> 介绍</h2> <p><img src="/blog/javaweb/image-20220312082018008.png" alt="image-20220312082018008"></p> <ol><li><p>JSP 全称是 Java Server Pages，Java 的服务器页面</p></li> <li><p>JSP 这门技术的最大的特点在于，写 JSP 就像在写 HTML</p></li></ol> <p>● 相比 html 而言，html 只能为用户提供静态数据，而 JSP 技术允许在页面中嵌套 java 代码，为用户提供动态数据</p> <p>● 相比 Servlet 而言，Servlet 很难对数据进行排版，而 jsp 除了可以用 java 代码产 生动态数据的同时，也很容易对数据进行排版。</p> <ol start="3"><li>jsp 技术基于 Servlet, 你可以理解成 JSP 就是对 Servlet 的包装. 4. 会使用 JSP 的程序员, 再使用 thymeleaf 是非常容易的事情, 几乎是无缝接轨。</li></ol> <h2 id="入门"><a href="#入门" class="header-anchor">#</a> 入门</h2> <div class="language-jsp extra-class"><pre class="language-text"><code>&lt;%@ page import=&quot;java.io.PrintWriter&quot; %&gt;
+&lt;%@ page contentType=&quot;text/html;charset=UTF-8&quot; language=&quot;java&quot; %&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;jsp简单求和计算器&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h1&gt;jsp简单求和计算器&lt;/h1&gt;
+&lt;%
+    //1. 在jsp的该标签中，可以写java代码
+    int i = 10;
+    int j = 20;
+    int res = i + j;
+    //2. jsp中内置对象，可以直接使用，比如 out
+    // 格式化快捷键 ctrl + alt + l
+    out.print(i + &quot; + &quot; + j + &quot; = &quot; + res);
+%&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div><h2 id="运行原理"><a href="#运行原理" class="header-anchor">#</a> 运行原理</h2> <ol><li><p>jsp 页面本质是一个 Servlet 程序，其性能是和 java 关联的，只是长得丑。</p></li> <li><p>第 1 次访问 jsp 页面的时候。Tomcat 服务器会把 jsp 页面解析成为一个 java 源文件。并且对它进行编译成为.class 字节码程序。 看下 Cal.jsp 对应的 cal_jsp.java 和cal_jsp.class 文件。</p> <p>（1）cal_jsp.java 是 jsp 对应的 servlet</p> <p>（2）cal_jsp.class 是对应的字节码文件</p> <p>（3）这两个文件在 tomcat 启动时的 Using CATALINA_BASE 对应目录下</p></li> <li><p>分析下 cal_jsp.java 的源码，可以看出本质就是 Servlet。（要看到源码和分析类图，需要加入 jasper.jar 这个包[在tomcat/lib 下拷贝]）<img src="D:%5CStudy%5CVIP%5CJavaWeb%5C%E7%AC%94%E8%AE%B0%5CJavaWeb.assets%5Cimage-20220312084934681.png" alt="image-20220312084934681"></p></li></ol> <p>（1）sum.jsp -&gt; sum_jsp.jsp</p> <p>（2）sum_jsp 继承 HttpJspBase</p> <p>（3）HttpJspBase 继承了 HttpServlet</p> <p>（4）结论 sum.jsp本质就是servlet</p> <p>（5）因为sum_jsp 类还继承 HttpJspBase 所以就有更强的功能</p> <h2 id="常用page指令"><a href="#常用page指令" class="header-anchor">#</a> 常用page指令</h2> <div class="language-jsp extra-class"><pre class="language-text"><code>&lt;%@ page contentType=&quot;text/html;charset=UTF-8&quot; language=&quot;java&quot; %&gt;
+</code></pre></div><ol><li>language 表示 jsp 翻译后是什么语言文件, 只支持 java</li> <li>contentType 表示 jsp 返回的数据类型，对应源码中 response.setContentType()参数值</li> <li>pageEncoding 属性 表示当前 jsp 页面文件本身的字符集</li> <li>import 属性 跟 java 源代码中一样。用于导包，导类</li></ol> <h2 id="jsp常用三种脚本"><a href="#jsp常用三种脚本" class="header-anchor">#</a> JSP常用三种脚本</h2> <h3 id="声明脚本基本语法"><a href="#声明脚本基本语法" class="header-anchor">#</a> 声明脚本基本语法</h3> <ol><li><p>声明脚本的格式是： <code>&lt;%! 声明 java 代码 %&gt;</code></p></li> <li><p>作用：定义 jsp 的需要属性、方法、静态代码块和内部类等</p></li></ol> <div class="language-jsp extra-class"><pre class="language-text"><code>&lt;%@ page contentType=&quot;text/html;charset=UTF-8&quot; language=&quot;java&quot; %&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;jsp声明脚本&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h1&gt;jsp声明脚本&lt;/h1&gt;
+&lt;%!
+    //这里我们可以声明该jsp需要使用的属性，方法，静态代码块，内部类
+    //也就是给 statement.jsp 对应的 statement_jsp 类定义成员
+    //1. 属性
+    private String name = &quot;jack&quot;;
+    private int age;
+    private static String company;
+    //2. 方法
+    public String getName(){
+        return name;
+    }
+    //3. 静态代码块
+    static{
+        company = &quot;阿里巴巴&quot;;
+    }
+%&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div><h3 id="表达式脚本基本语法"><a href="#表达式脚本基本语法" class="header-anchor">#</a> 表达式脚本基本语法</h3> <ol><li>表达式脚本的格式是：<code>&lt;%=表达式%&gt;</code></li> <li>表达式脚本的作用是：在 jsp 页面上输出数据</li> <li>表达式脚本中的表达式不能以分号结束</li></ol> <div class="language-jsp extra-class"><pre class="language-text"><code>&lt;%@ page contentType=&quot;text/html;charset=UTF-8&quot; language=&quot;java&quot; %&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;表达式脚本的使用&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h1&gt;个人信息&lt;/h1&gt;
+&lt;%
+    String name = &quot;lzw&quot;;
+    String email = request.getParameter(&quot;email&quot;);
+%&gt;
+用户名：&lt;%=name%&gt;&lt;br&gt;
+工作是：&lt;%=&quot;java工程师&quot;%&gt;&lt;br&gt;
+年龄:&lt;%=request.getParameter(&quot;age&quot;)%&gt;&lt;br&gt;
+邮箱:&lt;%=email%&gt;&lt;br&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div><h3 id="代码脚本基本语法"><a href="#代码脚本基本语法" class="header-anchor">#</a> 代码脚本基本语法</h3> <ol><li>代码脚本的语法是：<code>&lt;% java 代码%&gt;</code></li> <li>代码脚本的作用是：可以在 jsp 页面中，编写我们需要的功能（使用 java ）</li> <li>可以由多个代码脚本块组合完成一个完整的 java 语句。</li> <li>代码脚本还可以和表达式脚本一起组合使用，在 jsp 页面上输出数据</li></ol> <div class="language-java extra-class"><pre class="language-java"><code><span class="token keyword">package</span> <span class="token namespace">com<span class="token punctuation">.</span>lzw<span class="token punctuation">.</span>entity</span><span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Monster</span> <span class="token punctuation">{</span>
+    <span class="token keyword">private</span> <span class="token class-name">Integer</span> id<span class="token punctuation">;</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> name<span class="token punctuation">;</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> skill<span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token class-name">Monster</span><span class="token punctuation">(</span><span class="token class-name">Integer</span> id<span class="token punctuation">,</span> <span class="token class-name">String</span> name<span class="token punctuation">,</span> <span class="token class-name">String</span> skill<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>id <span class="token operator">=</span> id<span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name<span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>skill <span class="token operator">=</span> skill<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">public</span> <span class="token class-name">Integer</span> <span class="token function">getId</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> id<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setId</span><span class="token punctuation">(</span><span class="token class-name">Integer</span> id<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>id <span class="token operator">=</span> id<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> name<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setName</span><span class="token punctuation">(</span><span class="token class-name">String</span> name<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">getSkill</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> skill<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setSkill</span><span class="token punctuation">(</span><span class="token class-name">String</span> skill<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>skill <span class="token operator">=</span> skill<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><div class="language-jsp extra-class"><pre class="language-text"><code>&lt;%@ page import=&quot;java.util.ArrayList&quot; %&gt;
+&lt;%@ page import=&quot;com.lzw.entity.Monster&quot; %&gt;
+&lt;%@ page contentType=&quot;text/html;charset=UTF-8&quot; language=&quot;java&quot; %&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;演示代码脚本&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h1&gt;演示代码脚本&lt;/h1&gt;
+&lt;%
+    //创建 ArrayList，放入两个monster
+    ArrayList&lt;Monster&gt; monsterLists = new ArrayList&lt;&gt;();
+    monsterLists.add(new Monster(1, &quot;牛魔王&quot;, &quot;芭蕉扇&quot;));
+    monsterLists.add(new Monster(2, &quot;蜘蛛精&quot;, &quot;吐口水&quot;));
+%&gt;
+&lt;table bgcolor=&quot;#bfa&quot; border=&quot;1px&quot; width=&quot;300px&quot;&gt;
+    &lt;tr&gt;
+        &lt;th&gt;id&lt;/th&gt;
+        &lt;th&gt;名字&lt;/th&gt;
+        &lt;th&gt;技能&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;%
+        for (int i = 0; i &lt; monsterLists.size(); i++) {
+            //先取出monster对象
+            Monster monster = monsterLists.get(i);
+    %&gt;
+            &lt;tr&gt;
+                &lt;td&gt;&lt;%=monster.getId()%&gt;&lt;/td&gt;
+                &lt;td&gt;&lt;%=monster.getName()%&gt;&lt;/td&gt;
+                &lt;td&gt;&lt;%=monster.getSkill()%&gt;&lt;/td&gt;
+            &lt;/tr&gt;
+    &lt;%
+        }
+    %&gt;
+&lt;/table&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div><h2 id="jsp内置对象"><a href="#jsp内置对象" class="header-anchor">#</a> JSP内置对象</h2> <h3 id="介绍-2"><a href="#介绍-2" class="header-anchor">#</a> 介绍</h3> <p>1、JSP 内置对象(已经创建好的对象, 直接使用 inbuild)，是指 Tomcat 在翻译 jsp 页面成为Servlet 后，内部提供的九大对象，叫内置对象
+2、内置对象，可以直接使用，不需要手动定义</p> <h3 id="九大内置对象"><a href="#九大内置对象" class="header-anchor">#</a> 九大内置对象</h3> <ol><li>out 向客户端输出数据，out.println(&quot;&quot;);</li> <li>request 客户端的 http 请求</li> <li>response 响应对象</li> <li>session 会话对象</li> <li>application 对应 ServletContext</li> <li>pageContext jsp 页面的上下文，是一个域对象，可以 setAttribue(),作用范围只是本页面</li> <li>exception 异常对象 , getMessage()</li> <li>page 代表 jsp 这个实例本身</li> <li>config 对应 ServletConfig</li></ol> <p><img src="/blog/javaweb/image-20220313153638744.png" alt="image-20220313153638744"></p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token keyword">package</span> <span class="token namespace">com<span class="token punctuation">.</span>lzw<span class="token punctuation">.</span>servlet</span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">javax<span class="token punctuation">.</span>servlet<span class="token punctuation">.</span></span><span class="token class-name">ServletConfig</span></span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">javax<span class="token punctuation">.</span>servlet<span class="token punctuation">.</span></span><span class="token class-name">ServletContext</span></span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">javax<span class="token punctuation">.</span>servlet<span class="token punctuation">.</span></span><span class="token class-name">ServletException</span></span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">javax<span class="token punctuation">.</span>servlet<span class="token punctuation">.</span>http<span class="token punctuation">.</span></span><span class="token class-name">HttpServlet</span></span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">javax<span class="token punctuation">.</span>servlet<span class="token punctuation">.</span>http<span class="token punctuation">.</span></span><span class="token class-name">HttpServletRequest</span></span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">javax<span class="token punctuation">.</span>servlet<span class="token punctuation">.</span>http<span class="token punctuation">.</span></span><span class="token class-name">HttpServletResponse</span></span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">javax<span class="token punctuation">.</span>servlet<span class="token punctuation">.</span>http<span class="token punctuation">.</span></span><span class="token class-name">HttpSession</span></span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>io<span class="token punctuation">.</span></span><span class="token class-name">IOException</span></span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>io<span class="token punctuation">.</span></span><span class="token class-name">PrintWriter</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">HiServlet</span> <span class="token keyword">extends</span> <span class="token class-name">HttpServlet</span> <span class="token punctuation">{</span>
+    <span class="token keyword">protected</span> <span class="token keyword">void</span> <span class="token function">doPost</span><span class="token punctuation">(</span><span class="token class-name">HttpServletRequest</span> request<span class="token punctuation">,</span> <span class="token class-name">HttpServletResponse</span> response<span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">ServletException</span><span class="token punctuation">,</span> <span class="token class-name">IOException</span> <span class="token punctuation">{</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;HiServlet 被调用&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">PrintWriter</span> writer <span class="token operator">=</span> response<span class="token punctuation">.</span><span class="token function">getWriter</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        writer<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;haha&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        request<span class="token punctuation">.</span><span class="token function">getParameter</span><span class="token punctuation">(</span><span class="token string">&quot;age&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        response<span class="token punctuation">.</span><span class="token function">setContentType</span><span class="token punctuation">(</span><span class="token string">&quot;text/html;charset=utf-8&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">HttpSession</span> session <span class="token operator">=</span> request<span class="token punctuation">.</span><span class="token function">getSession</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        session<span class="token punctuation">.</span><span class="token function">setAttribute</span><span class="token punctuation">(</span><span class="token string">&quot;job&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;java工程师&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">ServletContext</span> servletContext <span class="token operator">=</span> request<span class="token punctuation">.</span><span class="token function">getServletContext</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        servletContext<span class="token punctuation">.</span><span class="token function">setAttribute</span><span class="token punctuation">(</span><span class="token string">&quot;count&quot;</span><span class="token punctuation">,</span><span class="token number">666</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">ServletConfig</span> servletConfig <span class="token operator">=</span> <span class="token function">getServletConfig</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        servletConfig<span class="token punctuation">.</span><span class="token function">getInitParameter</span><span class="token punctuation">(</span><span class="token string">&quot;pwd&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">protected</span> <span class="token keyword">void</span> <span class="token function">doGet</span><span class="token punctuation">(</span><span class="token class-name">HttpServletRequest</span> request<span class="token punctuation">,</span> <span class="token class-name">HttpServletResponse</span> response<span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">ServletException</span><span class="token punctuation">,</span> <span class="token class-name">IOException</span> <span class="token punctuation">{</span>
+        <span class="token function">doPost</span><span class="token punctuation">(</span>request<span class="token punctuation">,</span> response<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><div class="language-jsp extra-class"><pre class="language-text"><code>&lt;%@ page contentType=&quot;text/html;charset=UTF-8&quot; language=&quot;java&quot; %&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;jsp内置对象&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h1&gt;jsp内置对象&lt;/h1&gt;
+&lt;%
+    //jsp的内置对象
+    //out 类型是 JspWriter 父类就是 Writer.
+    out.println(&quot;jsp out&quot;);
+    //request是HttpServletRequest
+    request.getParameter(&quot;age&quot;);
+    //response就是 HttpServletResponse
+    //response.sendRedirect(&quot;http://www.baidu.com&quot;);
+    //session 就是 HttpSession
+    session.setAttribute(&quot;job&quot;, &quot;PHP工程师&quot;);
+    //application类型就是ServletContext
+    application.setAttribute(&quot;name&quot;, &quot;老韩老师&quot;);
+    //pageContext 可以存放数据(属性), 但是该数据只能在本页面使用
+    pageContext.setAttribute(&quot;age&quot;, 100);
+    //exception 异常对象 使用比较少
+    //page 内置对象，类似 this
+    out.println(&quot;page=&quot; + page);
+    //config 内置对象的类型就是ServletConfig
+    String pwd = config.getInitParameter(&quot;pwd&quot;);
+%&gt;
+&lt;/body&gt;
+age: &lt;%=pageContext.getAttribute(&quot;age&quot;)%&gt;
+&lt;/html&gt;
+</code></pre></div><h2 id="jsp域对象"><a href="#jsp域对象" class="header-anchor">#</a> JSP域对象</h2> <h3 id="jsp四大域对象"><a href="#jsp四大域对象" class="header-anchor">#</a> JSP四大域对象</h3> <ol><li>pageContext (域对象，存放的数据只能在当前页面使用)</li></ol> <p><img src="/blog/javaweb/image-20220313212927458.png" alt="image-20220313212927458"></p> <ol start="2"><li>request (域对象，存放的数据在一次 request 请求有效)</li></ol> <p><img src="/blog/javaweb/image-20220313213142802.png" alt="image-20220313213142802"></p> <ol start="3"><li>session(域对象，存放的数据在一次会话有效)</li></ol> <p><img src="/blog/javaweb/image-20220313213158673.png" alt="image-20220313213158673"></p> <ol start="4"><li>application(域对象，存放的数据在整个 web 应用运行期间有效，范围更大)</li></ol> <p><img src="/blog/javaweb/image-20220313213230807.png" alt="image-20220313213230807"></p> <p><img src="/blog/javaweb/image-20220313214003016.png" alt="image-20220313214003016"></p> <h3 id="应用实例"><a href="#应用实例" class="header-anchor">#</a> 应用实例</h3> <div class="language-jsp extra-class"><pre class="language-text"><code>&lt;%@ page contentType=&quot;text/html;charset=UTF-8&quot; language=&quot;java&quot; %&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;scope文件&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;%
+    //在不同的域对象中，放入数据
+    //1. 因为四个域对象，是不同的对象，因此name(key) 相同时，并不会冲突
+    pageContext.setAttribute(&quot;k1&quot;,&quot;pageContext 数据（k1）&quot;);
+    request.setAttribute(&quot;k1&quot;,&quot;request 数据(k1)&quot;);
+    session.setAttribute(&quot;k1&quot;,&quot;session 数据（k1）&quot;);
+    application.setAttribute(&quot;k1&quot;,&quot;application 数据（k1）&quot;);
+    //做一个请求转发的操作
+    //路径
+//    request.getRequestDispatcher(&quot;/scope2.jsp&quot;).forward(request, response);
+
+    //做一个重定向
+    String contextPath = request.getContextPath();
+    response.sendRedirect(contextPath + &quot;/scope2.jsp&quot;);
+//    response.sendRedirect(&quot;/jsp/scope2.jsp&quot;);
+%&gt;
+&lt;h1&gt;四个域对象，在本页面获取数据的情况&lt;/h1&gt;
+pageContext-k1:&lt;%=pageContext.getAttribute(&quot;k1&quot;)%&gt;&lt;br&gt;
+request-k1:&lt;%=request.getAttribute(&quot;k1&quot;)%&gt;&lt;br&gt;
+session-k1:&lt;%=session.getAttribute(&quot;k1&quot;)%&gt;&lt;br&gt;
+application-k1:&lt;%=application.getAttribute(&quot;k1&quot;)%&gt;&lt;br&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div><div class="language-jsp extra-class"><pre class="language-text"><code>&lt;%@ page contentType=&quot;text/html;charset=UTF-8&quot; language=&quot;java&quot; %&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;scope2.jsp&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h1&gt;scope2页面获取数据的情况&lt;/h1&gt;
+pageContext-k1:&lt;%=pageContext.getAttribute(&quot;k1&quot;)%&gt;&lt;br&gt;
+request-k1:&lt;%=request.getAttribute(&quot;k1&quot;)%&gt;&lt;br&gt;
+session-k1:&lt;%=session.getAttribute(&quot;k1&quot;)%&gt;&lt;br&gt;
+application-k1:&lt;%=application.getAttribute(&quot;k1&quot;)%&gt;&lt;br&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div><h3 id="注意事项和细节"><a href="#注意事项和细节" class="header-anchor">#</a> 注意事项和细节</h3> <ol><li>域对象是可以像 Map 一样存取数据的对象。四个域对象功能一样。不同的是它们对数据的存储范围</li> <li>从存储范围(作用域范围看) pageContext &lt; request &lt; session &lt; application</li></ol> <h2 id="jsp请求转发标签"><a href="#jsp请求转发标签" class="header-anchor">#</a> JSP请求转发标签</h2> <div class="language-jsp extra-class"><pre class="language-text"><code>&lt;%@ page contentType=&quot;text/html;charset=UTF-8&quot; language=&quot;java&quot; %&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;aa.jsp&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;%--
+1. jsp提供了很多标签，但是因为jsp不是重点，老韩就讲一个常用forward
+2. jsp:forward 本质就是 等价 request.getRequestDispatcher(&quot;/bb.jsp&quot;).for...
+--%&gt;
+&lt;jsp:forward page=&quot;bb.jsp&quot;&gt;&lt;/jsp:forward&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div></section> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev"><a href="/blog/javaweb/会话技术.html" class="prev">
+          会话技术
+        </a></span> <span class="next"><a href="/blog/javaweb/el.html">
+          EL表达式
+        </a></span></p></div> <div class="comments-wrapper"><!----></div> <ul class="side-bar sub-sidebar-wrapper" style="width:12rem;" data-v-ac050c62><li class="level-2" data-v-ac050c62><a href="/blog/javaweb/jsp.html#介绍" class="sidebar-link reco-side-介绍" data-v-ac050c62>介绍</a></li><li class="level-2" data-v-ac050c62><a href="/blog/javaweb/jsp.html#入门" class="sidebar-link reco-side-入门" data-v-ac050c62>入门</a></li><li class="level-2" data-v-ac050c62><a href="/blog/javaweb/jsp.html#运行原理" class="sidebar-link reco-side-运行原理" data-v-ac050c62>运行原理</a></li><li class="level-2" data-v-ac050c62><a href="/blog/javaweb/jsp.html#常用page指令" class="sidebar-link reco-side-常用page指令" data-v-ac050c62>常用page指令</a></li><li class="level-2" data-v-ac050c62><a href="/blog/javaweb/jsp.html#jsp常用三种脚本" class="sidebar-link reco-side-jsp常用三种脚本" data-v-ac050c62>JSP常用三种脚本</a></li><li class="level-3" data-v-ac050c62><a href="/blog/javaweb/jsp.html#声明脚本基本语法" class="sidebar-link reco-side-声明脚本基本语法" data-v-ac050c62>声明脚本基本语法</a></li><li class="level-3" data-v-ac050c62><a href="/blog/javaweb/jsp.html#表达式脚本基本语法" class="sidebar-link reco-side-表达式脚本基本语法" data-v-ac050c62>表达式脚本基本语法</a></li><li class="level-3" data-v-ac050c62><a href="/blog/javaweb/jsp.html#代码脚本基本语法" class="sidebar-link reco-side-代码脚本基本语法" data-v-ac050c62>代码脚本基本语法</a></li><li class="level-2" data-v-ac050c62><a href="/blog/javaweb/jsp.html#jsp内置对象" class="sidebar-link reco-side-jsp内置对象" data-v-ac050c62>JSP内置对象</a></li><li class="level-3" data-v-ac050c62><a href="/blog/javaweb/jsp.html#介绍-2" class="sidebar-link reco-side-介绍-2" data-v-ac050c62>介绍</a></li><li class="level-3" data-v-ac050c62><a href="/blog/javaweb/jsp.html#九大内置对象" class="sidebar-link reco-side-九大内置对象" data-v-ac050c62>九大内置对象</a></li><li class="level-2" data-v-ac050c62><a href="/blog/javaweb/jsp.html#jsp域对象" class="sidebar-link reco-side-jsp域对象" data-v-ac050c62>JSP域对象</a></li><li class="level-3" data-v-ac050c62><a href="/blog/javaweb/jsp.html#jsp四大域对象" class="sidebar-link reco-side-jsp四大域对象" data-v-ac050c62>JSP四大域对象</a></li><li class="level-3" data-v-ac050c62><a href="/blog/javaweb/jsp.html#应用实例" class="sidebar-link reco-side-应用实例" data-v-ac050c62>应用实例</a></li><li class="level-3" data-v-ac050c62><a href="/blog/javaweb/jsp.html#注意事项和细节" class="sidebar-link reco-side-注意事项和细节" data-v-ac050c62>注意事项和细节</a></li><li class="level-2" data-v-ac050c62><a href="/blog/javaweb/jsp.html#jsp请求转发标签" class="sidebar-link reco-side-jsp请求转发标签" data-v-ac050c62>JSP请求转发标签</a></li></ul></main></div> <!----></div></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-c6073ba8 data-v-c6073ba8><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-c6073ba8><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-c6073ba8></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-c6073ba8></path></svg></div></div></div>
+    <script src="/blog/assets/js/app.3330eed2.js" defer></script><script src="/blog/assets/js/3.6c5b35bb.js" defer></script><script src="/blog/assets/js/1.504525ea.js" defer></script><script src="/blog/assets/js/35.5257f9cf.js" defer></script>
+  </body>
+</html>

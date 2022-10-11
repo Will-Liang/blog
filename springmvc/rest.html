@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Rest-优雅的url请求风格 | LiAng的博客</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <link rel="icon" href="logo.png">
+    <meta name="description" content="使用VuePress搭建的个人博客">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    
+    <link rel="preload" href="/blog/assets/css/0.styles.20774dd8.css" as="style"><link rel="preload" href="/blog/assets/js/app.3330eed2.js" as="script"><link rel="preload" href="/blog/assets/js/3.6c5b35bb.js" as="script"><link rel="preload" href="/blog/assets/js/1.504525ea.js" as="script"><link rel="preload" href="/blog/assets/js/114.aecf45e8.js" as="script"><link rel="prefetch" href="/blog/assets/js/10.ae134eec.js"><link rel="prefetch" href="/blog/assets/js/100.f494bb12.js"><link rel="prefetch" href="/blog/assets/js/101.1abed729.js"><link rel="prefetch" href="/blog/assets/js/102.3dae5b73.js"><link rel="prefetch" href="/blog/assets/js/103.d4c1df48.js"><link rel="prefetch" href="/blog/assets/js/104.97769664.js"><link rel="prefetch" href="/blog/assets/js/105.e1d4b509.js"><link rel="prefetch" href="/blog/assets/js/106.d2de4d87.js"><link rel="prefetch" href="/blog/assets/js/107.32eb9a4b.js"><link rel="prefetch" href="/blog/assets/js/108.6176ba6f.js"><link rel="prefetch" href="/blog/assets/js/109.c2517b07.js"><link rel="prefetch" href="/blog/assets/js/11.3ad7e7ee.js"><link rel="prefetch" href="/blog/assets/js/110.5473f89e.js"><link rel="prefetch" href="/blog/assets/js/111.e5313fb6.js"><link rel="prefetch" href="/blog/assets/js/112.45abac2a.js"><link rel="prefetch" href="/blog/assets/js/113.2529321a.js"><link rel="prefetch" href="/blog/assets/js/115.7bfd8d11.js"><link rel="prefetch" href="/blog/assets/js/116.a8923bc8.js"><link rel="prefetch" href="/blog/assets/js/117.eb510836.js"><link rel="prefetch" href="/blog/assets/js/118.2d9e2dde.js"><link rel="prefetch" href="/blog/assets/js/119.fbd3d7d8.js"><link rel="prefetch" href="/blog/assets/js/12.c28da1fe.js"><link rel="prefetch" href="/blog/assets/js/120.44e6da3c.js"><link rel="prefetch" href="/blog/assets/js/121.fe8b1fbf.js"><link rel="prefetch" href="/blog/assets/js/122.77d14a10.js"><link rel="prefetch" href="/blog/assets/js/123.9e4f36b3.js"><link rel="prefetch" href="/blog/assets/js/124.e32c3fbc.js"><link rel="prefetch" href="/blog/assets/js/125.40820a9c.js"><link rel="prefetch" href="/blog/assets/js/13.3bfcea68.js"><link rel="prefetch" href="/blog/assets/js/14.5e91563f.js"><link rel="prefetch" href="/blog/assets/js/15.bbe624ea.js"><link rel="prefetch" href="/blog/assets/js/16.e3f08a8c.js"><link rel="prefetch" href="/blog/assets/js/17.266026b8.js"><link rel="prefetch" href="/blog/assets/js/18.98c4e036.js"><link rel="prefetch" href="/blog/assets/js/19.af649a7d.js"><link rel="prefetch" href="/blog/assets/js/20.c8f3d118.js"><link rel="prefetch" href="/blog/assets/js/21.0b934d92.js"><link rel="prefetch" href="/blog/assets/js/22.80702221.js"><link rel="prefetch" href="/blog/assets/js/23.5b00e6a3.js"><link rel="prefetch" href="/blog/assets/js/24.93187db2.js"><link rel="prefetch" href="/blog/assets/js/25.a3c37d42.js"><link rel="prefetch" href="/blog/assets/js/26.bf8dd5ea.js"><link rel="prefetch" href="/blog/assets/js/27.2af582fb.js"><link rel="prefetch" href="/blog/assets/js/28.8b9db5a9.js"><link rel="prefetch" href="/blog/assets/js/29.f707832d.js"><link rel="prefetch" href="/blog/assets/js/30.f8893186.js"><link rel="prefetch" href="/blog/assets/js/31.b38a6988.js"><link rel="prefetch" href="/blog/assets/js/32.a64f03d4.js"><link rel="prefetch" href="/blog/assets/js/33.3efca3c8.js"><link rel="prefetch" href="/blog/assets/js/34.0efe9205.js"><link rel="prefetch" href="/blog/assets/js/35.5257f9cf.js"><link rel="prefetch" href="/blog/assets/js/36.29894302.js"><link rel="prefetch" href="/blog/assets/js/37.835dd643.js"><link rel="prefetch" href="/blog/assets/js/38.a56eba01.js"><link rel="prefetch" href="/blog/assets/js/39.8373e53f.js"><link rel="prefetch" href="/blog/assets/js/4.f2ad145d.js"><link rel="prefetch" href="/blog/assets/js/40.cc877510.js"><link rel="prefetch" href="/blog/assets/js/41.64bff9da.js"><link rel="prefetch" href="/blog/assets/js/42.6c7528bd.js"><link rel="prefetch" href="/blog/assets/js/43.a2838eac.js"><link rel="prefetch" href="/blog/assets/js/44.f13486cd.js"><link rel="prefetch" href="/blog/assets/js/45.93f5b70b.js"><link rel="prefetch" href="/blog/assets/js/46.6f1eb6fb.js"><link rel="prefetch" href="/blog/assets/js/47.aca3e06b.js"><link rel="prefetch" href="/blog/assets/js/48.a386cbe0.js"><link rel="prefetch" href="/blog/assets/js/49.d845e320.js"><link rel="prefetch" href="/blog/assets/js/5.acb9c427.js"><link rel="prefetch" href="/blog/assets/js/50.0db2f824.js"><link rel="prefetch" href="/blog/assets/js/51.e9ed29e0.js"><link rel="prefetch" href="/blog/assets/js/52.ed09b025.js"><link rel="prefetch" href="/blog/assets/js/53.2793a02e.js"><link rel="prefetch" href="/blog/assets/js/54.98d281cf.js"><link rel="prefetch" href="/blog/assets/js/55.4a63e32d.js"><link rel="prefetch" href="/blog/assets/js/56.8c087e30.js"><link rel="prefetch" href="/blog/assets/js/57.20cb7cfb.js"><link rel="prefetch" href="/blog/assets/js/58.6250e7c1.js"><link rel="prefetch" href="/blog/assets/js/59.96395c59.js"><link rel="prefetch" href="/blog/assets/js/6.bf0398c6.js"><link rel="prefetch" href="/blog/assets/js/60.6bcb3992.js"><link rel="prefetch" href="/blog/assets/js/61.734a9217.js"><link rel="prefetch" href="/blog/assets/js/62.95dd7db0.js"><link rel="prefetch" href="/blog/assets/js/63.0c874190.js"><link rel="prefetch" href="/blog/assets/js/64.e0839af9.js"><link rel="prefetch" href="/blog/assets/js/65.dd798114.js"><link rel="prefetch" href="/blog/assets/js/66.8f5b96ca.js"><link rel="prefetch" href="/blog/assets/js/67.dfaee60f.js"><link rel="prefetch" href="/blog/assets/js/68.c9ee3fc9.js"><link rel="prefetch" href="/blog/assets/js/69.b001fe83.js"><link rel="prefetch" href="/blog/assets/js/7.36bc8eb5.js"><link rel="prefetch" href="/blog/assets/js/70.3a3581f4.js"><link rel="prefetch" href="/blog/assets/js/71.04b6be3b.js"><link rel="prefetch" href="/blog/assets/js/72.641865c3.js"><link rel="prefetch" href="/blog/assets/js/73.ac89690d.js"><link rel="prefetch" href="/blog/assets/js/74.c479d3a1.js"><link rel="prefetch" href="/blog/assets/js/75.b34e72e6.js"><link rel="prefetch" href="/blog/assets/js/76.c71b8c70.js"><link rel="prefetch" href="/blog/assets/js/77.8a3be04d.js"><link rel="prefetch" href="/blog/assets/js/78.96d54f80.js"><link rel="prefetch" href="/blog/assets/js/79.6da440db.js"><link rel="prefetch" href="/blog/assets/js/8.43b324b6.js"><link rel="prefetch" href="/blog/assets/js/80.447c0acc.js"><link rel="prefetch" href="/blog/assets/js/81.b9419c6a.js"><link rel="prefetch" href="/blog/assets/js/82.6dd18e6e.js"><link rel="prefetch" href="/blog/assets/js/83.17c3a465.js"><link rel="prefetch" href="/blog/assets/js/84.8495d717.js"><link rel="prefetch" href="/blog/assets/js/85.fbb83329.js"><link rel="prefetch" href="/blog/assets/js/86.fca7db54.js"><link rel="prefetch" href="/blog/assets/js/87.8bd35813.js"><link rel="prefetch" href="/blog/assets/js/88.bdc74531.js"><link rel="prefetch" href="/blog/assets/js/89.84f1ff99.js"><link rel="prefetch" href="/blog/assets/js/9.19cd0a47.js"><link rel="prefetch" href="/blog/assets/js/90.31a729c2.js"><link rel="prefetch" href="/blog/assets/js/91.b7f04c1a.js"><link rel="prefetch" href="/blog/assets/js/92.849d7d72.js"><link rel="prefetch" href="/blog/assets/js/93.2927031e.js"><link rel="prefetch" href="/blog/assets/js/94.96ea5dac.js"><link rel="prefetch" href="/blog/assets/js/95.f7b253d0.js"><link rel="prefetch" href="/blog/assets/js/96.79b1e320.js"><link rel="prefetch" href="/blog/assets/js/97.4630fde6.js"><link rel="prefetch" href="/blog/assets/js/98.0f7731f3.js"><link rel="prefetch" href="/blog/assets/js/99.cc7e1c06.js">
+    <link rel="stylesheet" href="/blog/assets/css/0.styles.20774dd8.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container" data-v-5bb33761><div data-v-5bb33761><div class="password-shadow password-wrapper-out" style="display:none;" data-v-59e6cb88 data-v-5bb33761 data-v-5bb33761><h3 class="title" data-v-59e6cb88>LiAng的博客</h3> <p class="description" data-v-59e6cb88>使用VuePress搭建的个人博客</p> <label id="box" class="inputBox" data-v-59e6cb88><input type="password" value="" data-v-59e6cb88> <span data-v-59e6cb88>Konck! Knock!</span> <button data-v-59e6cb88>OK</button></label> <div class="footer" data-v-59e6cb88><span data-v-59e6cb88><i class="iconfont reco-theme" data-v-59e6cb88></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-59e6cb88>vuePress-theme-reco</a></span> <span data-v-59e6cb88><i class="iconfont reco-copyright" data-v-59e6cb88></i> <a data-v-59e6cb88><span data-v-59e6cb88>LiAng</span>
+          
+        <!---->
+        2022
+      </a></span></div></div> <div class="hide" data-v-5bb33761><header class="navbar" data-v-5bb33761><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog/" class="home-link router-link-active"><!----> <span class="site-name">LiAng的博客</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/blog/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  TimeLine
+</a></div><div class="nav-item"><a href="/blog/websites/websites.html" class="nav-link"><i class="undefined"></i>
+  网站集合
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      Java
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/java/java.html" class="nav-link"><i class="undefined"></i>
+  Java
+</a></li><li class="dropdown-item"><!----> <a href="/blog/javaweb/javaweb.html" class="nav-link"><i class="undefined"></i>
+  JavaWeb
+</a></li><li class="dropdown-item"><!----> <a href="/blog/spring/spring.html" class="nav-link"><i class="undefined"></i>
+  Spring
+</a></li><li class="dropdown-item"><!----> <a href="/blog/springmvc/springmvc.html" class="nav-link"><i class="undefined"></i>
+  SpringMVC
+</a></li><li class="dropdown-item"><!----> <a href="/blog/mybatis/mybatis.html" class="nav-link"><i class="undefined"></i>
+  MyBatis
+</a></li><li class="dropdown-item"><!----> <a href="/blog/springboot/springboot.html" class="nav-link"><i class="undefined"></i>
+  SpringBoot
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      Spider
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/spider/说明.html" class="nav-link"><i class="undefined"></i>
+  爬虫基础
+</a></li><li class="dropdown-item"><!----> <a href="https://note.youdao.com/s/7PwmeCSn" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  Scrapy框架
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      大数据
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://www.yuque.com/liang-znkb8/wqs8e6/wz3m1g" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  环境部署
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      数据库
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/mongodb/MongoDB 介绍.html" class="nav-link"><i class="undefined"></i>
+  MongoDB
+</a></li><li class="dropdown-item"><!----> <a href="/blog/redis/五大常用数据类型.html" class="nav-link"><i class="undefined"></i>
+  Redis
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      Docker
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/docker/docker入门.html" class="nav-link"><i class="undefined"></i>
+  Docker入门
+</a></li><li class="dropdown-item"><!----> <a href="/blog/docker/docker进阶.html" class="nav-link"><i class="undefined"></i>
+  Docker进阶
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      LiAng 的博客
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/Will-Liang" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-5bb33761></div> <aside class="sidebar" data-v-5bb33761><div class="personal-info-wrapper" data-v-1fad0c41 data-v-5bb33761><!----> <h3 class="name" data-v-1fad0c41>
+    LiAng
+  </h3> <div class="num" data-v-1fad0c41><div data-v-1fad0c41><h3 data-v-1fad0c41>114</h3> <h6 data-v-1fad0c41>文章</h6></div> <div data-v-1fad0c41><h3 data-v-1fad0c41>0</h3> <h6 data-v-1fad0c41>标签</h6></div></div> <ul class="social-links" data-v-1fad0c41></ul> <hr data-v-1fad0c41></div> <nav class="nav-links"><div class="nav-item"><a href="/blog/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  TimeLine
+</a></div><div class="nav-item"><a href="/blog/websites/websites.html" class="nav-link"><i class="undefined"></i>
+  网站集合
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      Java
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/java/java.html" class="nav-link"><i class="undefined"></i>
+  Java
+</a></li><li class="dropdown-item"><!----> <a href="/blog/javaweb/javaweb.html" class="nav-link"><i class="undefined"></i>
+  JavaWeb
+</a></li><li class="dropdown-item"><!----> <a href="/blog/spring/spring.html" class="nav-link"><i class="undefined"></i>
+  Spring
+</a></li><li class="dropdown-item"><!----> <a href="/blog/springmvc/springmvc.html" class="nav-link"><i class="undefined"></i>
+  SpringMVC
+</a></li><li class="dropdown-item"><!----> <a href="/blog/mybatis/mybatis.html" class="nav-link"><i class="undefined"></i>
+  MyBatis
+</a></li><li class="dropdown-item"><!----> <a href="/blog/springboot/springboot.html" class="nav-link"><i class="undefined"></i>
+  SpringBoot
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      Spider
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/spider/说明.html" class="nav-link"><i class="undefined"></i>
+  爬虫基础
+</a></li><li class="dropdown-item"><!----> <a href="https://note.youdao.com/s/7PwmeCSn" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  Scrapy框架
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      大数据
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://www.yuque.com/liang-znkb8/wqs8e6/wz3m1g" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  环境部署
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      数据库
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/mongodb/MongoDB 介绍.html" class="nav-link"><i class="undefined"></i>
+  MongoDB
+</a></li><li class="dropdown-item"><!----> <a href="/blog/redis/五大常用数据类型.html" class="nav-link"><i class="undefined"></i>
+  Redis
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      Docker
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/docker/docker入门.html" class="nav-link"><i class="undefined"></i>
+  Docker入门
+</a></li><li class="dropdown-item"><!----> <a href="/blog/docker/docker进阶.html" class="nav-link"><i class="undefined"></i>
+  Docker进阶
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      LiAng 的博客
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/Will-Liang" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav> <ul class="sidebar-links"><li><a href="/blog/websites/websites.html" class="sidebar-link">网站集合</a></li><li><section class="sidebar-group collapsable depth-0"><a href="/blog/java/java" class="sidebar-heading clickable"><span>Java</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/blog/javaweb/javaweb" class="sidebar-heading clickable"><span>JavaWeb</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/blog/spring/spring" class="sidebar-heading clickable"><span>Spring</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/blog/springmvc/springmvc" class="sidebar-heading clickable open"><span>SpringMVC</span> <span class="arrow down"></span></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/springmvc/springmvc.html" class="sidebar-link">SpringMVC介绍</a></li><li><a href="/blog/springmvc/requestmapping.html" class="sidebar-link">RequestMapping</a></li><li><a href="/blog/springmvc/rest.html" aria-current="page" class="active sidebar-link">Rest-优雅的url请求风格</a></li><li><a href="/blog/springmvc/SpringMVC映射请求数据.html" class="sidebar-link">SpringMVC映射请求数据</a></li><li><a href="/blog/springmvc/模型数据.html" class="sidebar-link">模型数据</a></li><li><a href="/blog/springmvc/视图和视图解析器.html" class="sidebar-link">视图和视图解析器</a></li><li><a href="/blog/springmvc/数据格式化.html" class="sidebar-link">数据格式化</a></li><li><a href="/blog/springmvc/验证以及国际化.html" class="sidebar-link">验证以及国际化</a></li><li><a href="/blog/springmvc/中文乱码处理.html" class="sidebar-link">中文乱码处理</a></li><li><a href="/blog/springmvc/处理json.html" class="sidebar-link">处理 json 和 HttpMessageConverter&lt;T&gt;</a></li><li><a href="/blog/springmvc/上传文件.html" class="sidebar-link">上传文件</a></li><li><a href="/blog/springmvc/自定义拦截器.html" class="sidebar-link">自定义拦截器</a></li><li><a href="/blog/springmvc/异常处理.html" class="sidebar-link">异常处理</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/blog/mybatis/mybatis" class="sidebar-heading clickable"><span>MyBatis</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/blog/springboot/springboot" class="sidebar-heading clickable"><span>SpringBoot</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/blog/mongodb/MongoDB 介绍" class="sidebar-heading clickable"><span>MongoDB</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/blog/redis/五大常用数据类型" class="sidebar-heading clickable"><span>Redis</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/blog/spider/说明" class="sidebar-heading clickable"><span>Spider</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/blog/docker/docker入门" class="sidebar-heading clickable"><span>Docker</span> <span class="arrow right"></span></a> <!----></section></li></ul> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-59e6cb88 data-v-5bb33761><h3 class="title" data-v-59e6cb88>Rest-优雅的url请求风格</h3> <!----> <label id="box" class="inputBox" data-v-59e6cb88><input type="password" value="" data-v-59e6cb88> <span data-v-59e6cb88>Konck! Knock!</span> <button data-v-59e6cb88>OK</button></label> <div class="footer" data-v-59e6cb88><span data-v-59e6cb88><i class="iconfont reco-theme" data-v-59e6cb88></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-59e6cb88>vuePress-theme-reco</a></span> <span data-v-59e6cb88><i class="iconfont reco-copyright" data-v-59e6cb88></i> <a data-v-59e6cb88><span data-v-59e6cb88>LiAng</span>
+          
+        <!---->
+        2022
+      </a></span></div></div> <div data-v-5bb33761><div data-v-5bb33761><main class="page"><section style="display:;"><div class="page-title"><h1 class="title">Rest-优雅的url请求风格</h1> <div data-v-8a445198><i class="iconfont reco-account" data-v-8a445198><span data-v-8a445198>LiAng</span></i> <i class="iconfont reco-date" data-v-8a445198><span data-v-8a445198>2022/8/21</span></i> <!----> <!----></div></div> <div class="theme-reco-content content__default"><h2 id="基本介绍"><a href="#基本介绍" class="header-anchor">#</a> 基本介绍</h2> <ol><li><p>REST：即 Representational State Transfer。(资源)表现层状态转化。是目前流行的请求方式。它结构清晰，很多网站采用。</p></li> <li><p>HTTP 协议里面，四个表示操作方式的动词：GET、POST、PUT、DELETE。它们分别对应 四种基本操作：GET 用来获取资源，POST 用来新建资源，PUT 用来更新资源，DELETE 用来删除资源。</p></li> <li><p>实例</p> <p>传统的请求方法：</p> <p>getBook?id=1 GET； delete?id=1 GET； update POST； add POST</p></li> <li><p>传统的 url 是通过参数来说明 crud 的类型，rest 是通过 get/post/put/delete 来说明 crud 的类型。</p></li></ol> <h2 id="rest的核心过滤器"><a href="#rest的核心过滤器" class="header-anchor">#</a> REST的核心过滤器</h2> <ol><li>当前的浏览器只支持 post/get 请求，因此为了得到 put/delete 的请求方式需要使用 Spring 提供的 HiddenHttpMethodFilter 过滤器进行转换。</li> <li>HiddenHttpMethodFilter：浏览器 form 表单只支持 GET 与 POST 请求，而 DELETE、PUT 等 method 并不支持，Spring 添加了一个过滤器，可以将这些请求转换为标准的 http 方法，使得支持 GET、POST、PUT 与 DELETE 请求 。</li> <li>HiddenHttpMethodFilter 能对 post 请求方式进行转换，因此我们需要特别的注意这一点 。</li> <li>这个过滤器需要在 web.xml 中配置。</li></ol> <h2 id="rest-风格的-url-完成增删改查"><a href="#rest-风格的-url-完成增删改查" class="header-anchor">#</a> Rest 风格的 url-完成增删改查</h2> <h3 id="代码演示"><a href="#代码演示" class="header-anchor">#</a> 代码演示</h3> <h4 id="修改-web-xml-添加-hiddenhttpmethodfilter"><a href="#修改-web-xml-添加-hiddenhttpmethodfilter" class="header-anchor">#</a> 修改 web.xml 添加 HiddenHttpMethodFilter</h4> <div class="language-xml extra-class"><pre class="language-xml"><code><span class="token prolog">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>web-app</span> <span class="token attr-name">xmlns</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>http://xmlns.jcp.org/xml/ns/javaee<span class="token punctuation">&quot;</span></span>
+         <span class="token attr-name"><span class="token namespace">xmlns:</span>xsi</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>http://www.w3.org/2001/XMLSchema-instance<span class="token punctuation">&quot;</span></span>
+         <span class="token attr-name"><span class="token namespace">xsi:</span>schemaLocation</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd<span class="token punctuation">&quot;</span></span>
+         <span class="token attr-name">version</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>4.0<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+
+    <span class="token comment">&lt;!--
+        1. 作用是把以 post 方式提交的delete和put请求进行转换
+        2. 配置url-pattern 是 /* 表示请求都经过 hiddenHttpMethodFilter过滤
+    --&gt;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>filter</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>filter-name</span><span class="token punctuation">&gt;</span></span>hiddenHttpMethodFilter<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>filter-name</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>filter-class</span><span class="token punctuation">&gt;</span></span>org.springframework.web.filter.HiddenHttpMethodFilter<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>filter-class</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>filter</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>filter-mapping</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>filter-name</span><span class="token punctuation">&gt;</span></span>hiddenHttpMethodFilter<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>filter-name</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>url-pattern</span><span class="token punctuation">&gt;</span></span>/*<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>url-pattern</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>filter-mapping</span><span class="token punctuation">&gt;</span></span>
+
+    <span class="token comment">&lt;!--配置前端控制器/中央控制器/分发控制器
+        用户的请求都会经过它的处理
+    --&gt;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>servlet</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>servlet-name</span><span class="token punctuation">&gt;</span></span>springDispatcherServlet<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>servlet-name</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>servlet-class</span><span class="token punctuation">&gt;</span></span>org.springframework.web.servlet.DispatcherServlet<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>servlet-class</span><span class="token punctuation">&gt;</span></span>
+        <span class="token comment">&lt;!--配置属性 contextConfigLocation，指定DispatcherServlet去操作的spring配置文件--&gt;</span>
+        <span class="token comment">&lt;!--&lt;init-param&gt;--&gt;</span>
+        <span class="token comment">&lt;!--    &lt;param-name&gt;contextConfigLocation&lt;/param-name&gt;--&gt;</span>
+        <span class="token comment">&lt;!--    &lt;param-value&gt;classpath:WEB-INF/applicationContext-mvc.xml&lt;/param-value&gt;--&gt;</span>
+        <span class="token comment">&lt;!--&lt;/init-param&gt;--&gt;</span>
+        <span class="token comment">&lt;!--在web项目启动时，就自动加载DispatcherServlet--&gt;</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>load-on-startup</span><span class="token punctuation">&gt;</span></span>1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>load-on-startup</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>servlet</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>servlet-mapping</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>servlet-name</span><span class="token punctuation">&gt;</span></span>springDispatcherServlet<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>servlet-name</span><span class="token punctuation">&gt;</span></span>
+        <span class="token comment">&lt;!--
+            1.这里我们配置的url-pattern是 / ，表示用户的请求都经过 DispatcherServlet
+            2.这样配置也支持 rest 风格的url请求
+        --&gt;</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>url-pattern</span><span class="token punctuation">&gt;</span></span>/<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>url-pattern</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>servlet-mapping</span><span class="token punctuation">&gt;</span></span>
+
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>web-app</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><h4 id="修改-springdispatcherservlet-servlet-xml"><a href="#修改-springdispatcherservlet-servlet-xml" class="header-anchor">#</a> 修改 springDispatcherServlet-servlet.xml</h4> <div class="language-xml extra-class"><pre class="language-xml"><code><span class="token prolog">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>beans</span> <span class="token attr-name">xmlns</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>http://www.springframework.org/schema/beans<span class="token punctuation">&quot;</span></span>
+       <span class="token attr-name"><span class="token namespace">xmlns:</span>xsi</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>http://www.w3.org/2001/XMLSchema-instance<span class="token punctuation">&quot;</span></span>
+       <span class="token attr-name"><span class="token namespace">xmlns:</span>context</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>http://www.springframework.org/schema/context<span class="token punctuation">&quot;</span></span>
+       <span class="token attr-name"><span class="token namespace">xmlns:</span>mvc</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>http://www.springframework.org/schema/mvc<span class="token punctuation">&quot;</span></span>
+       <span class="token attr-name"><span class="token namespace">xsi:</span>schemaLocation</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+
+    <span class="token comment">&lt;!--配置要自动扫描的包--&gt;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token namespace">context:</span>component-scan</span> <span class="token attr-name">base-package</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>com.lzw.web<span class="token punctuation">&quot;</span></span><span class="token punctuation">/&gt;</span></span>
+
+    <span class="token comment">&lt;!--配置视图解析器--&gt;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>bean</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>org.springframework.web.servlet.view.InternalResourceViewResolver<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+        <span class="token comment">&lt;!--配置属性 suffix 和 prefix--&gt;</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>prefix<span class="token punctuation">&quot;</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>/WEB-INF/pages/<span class="token punctuation">&quot;</span></span><span class="token punctuation">/&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>suffix<span class="token punctuation">&quot;</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>.jsp<span class="token punctuation">&quot;</span></span><span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>bean</span><span class="token punctuation">&gt;</span></span>
+
+    <span class="token comment">&lt;!--加入两个常规配置--&gt;</span>
+    <span class="token comment">&lt;!--支持SpringMVC的高级功能，别入JSR303校验，映射动态请求--&gt;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token namespace">mvc:</span>annotation-driven</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token namespace">mvc:</span>annotation-driven</span><span class="token punctuation">&gt;</span></span>
+    <span class="token comment">&lt;!--将SpringMVC不能处理的请求，交给tomcat处理，比如css，js--&gt;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token namespace">mvc:</span>default-servlet-handler</span><span class="token punctuation">/&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>beans</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><h4 id="创建-web-rest-jsp"><a href="#创建-web-rest-jsp" class="header-anchor">#</a> 创建 web\rest.jsp</h4> <p>引入jQuery</p> <div class="language-jsp extra-class"><pre class="language-text"><code>&lt;%@ page contentType=&quot;text/html;charset=UTF-8&quot; language=&quot;java&quot; %&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Title&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h3&gt;Rest风格的crud操作案例&lt;/h3&gt;
+    &lt;br&gt;&lt;hr&gt;
+    &lt;h3&gt;rest风格的url 查询书籍[get]&lt;/h3&gt;
+    &lt;a href=&quot;user/book/200&quot;&gt;点击查询书籍&lt;/a&gt;
+    &lt;br&gt;&lt;hr&gt;
+    &lt;h3&gt;rest风格的url 添加书籍[post]&lt;/h3&gt;
+    &lt;form action=&quot;user/book&quot; method=&quot;post&quot;&gt;
+        name:&lt;input name=&quot;bookName&quot; type=&quot;text&quot;&gt;&lt;br&gt;
+        &lt;input type=&quot;submit&quot; value=&quot;添加书籍&quot;&gt;
+    &lt;/form&gt;
+    &lt;br&gt;&lt;hr&gt;
+    &lt;h3&gt;rest风格的url, 删除一本书&lt;/h3&gt;
+   
+    &lt;a href=&quot;user/book/600&quot; id=&quot;deleteBook&quot;&gt;删除指定id的书&lt;/a&gt;
+    &lt;form action=&quot;&quot; method=&quot;post&quot; id=&quot;hiddenForm&quot;&gt;
+        &lt;input type=&quot;hidden&quot; name=&quot;_method&quot;/&gt;
+    &lt;/form&gt;
+    &lt;br&gt;&lt;hr&gt;
+    &lt;h3&gt;rest风格的url 修改书籍[put]~&lt;/h3&gt;
+    &lt;form action=&quot;user/book/666&quot; method=&quot;post&quot;&gt;
+        &lt;input type=&quot;hidden&quot; name=&quot;_method&quot; value=&quot;PUT&quot;&gt;
+        &lt;input type=&quot;submit&quot; value=&quot;修改书籍~&quot;&gt;
+    &lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div><h4 id="创建-bookhandler-java"><a href="#创建-bookhandler-java" class="header-anchor">#</a> 创建 BookHandler.java</h4> <div class="language-java extra-class"><pre class="language-java"><code><span class="token keyword">package</span> <span class="token namespace">com<span class="token punctuation">.</span>lzw<span class="token punctuation">.</span>web<span class="token punctuation">.</span>rest</span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">org<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>stereotype<span class="token punctuation">.</span></span><span class="token class-name">Controller</span></span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">org<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>web<span class="token punctuation">.</span>bind<span class="token punctuation">.</span>annotation<span class="token punctuation">.</span></span><span class="token class-name">PathVariable</span></span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">org<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>web<span class="token punctuation">.</span>bind<span class="token punctuation">.</span>annotation<span class="token punctuation">.</span></span><span class="token class-name">RequestMapping</span></span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">org<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>web<span class="token punctuation">.</span>bind<span class="token punctuation">.</span>annotation<span class="token punctuation">.</span></span><span class="token class-name">RequestMethod</span></span><span class="token punctuation">;</span>
+
+<span class="token comment">/**
+ * @author LiAng
+ * 处理 rest 风格的请求-增删改查
+ */</span>
+<span class="token annotation punctuation">@RequestMapping</span><span class="token punctuation">(</span><span class="token string">&quot;/user&quot;</span><span class="token punctuation">)</span>
+<span class="token annotation punctuation">@Controller</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">BookHandler</span> <span class="token punctuation">{</span>
+    <span class="token comment">//查询[GET]</span>
+    <span class="token annotation punctuation">@RequestMapping</span><span class="token punctuation">(</span>value <span class="token operator">=</span> <span class="token string">&quot;/book/{id}&quot;</span><span class="token punctuation">,</span> method <span class="token operator">=</span> <span class="token class-name">RequestMethod</span><span class="token punctuation">.</span>GET<span class="token punctuation">)</span>
+    <span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">getBook</span><span class="token punctuation">(</span><span class="token annotation punctuation">@PathVariable</span><span class="token punctuation">(</span><span class="token string">&quot;id&quot;</span><span class="token punctuation">)</span> <span class="token class-name">String</span> id<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;查询书籍 id = &quot;</span> <span class="token operator">+</span> id<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> <span class="token string">&quot;success&quot;</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h4 id="完成get测试"><a href="#完成get测试" class="header-anchor">#</a> <strong>完成GET测试</strong></h4> <h4 id="修改-bookhandler-java"><a href="#修改-bookhandler-java" class="header-anchor">#</a> 修改 BookHandler.java</h4> <div class="language-java extra-class"><pre class="language-java"><code>	<span class="token comment">//添加[POST]</span>
+    <span class="token annotation punctuation">@PostMapping</span><span class="token punctuation">(</span>value <span class="token operator">=</span> <span class="token string">&quot;/book&quot;</span><span class="token punctuation">)</span>
+    <span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">addBook</span><span class="token punctuation">(</span><span class="token class-name">String</span> bookName<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;添加书籍 bookName== &quot;</span> <span class="token operator">+</span> bookName<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> <span class="token string">&quot;success&quot;</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+</code></pre></div><h4 id="完成post测试"><a href="#完成post测试" class="header-anchor">#</a> <strong>完成POST测试</strong></h4> <p>（前端表单中输入中文，后端接收到的是乱码，后面处理）</p> <h4 id="修改-bookhandler-java-2"><a href="#修改-bookhandler-java-2" class="header-anchor">#</a> 修改 BookHandler.java</h4> <div class="language-java extra-class"><pre class="language-java"><code>	<span class="token comment">//删除[DELETE]</span>
+    <span class="token annotation punctuation">@RequestMapping</span><span class="token punctuation">(</span>value <span class="token operator">=</span> <span class="token string">&quot;/book/{id}&quot;</span><span class="token punctuation">,</span> method <span class="token operator">=</span> <span class="token class-name">RequestMethod</span><span class="token punctuation">.</span>DELETE<span class="token punctuation">)</span>
+    <span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">delBook</span><span class="token punctuation">(</span><span class="token annotation punctuation">@PathVariable</span><span class="token punctuation">(</span><span class="token string">&quot;id&quot;</span><span class="token punctuation">)</span> <span class="token class-name">String</span> id<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;删除书籍 id= &quot;</span> <span class="token operator">+</span> id<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">//return &quot;success&quot;; //[如果 这样返 回会报错 JSPs only permit GET POST or HEAD]</span>
+        
+        <span class="token comment">//1. redirect:/user/success 重定向</span>
+        <span class="token comment">//2. 会被解析成 /springmvc/user/success</span>
+        <span class="token keyword">return</span> <span class="token string">&quot;redirect:/user/success&quot;</span><span class="token punctuation">;</span> <span class="token comment">//重定向到一个没有指定 method 的 Handler 方 法</span>
+    <span class="token punctuation">}</span>
+
+	<span class="token annotation punctuation">@RequestMapping</span><span class="token punctuation">(</span>value <span class="token operator">=</span> <span class="token string">&quot;/success&quot;</span><span class="token punctuation">)</span>
+    <span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">successGenecal</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token string">&quot;success&quot;</span><span class="token punctuation">;</span> <span class="token comment">//由该方法 转发到 success.jsp 页面</span>
+    <span class="token punctuation">}</span>
+</code></pre></div><h4 id="修改-rest-jsp"><a href="#修改-rest-jsp" class="header-anchor">#</a> 修改 rest.jsp</h4> <div class="language-jsp extra-class"><pre class="language-text"><code>&lt;%@ page contentType=&quot;text/html;charset=UTF-8&quot; language=&quot;java&quot; %&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Title&lt;/title&gt;
+    &lt;script type=&quot;text/javascript&quot; src=&quot;script/jquery-3.6.0.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script type=&quot;text/javascript&quot;&gt;
+        $(function(){
+
+            $(&quot;#deleteBook&quot;).click(function(){
+                // alert(&quot;点击。。&quot;);
+                //自己定义个提交行为
+                $(&quot;#hiddenForm&quot;).attr(&quot;action&quot;, this.href);
+                $(&quot;:hidden&quot;).val(&quot;DELETE&quot;);
+                $(&quot;#hiddenForm&quot;).submit();
+                return false;//改变超链接的行为，不再提交
+            })
+        })
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h3&gt;Rest风格的crud操作案例&lt;/h3&gt;
+    &lt;br&gt;&lt;hr&gt;
+    &lt;h3&gt;rest风格的url 查询书籍[get]&lt;/h3&gt;
+    &lt;a href=&quot;user/book/200&quot;&gt;点击查询书籍&lt;/a&gt;
+    &lt;br&gt;&lt;hr&gt;
+    &lt;h3&gt;rest风格的url 添加书籍[post]&lt;/h3&gt;
+    &lt;form action=&quot;user/book&quot; method=&quot;post&quot;&gt;
+        name:&lt;input name=&quot;bookName&quot; type=&quot;text&quot;&gt;&lt;br&gt;
+        &lt;input type=&quot;submit&quot; value=&quot;添加书籍&quot;&gt;
+    &lt;/form&gt;
+    &lt;br&gt;&lt;hr&gt;
+    &lt;h3&gt;rest风格的url, 删除一本书&lt;/h3&gt;
+    &lt;%--
+    1. 默认情况下 &lt;a href=&quot;user/book/600&quot;&gt;删除指定id的书&lt;/a&gt; 是get
+    2. 怎么样将 get 请求转成 springmvc 可以识别的 delete 就要考虑HiddenHttpMethodFilter机制
+       public static final String DEFAULT_METHOD_PARAM = &quot;_method&quot;;
+       ---------------------------------------------------
+       private static final List&lt;String&gt; ALLOWED_METHODS =
+                Collections.unmodifiableList(Arrays.asList(HttpMethod.PUT.name(),
+                        HttpMethod.DELETE.name(), HttpMethod.PATCH.name()));
+      ---------------------------------------------------
+       if (&quot;POST&quot;.equals(request.getMethod()) &amp;&amp; request.getAttribute(WebUtils.ERROR_EXCEPTION_ATTRIBUTE) == null) {
+                String paramValue = request.getParameter(this.methodParam);
+                if (StringUtils.hasLength(paramValue)) {
+                    String method = paramValue.toUpperCase(Locale.ENGLISH);
+                    if (ALLOWED_METHODS.contains(method)) {
+                        requestToUse = new HttpMethodRequestWrapper(request, method);
+                    }
+                }
+            }
+    3. 上面代码可以看到 HiddenHttpMethodFilter 过滤器可以对以Post方式提交的delete,put,patch进行转换成springmvc
+       识别的 RequestMethod.DELETE / RequestMethod.PUT /...
+    4. 我们需要将 get &lt;a href=&quot;user/book/600&quot;&gt;删除指定id的书&lt;/a&gt; 以post方式提交给后端handler, 这样过滤器还会生效
+    5. 我们可以用jquery来处理-引入jquery
+    --%&gt;
+    &lt;a href=&quot;user/book/600&quot; id=&quot;deleteBook&quot;&gt;删除指定id的书&lt;/a&gt;
+    &lt;form action=&quot;&quot; method=&quot;post&quot; id=&quot;hiddenForm&quot;&gt;
+        &lt;input type=&quot;hidden&quot; name=&quot;_method&quot;/&gt;
+    &lt;/form&gt;
+    &lt;br&gt;&lt;hr&gt;
+    &lt;h3&gt;rest风格的url 修改书籍[put]~&lt;/h3&gt;
+    &lt;form action=&quot;user/book/666&quot; method=&quot;post&quot;&gt;
+        &lt;input type=&quot;hidden&quot; name=&quot;_method&quot; value=&quot;PUT&quot;&gt;
+        &lt;input type=&quot;submit&quot; value=&quot;修改书籍~&quot;&gt;
+    &lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div><h4 id="完成delete测试"><a href="#完成delete测试" class="header-anchor">#</a> <strong>完成DELETE测试</strong></h4> <h4 id="修改-bookhandler-java-3"><a href="#修改-bookhandler-java-3" class="header-anchor">#</a> 修改 BookHandler.java</h4> <div class="language-java extra-class"><pre class="language-java"><code>	<span class="token comment">//修改[PUT]</span>
+    <span class="token annotation punctuation">@PutMapping</span><span class="token punctuation">(</span>value <span class="token operator">=</span> <span class="token string">&quot;/book/{id}&quot;</span><span class="token punctuation">)</span>
+    <span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">updateBook</span><span class="token punctuation">(</span><span class="token annotation punctuation">@PathVariable</span><span class="token punctuation">(</span><span class="token string">&quot;id&quot;</span><span class="token punctuation">)</span> <span class="token class-name">String</span> id<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;修改书籍 id=&quot;</span> <span class="token operator">+</span> id<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> <span class="token string">&quot;redirect:/user/success&quot;</span><span class="token punctuation">;</span> <span class="token comment">//重定向到一个没有指定 method 的 Handler 方法</span>
+    <span class="token punctuation">}</span>
+</code></pre></div><h4 id="完成put测试"><a href="#完成put测试" class="header-anchor">#</a> <strong>完成PUT测试</strong></h4> <h3 id="注意事项和细节说明"><a href="#注意事项和细节说明" class="header-anchor">#</a> 注意事项和细节说明</h3> <p>1、HiddenHttpMethodFilter，在将 post 转成 delete / put 请求时，是按_method 参数名来读取的</p> <p>2、如果 web 项目是运行在 Tomcat 8 及以上，会发现被过滤成 DELETE 和 PUT 请求，到达控制器时能顺利执行，但是返回时（forward）会报 HTTP 405 的错误提示：消息 JSP 只允许 GET、POST 或 HEAD。（不用纠结，了解即可）</p> <p>（1）解决方式 1：使用 Tomcat7</p> <p>（2）解决方式 2：将请求转发（forward）改为请求重定向（redirect）:重定向到一个 Handler， 由 Handler 转发到页面</p> <p><img src="/blog/springmvc/image-20220621152738067.png" alt="image-20220621152738067"></p></div></section> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev"><a href="/blog/springmvc/requestmapping.html" class="prev">
+          RequestMapping
+        </a></span> <span class="next"><a href="/blog/springmvc/SpringMVC映射请求数据.html">
+          SpringMVC映射请求数据
+        </a></span></p></div> <div class="comments-wrapper"><!----></div> <ul class="side-bar sub-sidebar-wrapper" style="width:12rem;" data-v-ac050c62><li class="level-2" data-v-ac050c62><a href="/blog/springmvc/rest.html#基本介绍" class="sidebar-link reco-side-基本介绍" data-v-ac050c62>基本介绍</a></li><li class="level-2" data-v-ac050c62><a href="/blog/springmvc/rest.html#rest的核心过滤器" class="sidebar-link reco-side-rest的核心过滤器" data-v-ac050c62>REST的核心过滤器</a></li><li class="level-2" data-v-ac050c62><a href="/blog/springmvc/rest.html#rest-风格的-url-完成增删改查" class="sidebar-link reco-side-rest-风格的-url-完成增删改查" data-v-ac050c62>Rest 风格的 url-完成增删改查</a></li><li class="level-3" data-v-ac050c62><a href="/blog/springmvc/rest.html#代码演示" class="sidebar-link reco-side-代码演示" data-v-ac050c62>代码演示</a></li><li class="level-3" data-v-ac050c62><a href="/blog/springmvc/rest.html#注意事项和细节说明" class="sidebar-link reco-side-注意事项和细节说明" data-v-ac050c62>注意事项和细节说明</a></li></ul></main></div> <!----></div></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-c6073ba8 data-v-c6073ba8><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-c6073ba8><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-c6073ba8></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-c6073ba8></path></svg></div></div></div>
+    <script src="/blog/assets/js/app.3330eed2.js" defer></script><script src="/blog/assets/js/3.6c5b35bb.js" defer></script><script src="/blog/assets/js/1.504525ea.js" defer></script><script src="/blog/assets/js/114.aecf45e8.js" defer></script>
+  </body>
+</html>
